@@ -11,6 +11,8 @@
     <None Include="..\..\Source\WarriorEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
@@ -54,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\WarriorAttributeSet.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Private\AbilitySystem\Abilities">
+      <UniqueIdentifier>{F1AAEC36-8D99-3B4E-9B75-F663FA310F2B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorGameplayAbility.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Private\AnimInstances">
       <UniqueIdentifier>{9B98FFC4-A24E-3C78-A4AB-038FDD7FFD34}</UniqueIdentifier>
@@ -129,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\WarriorAttributeSet.h">
       <Filter>Source\Warrior\Public\AbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\AbilitySystem\Abilities">
+      <UniqueIdentifier>{139FEC8F-6864-3A6A-9615-1F8783976B9A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorGameplayAbility.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\AnimInstances">
       <UniqueIdentifier>{1E769DC4-FF09-3BE9-AF67-CCCBBC5FF713}</UniqueIdentifier>
