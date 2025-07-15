@@ -114,6 +114,15 @@
     <ClCompile Include="..\..\Source\Warrior\Private\DataAssets\Input\DataAsset_InputConfig.cpp">
       <Filter>Source\Warrior\Private\DataAssets\Input</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\DataAssets\StartUpData">
+      <UniqueIdentifier>{8E7DB0BA-589F-395D-90BB-837D5F33BA4F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\DataAssets\StartUpData\DataAsset_HeroStartUpData.cpp">
+      <Filter>Source\Warrior\Private\DataAssets\StartUpData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\DataAssets\StartUpData\DataAsset_StartUpDataBase.cpp">
+      <Filter>Source\Warrior\Private\DataAssets\StartUpData</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\GameModes">
       <UniqueIdentifier>{0D1A8259-3380-3B26-91BB-A7128220098B}</UniqueIdentifier>
     </Filter>
@@ -206,6 +215,15 @@
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\Input\DataAsset_InputConfig.h">
       <Filter>Source\Warrior\Public\DataAssets\Input</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\DataAssets\StartUpData">
+      <UniqueIdentifier>{0F9D9C86-820C-3055-AA0C-3B5D7C50C905}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_HeroStartUpData.h">
+      <Filter>Source\Warrior\Public\DataAssets\StartUpData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_StartUpDataBase.h">
+      <Filter>Source\Warrior\Public\DataAssets\StartUpData</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\GameModes">
       <UniqueIdentifier>{3B652AF5-C50C-31D0-A775-F1AFA9747A91}</UniqueIdentifier>
