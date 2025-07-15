@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define WARRIOR_WarriorBaseCharacter_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWarriorBaseCharacter(); \
 	friend struct Z_Construct_UClass_AWarriorBaseCharacter_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AWarriorBaseCharacter*>(this); }
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AWarriorBaseCharacter(AWarriorBaseCharacter&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~AWarriorBaseCharacter();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_13_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_16_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_14_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_16_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_16_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_17_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

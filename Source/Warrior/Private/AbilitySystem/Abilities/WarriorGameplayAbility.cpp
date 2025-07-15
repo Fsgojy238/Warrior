@@ -11,9 +11,10 @@ void UWarriorGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* Act
 
 	if (AbilityActivationPolicy == EWarriorAbilityActivationPolicy::OnGiven)
 	{
+		// 如果 Gameplay Ability 没有激活，我们要激活它
 		if (ActorInfo && !Spec.IsActive())
 		{
-			ActorInfo->AbilitySystemComponent->TryActivateAbility(Spec.Handle);
+			ActorInfo->AbilitySystemComponent->TryActivateAbility(Spec.Handle); // Handle是操作能力的“钥匙”，TryActivateAbility，ClearAbility 时都要把钥匙插上
 		}
 	}
 }

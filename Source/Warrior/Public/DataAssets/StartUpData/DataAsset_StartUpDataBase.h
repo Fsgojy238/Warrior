@@ -23,7 +23,7 @@ public:
 	 * @param InWarriorASCToGive - 目标能力系统组件
 	 * @param ApplyLevel - 能力等级，影响能力强度和效果
 	 */
-	virtual void GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InWarriorASCToGive, int32 ApplyLevel = 1);
+	virtual void GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
 	
 protected:
 	/** 角色生成时自动激活的能力列表 */
@@ -40,5 +40,5 @@ protected:
 	 * @param InWarriorASCToGive - 目标能力系统组件
 	 * @param ApplyLevel - 能力等级
 	 */
-	void GrantAbilities(const TArray< TSubclassOf < UWarriorGameplayAbility > >& InAbilitiesToGive, UWarriorAbilitySystemComponent* InWarriorASCToGive, int32 ApplyLevel = 1);
+	void GrantAbilities(const TArray< TSubclassOf < UWarriorGameplayAbility > >& InAbilitiesToGive, UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
 };
