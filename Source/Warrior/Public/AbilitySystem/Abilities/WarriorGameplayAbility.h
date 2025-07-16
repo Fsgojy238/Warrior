@@ -16,6 +16,7 @@ enum class EWarriorAbilityActivationPolicy : uint8
 };
 
 class UPawnCombatComponent;
+class UWarriorAbilitySystemComponent;
 /**
  * 
  */
@@ -33,7 +34,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "WarriorAbility")
 	EWarriorAbilityActivationPolicy AbilityActivationPolicy = EWarriorAbilityActivationPolicy::OnTriggered;
 
-	/**
+/**
  * 从Ability ActorInfo中安全获取角色的战斗组件
  *
  * @return UPawnCombatComponent指针，若未找到则返回nullptr
@@ -45,4 +46,7 @@ protected:
  */
 	UFUNCTION(BlueprintPure, Category = "Warrior|Ability")
 	UPawnCombatComponent* GetPawnCombatComponentFromActorInfo() const;
+
+	UFUNCTION(BlueprintPure, Category = "Warrior|Ability")
+	UWarriorAbilitySystemComponent* GetWarriorAbilitySystemComponentFromActorInfo() const;
 };
