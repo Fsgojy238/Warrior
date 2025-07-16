@@ -11,6 +11,7 @@
 #include "WarriorGameplayTags.h"
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
+#include "Components/Combat/HeroCombatComponent.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -45,6 +46,7 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f; //行走时的制动减速度
 
+	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
 }
 
 void AWarriorHeroCharacter::PossessedBy(AController* NewController)
