@@ -9,12 +9,17 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPawnCombatComponent;
 #ifdef WARRIOR_WarriorGameplayAbility_generated_h
 #error "WarriorGameplayAbility.generated.h already included, missing '#pragma once' in WarriorGameplayAbility.h"
 #endif
 #define WARRIOR_WarriorGameplayAbility_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_23_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetPawnCombatComponentFromActorInfo);
+
+
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorGameplayAbility(); \
 	friend struct Z_Construct_UClass_UWarriorGameplayAbility_Statics; \
@@ -23,7 +28,7 @@ public: \
 	DECLARE_SERIALIZER(UWarriorGameplayAbility)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_23_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWarriorGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +42,13 @@ public: \
 	NO_API virtual ~UWarriorGameplayAbility();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_20_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_23_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_22_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_23_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_23_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

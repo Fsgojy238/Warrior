@@ -9,12 +9,20 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AWarriorWeaponBase;
+struct FGameplayTag;
 #ifdef WARRIOR_PawnCombatComponent_generated_h
 #error "PawnCombatComponent.generated.h already included, missing '#pragma once' in PawnCombatComponent.h"
 #endif
 #define WARRIOR_PawnCombatComponent_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetCharacterCurrentEquippedWeapon); \
+	DECLARE_FUNCTION(execGetCharacterCarriedWeaponByTag); \
+	DECLARE_FUNCTION(execRegisterSpawnedWeapon);
+
+
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPawnCombatComponent(); \
 	friend struct Z_Construct_UClass_UPawnCombatComponent_Statics; \
@@ -23,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UPawnCombatComponent)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPawnCombatComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +45,13 @@ public: \
 	NO_API virtual ~UPawnCombatComponent();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_12_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_15_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_14_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_15_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_15_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
