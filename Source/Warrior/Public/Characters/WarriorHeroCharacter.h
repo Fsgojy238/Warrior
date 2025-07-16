@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Characters/WarriorBaseCharacter.h"
 #include "DataAssets/Input/DataAsset_InputConfig.h"
+#include "GameplayTagContainer.h"
 #include "WarriorHeroCharacter.generated.h"
 
 
@@ -55,6 +56,9 @@ private:
 	// ‘ˆ«ø ‰»Î
 	void Input_Move(const FInputActionValue& InputActionValue);
 	void Input_Look(const FInputActionValue& InputActionValue);
+
+	void Input_AbilityInputPressed(FGameplayTag InInputTag);
+	void Input_AbilityInputReleased (FGameplayTag InInputTag);
 
 
 #pragma endregion
