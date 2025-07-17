@@ -156,6 +156,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\Items\Weapons\WarriorWeaponBase.cpp">
       <Filter>Source\Warrior\Private\Items\Weapons</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\WarriorTypes">
+      <UniqueIdentifier>{72F84900-286B-358E-A1E2-66BBF4F03429}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\WarriorTypes\WarriorStructTypes.cpp">
+      <Filter>Source\Warrior\Private\WarriorTypes</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Public">
       <UniqueIdentifier>{BCFCC6DC-7E76-37B0-98D2-C6FE729328D4}</UniqueIdentifier>
     </Filter>
@@ -272,6 +278,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\Items\Weapons\WarriorWeaponBase.h">
       <Filter>Source\Warrior\Public\Items\Weapons</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\WarriorTypes">
+      <UniqueIdentifier>{EE03F685-923F-38E8-8F8B-0062E0925ECC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorStructTypes.h">
+      <Filter>Source\Warrior\Public\WarriorTypes</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

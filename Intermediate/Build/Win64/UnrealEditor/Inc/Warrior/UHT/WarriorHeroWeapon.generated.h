@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define WARRIOR_WarriorHeroWeapon_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWarriorHeroWeapon(); \
 	friend struct Z_Construct_UClass_AWarriorHeroWeapon_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AWarriorHeroWeapon)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWarriorHeroWeapon(); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~AWarriorHeroWeapon();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_12_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_15_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_13_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_15_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_15_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_16_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
