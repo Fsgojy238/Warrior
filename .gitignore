@@ -379,6 +379,8 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+Binaries/Win64/
+
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 >>>>>>> b07034d (添加 .gitattributes 和 .gitignore。)

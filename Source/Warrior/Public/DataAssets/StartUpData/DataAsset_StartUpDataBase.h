@@ -18,11 +18,7 @@ class WARRIOR_API UDataAsset_StartUpDataBase : public UDataAsset
 	GENERATED_BODY()
 
 public:
-	/**
-	 * 将资产中定义的所有能力赋予指定的能力系统组件
-	 * @param InWarriorASCToGive - 目标能力系统组件
-	 * @param ApplyLevel - 能力等级，影响能力强度和效果
-	 */
+	
 	virtual void GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
 	
 protected:
@@ -30,7 +26,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
 	TArray< TSubclassOf < UWarriorGameplayAbility > > ActivateOnGivenAbilities;
 
-	/** 被动触发的能力列表（如受击反击、状态触发等） */
+	/** 被动触发能力 */
 	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
 	TArray< TSubclassOf < UWarriorGameplayAbility > > ReactiveAbilities;
 

@@ -81,7 +81,7 @@ void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 	WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset, WarriorGameplayTags::InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move);
 	WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset, WarriorGameplayTags::InputTag_Look, ETriggerEvent::Triggered, this, &ThisClass::Input_Look);
 
-	//
+	
 	WarriorInputComponent->BindAbilityInputAction(InputConfigDataAsset, this, &ThisClass::Input_AbilityInputPressed, &ThisClass::Input_AbilityInputReleased);
 }
 
@@ -132,5 +132,4 @@ void AWarriorHeroCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
 void AWarriorHeroCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
 {
 	WarriorAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
-
 }

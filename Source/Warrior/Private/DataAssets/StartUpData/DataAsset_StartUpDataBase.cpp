@@ -5,12 +5,6 @@
 #include "AbilitySystem/Abilities/WarriorGameplayAbility.h"
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 
-
-/**
- * 将资产中定义的所有能力赋予指定的能力系统组件
- * @param InASCToGive - 目标能力系统组件
- * @param ApplyLevel - 能力等级，影响能力强度和效果
- */
 void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel)
 {
 	check(InASCToGive); // 确保目标组件有效
@@ -20,12 +14,6 @@ void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(UWarriorAbilitySys
 	GrantAbilities(ReactiveAbilities, InASCToGive, ApplyLevel);
 }
 
-/**
- * 内部辅助函数：将指定能力列表赋予目标能力系统组件
- * @param InAbilitiesToGive - 要赋予的能力类数组
- * @param InASCToGive - 目标能力系统组件
- * @param ApplyLevel - 能力等级
- */
 void UDataAsset_StartUpDataBase::GrantAbilities(const TArray< TSubclassOf < UWarriorGameplayAbility > >& InAbilitiesToGive, UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel)
 {
 	if (InAbilitiesToGive.IsEmpty()) // 检查能力列表是否为空

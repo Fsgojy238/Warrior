@@ -6,12 +6,6 @@
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 
 
-
-bool FWarriorHeroAbilitySet::IsValid() const
-{
-	return InputTag.IsValid() && AbilityToGrant;
-}
-
 void UDataAsset_HeroStartUpData::GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel)
 {
 	Super::GiveToAbilitySystemComponent(InASCToGive, ApplyLevel);
@@ -30,7 +24,6 @@ void UDataAsset_HeroStartUpData::GiveToAbilitySystemComponent(UWarriorAbilitySys
 		AbilitySpec.Level = ApplyLevel;
 		//添加动态能力标签，当对应输入触发时，会激活带有此标签的能力
 		AbilitySpec.DynamicAbilityTags.AddTag(AbilitySet.InputTag);
-
 		//将能力注册到ASC中
 		InASCToGive->GiveAbility(AbilitySpec);
 	}

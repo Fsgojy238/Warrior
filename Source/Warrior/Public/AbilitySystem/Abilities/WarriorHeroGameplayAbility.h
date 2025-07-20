@@ -28,6 +28,7 @@ public:
 	UHeroCombatComponent* GetHeroCombatComponentFromActorInfo();
 
 private:
+	// »º´æ
 	TWeakObjectPtr<AWarriorHeroCharacter> CachedWarriorHeroCharacter;
 	TWeakObjectPtr<AWarriorHeroController> CachedWarriorHeroController;
 };

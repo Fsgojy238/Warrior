@@ -17,9 +17,9 @@ struct FWarriorInputActionConfig
 
 public:
 
-	/* 一个结构体里的 InputTag 和 InputAction 相对应 */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (Categories = "InputTag"))
 	FGameplayTag InputTag;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UInputAction* InputAction;
 
