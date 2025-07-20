@@ -30,9 +30,8 @@ void UWarriorAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& 
 	}
 }
 
-void UWarriorAbilitySystemComponent::GrantHeroWeaponAbilities(const TArray<FWarriorHeroAbilitySet>& InDefaultWeaponAbilities, int32 ApplyLevel /*= 1*/)
+void UWarriorAbilitySystemComponent::GrantHeroWeaponAbilities(const TArray<FWarriorHeroAbilitySet>& InDefaultWeaponAbilities, int32 ApplyLevel /*= 1*/, TArray<FGameplayAbilitySpecHandle>& OutGrantedAbilitySpecHandle)
 {
-	Debug::Print("GrantHeroWeaponAbilities work commonly");
 
 	if (InDefaultWeaponAbilities.IsEmpty())
 	{
@@ -48,10 +47,26 @@ void UWarriorAbilitySystemComponent::GrantHeroWeaponAbilities(const TArray<FWarr
 		AbilitySpec.Level = ApplyLevel;
 		AbilitySpec.DynamicAbilityTags.AddTag(AbilitySet.InputTag);
 
-		GiveAbility(AbilitySpec);
+		OutGrantedAbilitySpecHandle.AddUnique(GiveAbility(AbilitySpec));
 		
 	}
+}
 
-	
+void UWarriorAbilitySystemComponent::RemoveGrantedHeroWeaponAbilities(TArray<FGameplayAbilitySpecHandle>& InSpecHandlesToRemove)
+{
+	if (InSpecHandlesToRemove.IsEmpty())
+	{
+		return;
+	}
+
+	for (const FGameplayAbilitySpecHandle& SpecHandle : InSpecHandlesToRemove)
+	{
+		if (SpecHandle.IsValid())
+		{
+			ClearAbility(SpecHandle);
+		}
+
+		InSpecHandlesToRemove.Empty();
+	}
 }
 
