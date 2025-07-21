@@ -16,7 +16,7 @@ struct FGameplayAbilitySpecHandle;
 #define WARRIOR_WarriorHeroWeapon_generated_h
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetGrantedAbilitySpecHandle); \
+	DECLARE_FUNCTION(execGetGrantedAbilitySpecHandles); \
 	DECLARE_FUNCTION(execAssignGrantedAbilitySpecHandles);
 
 

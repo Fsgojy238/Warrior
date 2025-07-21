@@ -68,10 +68,10 @@ DEFINE_FUNCTION(AWarriorHeroWeapon::execAssignGrantedAbilitySpecHandles)
 }
 // End Class AWarriorHeroWeapon Function AssignGrantedAbilitySpecHandles
 
-// Begin Class AWarriorHeroWeapon Function GetGrantedAbilitySpecHandle
-struct Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics
+// Begin Class AWarriorHeroWeapon Function GetGrantedAbilitySpecHandles
+struct Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics
 {
-	struct WarriorHeroWeapon_eventGetGrantedAbilitySpecHandle_Parms
+	struct WarriorHeroWeapon_eventGetGrantedAbilitySpecHandles_Parms
 	{
 		TArray<FGameplayAbilitySpecHandle> ReturnValue;
 	};
@@ -85,32 +85,32 @@ struct Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Stat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle, METADATA_PARAMS(0, nullptr) }; // 3490030742
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroWeapon_eventGetGrantedAbilitySpecHandle_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3490030742
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::NewProp_ReturnValue_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle, METADATA_PARAMS(0, nullptr) }; // 3490030742
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroWeapon_eventGetGrantedAbilitySpecHandles_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3490030742
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::NewProp_ReturnValue_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorHeroWeapon, nullptr, "GetGrantedAbilitySpecHandle", nullptr, nullptr, Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::WarriorHeroWeapon_eventGetGrantedAbilitySpecHandle_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::WarriorHeroWeapon_eventGetGrantedAbilitySpecHandle_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorHeroWeapon, nullptr, "GetGrantedAbilitySpecHandles", nullptr, nullptr, Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::WarriorHeroWeapon_eventGetGrantedAbilitySpecHandles_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::WarriorHeroWeapon_eventGetGrantedAbilitySpecHandles_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(AWarriorHeroWeapon::execGetGrantedAbilitySpecHandle)
+DEFINE_FUNCTION(AWarriorHeroWeapon::execGetGrantedAbilitySpecHandles)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(TArray<FGameplayAbilitySpecHandle>*)Z_Param__Result=P_THIS->GetGrantedAbilitySpecHandle();
+	*(TArray<FGameplayAbilitySpecHandle>*)Z_Param__Result=P_THIS->GetGrantedAbilitySpecHandles();
 	P_NATIVE_END;
 }
-// End Class AWarriorHeroWeapon Function GetGrantedAbilitySpecHandle
+// End Class AWarriorHeroWeapon Function GetGrantedAbilitySpecHandles
 
 // Begin Class AWarriorHeroWeapon
 void AWarriorHeroWeapon::StaticRegisterNativesAWarriorHeroWeapon()
@@ -118,7 +118,7 @@ void AWarriorHeroWeapon::StaticRegisterNativesAWarriorHeroWeapon()
 	UClass* Class = AWarriorHeroWeapon::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AssignGrantedAbilitySpecHandles", &AWarriorHeroWeapon::execAssignGrantedAbilitySpecHandles },
-		{ "GetGrantedAbilitySpecHandle", &AWarriorHeroWeapon::execGetGrantedAbilitySpecHandle },
+		{ "GetGrantedAbilitySpecHandles", &AWarriorHeroWeapon::execGetGrantedAbilitySpecHandles },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -147,7 +147,7 @@ struct Z_Construct_UClass_AWarriorHeroWeapon_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AWarriorHeroWeapon_AssignGrantedAbilitySpecHandles, "AssignGrantedAbilitySpecHandles" }, // 1469004381
-		{ &Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandle, "GetGrantedAbilitySpecHandle" }, // 2944460671
+		{ &Z_Construct_UFunction_AWarriorHeroWeapon_GetGrantedAbilitySpecHandles, "GetGrantedAbilitySpecHandles" }, // 3770033428
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -201,10 +201,10 @@ AWarriorHeroWeapon::~AWarriorHeroWeapon() {}
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorHeroWeapon, AWarriorHeroWeapon::StaticClass, TEXT("AWarriorHeroWeapon"), &Z_Registration_Info_UClass_AWarriorHeroWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroWeapon), 265583336U) },
+		{ Z_Construct_UClass_AWarriorHeroWeapon, AWarriorHeroWeapon::StaticClass, TEXT("AWarriorHeroWeapon"), &Z_Registration_Info_UClass_AWarriorHeroWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroWeapon), 1744175219U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_1134972057(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_447062279(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorHeroWeapon_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

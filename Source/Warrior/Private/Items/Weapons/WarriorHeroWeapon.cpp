@@ -5,10 +5,10 @@
 
 void AWarriorHeroWeapon::AssignGrantedAbilitySpecHandles(const TArray<FGameplayAbilitySpecHandle>& InSpecHandles)
 {
-	GrantedAbilitySpecHandle = InSpecHandles;
+	GrantedAbilitySpecHandles = InSpecHandles;
 }
 
-TArray<FGameplayAbilitySpecHandle> AWarriorHeroWeapon::GetGrantedAbilitySpecHandle() const
+TArray<FGameplayAbilitySpecHandle> AWarriorHeroWeapon::GetGrantedAbilitySpecHandles() const
 {
-	return TArray<FGameplayAbilitySpecHandle>();
+	return GrantedAbilitySpecHandles;
 }

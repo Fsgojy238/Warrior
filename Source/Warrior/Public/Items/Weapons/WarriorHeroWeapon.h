@@ -24,10 +24,9 @@ public:
 	void AssignGrantedAbilitySpecHandles(const TArray<FGameplayAbilitySpecHandle>& InSpecHandles);
 
 	UFUNCTION(BlueprintPure)
-	TArray<FGameplayAbilitySpecHandle> GetGrantedAbilitySpecHandle() const;
+	TArray<FGameplayAbilitySpecHandle> GetGrantedAbilitySpecHandles() const;
 
 private:
-	TArray<FGameplayAbilitySpecHandle> GrantedAbilitySpecHandle;
-	
+	TArray<FGameplayAbilitySpecHandle> GrantedAbilitySpecHandles;
 
 };
