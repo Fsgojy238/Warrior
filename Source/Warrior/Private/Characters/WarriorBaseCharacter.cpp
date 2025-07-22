@@ -9,8 +9,8 @@
 
 AWarriorBaseCharacter::AWarriorBaseCharacter()
 {
-	PrimaryActorTick.bCanEverTick = false;
-	PrimaryActorTick.bStartWithTickEnabled = false;
+	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bStartWithTickEnabled = true;
 
 	GetMesh()->bReceivesDecals = false; //禁用网格体接收贴花（Decals），贴花是临时渲染效果（如弹痕、血迹），禁用后可优化性能。
 

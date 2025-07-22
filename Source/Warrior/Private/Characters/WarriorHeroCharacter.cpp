@@ -17,6 +17,7 @@
 
 AWarriorHeroCharacter::AWarriorHeroCharacter()
 {
+
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.f); //初始化胶囊体碰撞组件，设置了宽度和高度的碰撞体积。
 	
 	// 禁用控制器直接旋转角色  pitch（上下看）、roll（侧倾）、yaw（左右转）
