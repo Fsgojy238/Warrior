@@ -45,7 +45,9 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = true; //角色自动转向移动方向
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f); //旋转速度
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
-	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f; //行走时的制动减速度
+	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f; 
+	GetCharacterMovement()->bUseControllerDesiredRotation = true;
+
 
 	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
 }
