@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define WARRIOR_DataAsset_StartUpDataBase_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDataAsset_StartUpDataBase(); \
 	friend struct Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UDataAsset_StartUpDataBase)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_19_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDataAsset_StartUpDataBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UDataAsset_StartUpDataBase();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_15_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_18_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_16_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_18_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_18_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_19_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

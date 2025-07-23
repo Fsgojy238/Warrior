@@ -9,6 +9,7 @@
 
 class UWarriorGameplayAbility;
 class UWarriorAbilitySystemComponent;
+class UGameplayEffect;
 /**
  * 
  */
@@ -29,6 +30,9 @@ protected:
 	/** 被动触发能力 */
 	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
 	TArray< TSubclassOf < UWarriorGameplayAbility > > ReactiveAbilities;
+
+	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
+	TArray< TSubclassOf < UGameplayEffect > > StartUpGameplayEffects;
 
 	/**
 	 * 内部辅助函数：将指定能力列表赋予目标能力系统组件
