@@ -9,12 +9,19 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef WARRIOR_WarriorWeaponBase_generated_h
 #error "WarriorWeaponBase.generated.h already included, missing '#pragma once' in WarriorWeaponBase.h"
 #endif
 #define WARRIOR_WarriorWeaponBase_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnCollisionBoxBeginOverlap);
+
+
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWarriorWeaponBase(); \
 	friend struct Z_Construct_UClass_AWarriorWeaponBase_Statics; \
@@ -23,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AWarriorWeaponBase)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AWarriorWeaponBase(AWarriorWeaponBase&&); \
@@ -35,12 +42,13 @@ public: \
 	NO_API virtual ~AWarriorWeaponBase();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_10_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_13_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_11_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_13_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_13_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

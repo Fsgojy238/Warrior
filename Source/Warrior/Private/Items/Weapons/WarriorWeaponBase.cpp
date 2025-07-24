@@ -2,6 +2,7 @@
 
 
 #include "../Public/Items/Weapons/WarriorWeaponBase.h"
+#include "Components/BoxComponent.h"
 
 // Sets default values
 AWarriorWeaponBase::AWarriorWeaponBase()
@@ -22,7 +23,12 @@ AWarriorWeaponBase::AWarriorWeaponBase()
 	WeaponCollisionBox->SetBoxExtent(FVector(20.f));
 	// Ä¬ÈÏ½ûÓÃÅö×²¼ì²â£¨¹¥»÷Ê±ÔÙÆôÓÃ£©
 	WeaponCollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	WeaponCollisionBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &ThisClass::OnCollisionBoxBeginOverlap);
 }
 
+void AWarriorWeaponBase::OnCollisionBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+
+}
 
 

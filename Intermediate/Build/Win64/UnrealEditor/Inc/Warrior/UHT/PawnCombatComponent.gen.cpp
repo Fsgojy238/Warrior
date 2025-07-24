@@ -17,7 +17,62 @@ WARRIOR_API UClass* Z_Construct_UClass_AWarriorWeaponBase_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatComponent();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnExtensionComponentBase();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EToogleDamageType();
 // End Cross Module References
+
+// Begin Enum EToogleDamageType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EToogleDamageType;
+static UEnum* EToogleDamageType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EToogleDamageType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EToogleDamageType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Warrior_EToogleDamageType, (UObject*)Z_Construct_UPackage__Script_Warrior(), TEXT("EToogleDamageType"));
+	}
+	return Z_Registration_Info_UEnum_EToogleDamageType.OuterSingleton;
+}
+template<> WARRIOR_API UEnum* StaticEnum<EToogleDamageType>()
+{
+	return EToogleDamageType_StaticEnum();
+}
+struct Z_Construct_UEnum_Warrior_EToogleDamageType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "CurrentEquippedWeapon.Name", "EToogleDamageType::CurrentEquippedWeapon" },
+		{ "LeftHand.Name", "EToogleDamageType::LeftHand" },
+		{ "ModuleRelativePath", "Public/Components/Combat/PawnCombatComponent.h" },
+		{ "RightHand.Name", "EToogleDamageType::RightHand" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EToogleDamageType::CurrentEquippedWeapon", (int64)EToogleDamageType::CurrentEquippedWeapon },
+		{ "EToogleDamageType::LeftHand", (int64)EToogleDamageType::LeftHand },
+		{ "EToogleDamageType::RightHand", (int64)EToogleDamageType::RightHand },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Warrior_EToogleDamageType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Warrior,
+	nullptr,
+	"EToogleDamageType",
+	"EToogleDamageType",
+	Z_Construct_UEnum_Warrior_EToogleDamageType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EToogleDamageType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EToogleDamageType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Warrior_EToogleDamageType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Warrior_EToogleDamageType()
+{
+	if (!Z_Registration_Info_UEnum_EToogleDamageType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EToogleDamageType.InnerSingleton, Z_Construct_UEnum_Warrior_EToogleDamageType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EToogleDamageType.InnerSingleton;
+}
+// End Enum EToogleDamageType
 
 // Begin Class UPawnCombatComponent Function GetCharacterCarriedWeaponByTag
 struct Z_Construct_UFunction_UPawnCombatComponent_GetCharacterCarriedWeaponByTag_Statics
@@ -167,6 +222,63 @@ DEFINE_FUNCTION(UPawnCombatComponent::execRegisterSpawnedWeapon)
 }
 // End Class UPawnCombatComponent Function RegisterSpawnedWeapon
 
+// Begin Class UPawnCombatComponent Function ToggleWeaponCollision
+struct Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics
+{
+	struct PawnCombatComponent_eventToggleWeaponCollision_Parms
+	{
+		bool bShouldEnable;
+		EToogleDamageType ToogleDamageType;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|Combat" },
+		{ "CPP_Default_ToogleDamageType", "CurrentEquippedWeapon" },
+		{ "ModuleRelativePath", "Public/Components/Combat/PawnCombatComponent.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_bShouldEnable_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShouldEnable;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_ToogleDamageType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_ToogleDamageType;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_bShouldEnable_SetBit(void* Obj)
+{
+	((PawnCombatComponent_eventToggleWeaponCollision_Parms*)Obj)->bShouldEnable = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_bShouldEnable = { "bShouldEnable", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PawnCombatComponent_eventToggleWeaponCollision_Parms), &Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_bShouldEnable_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_ToogleDamageType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_ToogleDamageType = { "ToogleDamageType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PawnCombatComponent_eventToggleWeaponCollision_Parms, ToogleDamageType), Z_Construct_UEnum_Warrior_EToogleDamageType, METADATA_PARAMS(0, nullptr) }; // 909523194
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_bShouldEnable,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_ToogleDamageType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::NewProp_ToogleDamageType,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPawnCombatComponent, nullptr, "ToggleWeaponCollision", nullptr, nullptr, Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::PawnCombatComponent_eventToggleWeaponCollision_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::PawnCombatComponent_eventToggleWeaponCollision_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPawnCombatComponent::execToggleWeaponCollision)
+{
+	P_GET_UBOOL(Z_Param_bShouldEnable);
+	P_GET_ENUM(EToogleDamageType,Z_Param_ToogleDamageType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleWeaponCollision(Z_Param_bShouldEnable,EToogleDamageType(Z_Param_ToogleDamageType));
+	P_NATIVE_END;
+}
+// End Class UPawnCombatComponent Function ToggleWeaponCollision
+
 // Begin Class UPawnCombatComponent
 void UPawnCombatComponent::StaticRegisterNativesUPawnCombatComponent()
 {
@@ -175,6 +287,7 @@ void UPawnCombatComponent::StaticRegisterNativesUPawnCombatComponent()
 		{ "GetCharacterCarriedWeaponByTag", &UPawnCombatComponent::execGetCharacterCarriedWeaponByTag },
 		{ "GetCharacterCurrentEquippedWeapon", &UPawnCombatComponent::execGetCharacterCurrentEquippedWeapon },
 		{ "RegisterSpawnedWeapon", &UPawnCombatComponent::execRegisterSpawnedWeapon },
+		{ "ToggleWeaponCollision", &UPawnCombatComponent::execToggleWeaponCollision },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -205,6 +318,7 @@ struct Z_Construct_UClass_UPawnCombatComponent_Statics
 		{ &Z_Construct_UFunction_UPawnCombatComponent_GetCharacterCarriedWeaponByTag, "GetCharacterCarriedWeaponByTag" }, // 2042496126
 		{ &Z_Construct_UFunction_UPawnCombatComponent_GetCharacterCurrentEquippedWeapon, "GetCharacterCurrentEquippedWeapon" }, // 2058939703
 		{ &Z_Construct_UFunction_UPawnCombatComponent_RegisterSpawnedWeapon, "RegisterSpawnedWeapon" }, // 963978278
+		{ &Z_Construct_UFunction_UPawnCombatComponent_ToggleWeaponCollision, "ToggleWeaponCollision" }, // 3981585950
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -257,13 +371,16 @@ UPawnCombatComponent::~UPawnCombatComponent() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ EToogleDamageType_StaticEnum, TEXT("EToogleDamageType"), &Z_Registration_Info_UEnum_EToogleDamageType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 909523194U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPawnCombatComponent, UPawnCombatComponent::StaticClass, TEXT("UPawnCombatComponent"), &Z_Registration_Info_UClass_UPawnCombatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPawnCombatComponent), 3663403483U) },
+		{ Z_Construct_UClass_UPawnCombatComponent, UPawnCombatComponent::StaticClass, TEXT("UPawnCombatComponent"), &Z_Registration_Info_UClass_UPawnCombatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPawnCombatComponent), 1880797682U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_1767405473(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_669180245(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_PawnCombatComponent_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

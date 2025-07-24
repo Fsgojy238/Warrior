@@ -159,6 +159,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\GameModes\WarriorBaseGameMode.cpp">
       <Filter>Source\Warrior\Private\GameModes</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\Interface">
+      <UniqueIdentifier>{98A6F510-EF9B-35C9-84D1-49F98D0CDC13}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Interface\PawnCombatInterface.cpp">
+      <Filter>Source\Warrior\Private\Interface</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Items">
       <UniqueIdentifier>{7E912935-5489-38C9-8827-162368068E94}</UniqueIdentifier>
     </Filter>
@@ -297,6 +303,12 @@
     <ClCompile Include="..\..\Source\Warrior\Public\GameModes\WarriorBaseGameMode.h">
       <Filter>Source\Warrior\Public\GameModes</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Public\Interface">
+      <UniqueIdentifier>{275C50E9-5B76-35AF-8AFB-0A457AF06D2D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\Interface\PawnCombatInterface.h">
+      <Filter>Source\Warrior\Public\Interface</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Public\Items">
       <UniqueIdentifier>{6DD88F64-AD61-3FD2-A571-CBD6D8CCD7C8}</UniqueIdentifier>
     </Filter>
@@ -315,5 +327,10 @@
     <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorStructTypes.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorEnumTypes.h">
+      <Filter>Source\Warrior\Public\WarriorTypes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
