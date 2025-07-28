@@ -18,6 +18,7 @@ struct FHitResult;
 #define WARRIOR_WarriorWeaponBase_generated_h
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnCollisionBoxEndOverlap); \
 	DECLARE_FUNCTION(execOnCollisionBoxBeginOverlap);
 
 
