@@ -15,6 +15,11 @@ void UPawnCombatComponent::RegisterSpawnedWeapon(FGameplayTag InWeaponTagToRegis
     // 将武器添加到映射表中（标签 → 武器）
     CharacterCarriedWeaponMap.Emplace(InWeaponTagToRegister, InWeaponToRegister);
 
+    // 将战斗组件的 OnHitTargetActor 函数绑定到武器的 OnWeaponHitTarget 委托上，this会指向当前战斗组件的实例，会自动分别是玩家还是敌人的战斗组件
+    InWeaponToRegister->OnWeaponHitTarget.BindUObject(this, &ThisClass::OnHitTargetActor);
+    // 将战斗组件的 OnWeaponPulledFromTargetActor 函数绑定到武器的 OnWeaponPulledFromTarget 委托上
+    InWeaponToRegister->OnWeaponPulledFromTarget.BindUObject(this, &ThisClass::OnWeaponPulledFromTargetActor);
+
     // 如果需要注册为装备武器，则更新当前武器标签
     if (bRegisterAsEquippedWeapon)
     {
@@ -69,4 +74,14 @@ void UPawnCombatComponent::ToggleWeaponCollision(bool bShouldEnable, EToogleDama
     }
 
     // TODO: Handle body collision boxes
+}
+
+void UPawnCombatComponent::OnHitTargetActor(AActor* HitActor)
+{
+
+}
+
+void UPawnCombatComponent::OnWeaponPulledFromTargetActor(AActor* InteractedActor)
+{
+
 }
