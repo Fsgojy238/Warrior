@@ -3,6 +3,7 @@
 
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 #include "AbilitySystem/Abilities/WarriorGameplayAbility.h"
+#include "AbilitySystem/Abilities/WarriorHeroGameplayAbility.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -19,7 +20,6 @@ void UWarriorAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& I
 
 		TryActivateAbility(AbilitySpec.Handle);
 	}
-	
 }
 
 void UWarriorAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& InInputTag)
@@ -69,4 +69,3 @@ void UWarriorAbilitySystemComponent::RemoveGrantedHeroWeaponAbilities(UPARAM(ref
 
 	InSpecHandlesToRemove.Empty();
 }
-

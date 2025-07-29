@@ -72,6 +72,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorHeroGameplayAbility.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\AbilitySystem\GEExecCalc">
+      <UniqueIdentifier>{D7D3D6A4-B818-38B6-9969-8FB3DAD68AA7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\GEExecCalc\GEExecCalc_DamageTaken.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\GEExecCalc</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AnimInstances">
       <UniqueIdentifier>{9B98FFC4-A24E-3C78-A4AB-038FDD7FFD34}</UniqueIdentifier>
     </Filter>
@@ -216,6 +222,12 @@
     <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Public\AbilitySystem\GEExecCalc">
+      <UniqueIdentifier>{E6F579C0-14C2-3A47-B197-9CA5BBEE1561}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\GEExecCalc\GEExecCalc_DamageTaken.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\GEExecCalc</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Public\AnimInstances">
       <UniqueIdentifier>{1E769DC4-FF09-3BE9-AF67-CCCBBC5FF713}</UniqueIdentifier>
     </Filter>
@@ -324,13 +336,11 @@
     <Filter Include="Source\Warrior\Public\WarriorTypes">
       <UniqueIdentifier>{EE03F685-923F-38E8-8F8B-0062E0925ECC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorEnumTypes.h">
+      <Filter>Source\Warrior\Public\WarriorTypes</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorStructTypes.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorEnumTypes.h">
-      <Filter>Source\Warrior\Public\WarriorTypes</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
