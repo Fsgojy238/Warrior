@@ -45,6 +45,9 @@ public:
 	virtual void OnHitTargetActor(AActor* HitActor);
 	virtual void OnWeaponPulledFromTargetActor(AActor* InteractedActor);
 
+protected:
+	TArray<AActor*> OverlappedActors;
+
 private:
 	/**
 	 * 角色携带的所有武器映射表
