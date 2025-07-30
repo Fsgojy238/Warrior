@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorEnumTypes() {}
 // Begin Cross Module References
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorConfirmType();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorSuccessType();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorValidType();
 // End Cross Module References
 
@@ -117,15 +118,67 @@ UEnum* Z_Construct_UEnum_Warrior_EWarriorValidType()
 }
 // End Enum EWarriorValidType
 
+// Begin Enum EWarriorSuccessType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EWarriorSuccessType;
+static UEnum* EWarriorSuccessType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EWarriorSuccessType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EWarriorSuccessType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Warrior_EWarriorSuccessType, (UObject*)Z_Construct_UPackage__Script_Warrior(), TEXT("EWarriorSuccessType"));
+	}
+	return Z_Registration_Info_UEnum_EWarriorSuccessType.OuterSingleton;
+}
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorSuccessType>()
+{
+	return EWarriorSuccessType_StaticEnum();
+}
+struct Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Failed.Name", "EWarriorSuccessType::Failed" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorEnumTypes.h" },
+		{ "Successful.Name", "EWarriorSuccessType::Successful" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EWarriorSuccessType::Successful", (int64)EWarriorSuccessType::Successful },
+		{ "EWarriorSuccessType::Failed", (int64)EWarriorSuccessType::Failed },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Warrior,
+	nullptr,
+	"EWarriorSuccessType",
+	"EWarriorSuccessType",
+	Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Warrior_EWarriorSuccessType()
+{
+	if (!Z_Registration_Info_UEnum_EWarriorSuccessType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EWarriorSuccessType.InnerSingleton, Z_Construct_UEnum_Warrior_EWarriorSuccessType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EWarriorSuccessType.InnerSingleton;
+}
+// End Enum EWarriorSuccessType
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EWarriorConfirmType_StaticEnum, TEXT("EWarriorConfirmType"), &Z_Registration_Info_UEnum_EWarriorConfirmType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1841062664U) },
 		{ EWarriorValidType_StaticEnum, TEXT("EWarriorValidType"), &Z_Registration_Info_UEnum_EWarriorValidType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2216850729U) },
+		{ EWarriorSuccessType_StaticEnum, TEXT("EWarriorSuccessType"), &Z_Registration_Info_UEnum_EWarriorSuccessType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3005604401U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_4180535815(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_3319117658(TEXT("/Script/Warrior"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics::EnumInfo));

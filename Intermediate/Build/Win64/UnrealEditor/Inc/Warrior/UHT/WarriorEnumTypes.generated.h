@@ -35,4 +35,12 @@ enum class EWarriorValidType : uint8;
 template<> struct TIsUEnumClass<EWarriorValidType> { enum { Value = true }; };
 template<> WARRIOR_API UEnum* StaticEnum<EWarriorValidType>();
 
+#define FOREACH_ENUM_EWARRIORSUCCESSTYPE(op) \
+	op(EWarriorSuccessType::Successful) \
+	op(EWarriorSuccessType::Failed) 
+
+enum class EWarriorSuccessType : uint8;
+template<> struct TIsUEnumClass<EWarriorSuccessType> { enum { Value = true }; };
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorSuccessType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
