@@ -61,6 +61,10 @@ struct Z_Construct_UClass_UWarriorAttributeSet_Statics
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/WarriorAttributeSet.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageTaken_MetaData[] = {
+		{ "Category", "Damage" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/WarriorAttributeSet.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_CurrentHealth;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_MaxHealth;
@@ -68,6 +72,7 @@ struct Z_Construct_UClass_UWarriorAttributeSet_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_MaxRage;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_AttackPower;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_DeffensePower;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DamageTaken;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -81,6 +86,7 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWarriorAttrib
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_MaxRage = { "MaxRage", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWarriorAttributeSet, MaxRage), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxRage_MetaData), NewProp_MaxRage_MetaData) }; // 675369593
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_AttackPower = { "AttackPower", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWarriorAttributeSet, AttackPower), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackPower_MetaData), NewProp_AttackPower_MetaData) }; // 675369593
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_DeffensePower = { "DeffensePower", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWarriorAttributeSet, DeffensePower), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DeffensePower_MetaData), NewProp_DeffensePower_MetaData) }; // 675369593
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_DamageTaken = { "DamageTaken", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWarriorAttributeSet, DamageTaken), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageTaken_MetaData), NewProp_DamageTaken_MetaData) }; // 675369593
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWarriorAttributeSet_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_CurrentHealth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_MaxHealth,
@@ -88,6 +94,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWarriorA
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_MaxRage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_AttackPower,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_DeffensePower,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorAttributeSet_Statics::NewProp_DamageTaken,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWarriorAttributeSet_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UWarriorAttributeSet_Statics::DependentSingletons[])() = {
@@ -130,10 +137,10 @@ UWarriorAttributeSet::~UWarriorAttributeSet() {}
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorAttributeSet, UWarriorAttributeSet::StaticClass, TEXT("UWarriorAttributeSet"), &Z_Registration_Info_UClass_UWarriorAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorAttributeSet), 3355548564U) },
+		{ Z_Construct_UClass_UWarriorAttributeSet, UWarriorAttributeSet::StaticClass, TEXT("UWarriorAttributeSet"), &Z_Registration_Info_UClass_UWarriorAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorAttributeSet), 2385135973U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_3999590667(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_2602020849(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

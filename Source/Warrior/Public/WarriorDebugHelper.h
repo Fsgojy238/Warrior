@@ -13,4 +13,16 @@ namespace Debug
 			UE_LOG(LogTemp, Warning, TEXT("%s"), *Msg); // Warning 是日志级别（可在控制台过滤） TEXT("%s") 是格式化字符串，*Msg 将 FString 转换为 const TCHAR*
 		}
 	}
+
+	static void Print(const FString& FloatTitle, float FloatValueToPrint, int32 InKey = -1, const FColor& Color = FColor::MakeRandomColor())
+	{
+		if (GEngine)
+		{
+			const FString FinalMsg = FloatTitle + TEXT(": ") + FString::SanitizeFloat(FloatValueToPrint);
+
+			GEngine->AddOnScreenDebugMessage(InKey, 7.f, Color, FinalMsg);
+
+			UE_LOG(LogTemp, Warning, TEXT("%s"), *FinalMsg);
+		}
+	}
 }

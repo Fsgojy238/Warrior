@@ -5,16 +5,19 @@
 #include "AbilitySystem/WarriorAttributeSet.h"
 #include "WarriorGameplayTags.h"
 
+#include "WarriorDebugHelper.h"
 
 struct FWarriorDamageCapture
 {
 	DECLARE_ATTRIBUTE_CAPTUREDEF(AttackPower)
 	DECLARE_ATTRIBUTE_CAPTUREDEF(DeffensePower)
+	DECLARE_ATTRIBUTE_CAPTUREDEF(DamageTaken)
 
 	FWarriorDamageCapture()
 	{
 		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, AttackPower, Source, false);
-		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, AttackPower, Target, false);
+		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, DeffensePower, Target, false);
+		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, DamageTaken, Target, false);
 	}
 };
 
@@ -42,6 +45,7 @@ UGEExecCalc_DamageTaken::UGEExecCalc_DamageTaken()
 
 	RelevantAttributesToCapture.Add(GetFWarriorDamageCapture().AttackPowerDef);
 	RelevantAttributesToCapture.Add(GetFWarriorDamageCapture().DeffensePowerDef);
+	RelevantAttributesToCapture.Add(GetFWarriorDamageCapture().DamageTakenDef);
 
 }
 
@@ -65,6 +69,7 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		EvaluateParameters,						   // 上面设置的参数收集器
 		SourceAttackPower						   // 结果存到这个变量里
 	);
+	Debug::Print(TEXT("SourceAttackPower"), SourceAttackPower);
 
 	float BaseDamage = 0.f;
 	int32 UsedLightAttackComboCount = 0;
@@ -77,18 +82,22 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		if (TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Shared_SetByCaller_BaseDamage))
 		{
 			BaseDamage = TagMagnitude.Value;
+			Debug::Print(TEXT("BaseDamage"), BaseDamage);
 		}
 
 		// 提取轻攻击连击数
 		if (TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Player_SetByCaller_AttackType_Light))
 		{
 			UsedLightAttackComboCount = TagMagnitude.Value;
+			Debug::Print(TEXT("UsedLightAttackComboCount"), UsedLightAttackComboCount);
+
 		}
 		
 		// 提取重攻击连击数
 		if (TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Player_SetByCaller_AttackType_Heavy))
 		{
 			UsedHeavyAttackComboCount = TagMagnitude.Value;
+			Debug::Print(TEXT("UsedHeavyAttackComboCount"), UsedHeavyAttackComboCount);
 		}
 	}
 
@@ -99,4 +108,39 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		EvaluateParameters,                           // 参数收集器
 		TargetDefensePower                            // 结果存到这个变量里
 	);
+	Debug::Print(TEXT("TargetDefensePower"), TargetDefensePower);
+
+
+	if (UsedLightAttackComboCount != 0)
+	{
+		const float DamageIncreasePercentLight = (UsedLightAttackComboCount - 1) * 0.05 + 1.f;
+
+		BaseDamage *= DamageIncreasePercentLight;
+		Debug::Print(TEXT("ScaledBaseDamageLight"), BaseDamage);
+
+	}
+
+	if (UsedHeavyAttackComboCount != 0)
+	{
+		const float DamageIncreasePercentHeavey = (UsedHeavyAttackComboCount - 1) * 0.05 + 1.f;
+
+		BaseDamage *= DamageIncreasePercentHeavey;
+		Debug::Print(TEXT("ScaledBaseDamageHeavy"), BaseDamage);
+
+	}
+
+	const float FinalDamageDone = BaseDamage * SourceAttackPower / TargetDefensePower;
+	Debug::Print(TEXT("FinalDamageDone"), FinalDamageDone);
+
+
+	if (FinalDamageDone > 0.f)
+	{
+		OutExecutionOutput.AddOutputModifier(
+			FGameplayModifierEvaluatedData(
+				GetFWarriorDamageCapture().DamageTakenProperty,
+				EGameplayModOp::Override,
+				FinalDamageDone
+			)
+		);
+	}
 }
