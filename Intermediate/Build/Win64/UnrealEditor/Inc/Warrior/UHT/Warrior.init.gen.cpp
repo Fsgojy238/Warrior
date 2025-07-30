@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeWarrior_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x812FF617,
+				0x098B8BDA,
 				0xCC8D3FEE,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeWarrior_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_Warrior.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Warrior(Z_Construct_UPackage__Script_Warrior, TEXT("/Script/Warrior"), Z_Registration_Info_UPackage__Script_Warrior, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x812FF617, 0xCC8D3FEE));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Warrior(Z_Construct_UPackage__Script_Warrior, TEXT("/Script/Warrior"), Z_Registration_Info_UPackage__Script_Warrior, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x098B8BDA, 0xCC8D3FEE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
