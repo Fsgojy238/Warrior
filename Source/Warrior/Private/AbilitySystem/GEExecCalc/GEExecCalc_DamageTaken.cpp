@@ -69,7 +69,7 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		EvaluateParameters,						   // 上面设置的参数收集器
 		SourceAttackPower						   // 结果存到这个变量里
 	);
-	Debug::Print(TEXT("SourceAttackPower"), SourceAttackPower);
+	/*Debug::Print(TEXT("SourceAttackPower"), SourceAttackPower);*/
 
 	float BaseDamage = 0.f;
 	int32 UsedLightAttackComboCount = 0;
@@ -82,14 +82,14 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		if (TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Shared_SetByCaller_BaseDamage))
 		{
 			BaseDamage = TagMagnitude.Value;
-			Debug::Print(TEXT("BaseDamage"), BaseDamage);
+			/*Debug::Print(TEXT("BaseDamage"), BaseDamage);*/
 		}
 
 		// 提取轻攻击连击数
 		if (TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Player_SetByCaller_AttackType_Light))
 		{
 			UsedLightAttackComboCount = TagMagnitude.Value;
-			Debug::Print(TEXT("UsedLightAttackComboCount"), UsedLightAttackComboCount);
+			/*Debug::Print(TEXT("UsedLightAttackComboCount"), UsedLightAttackComboCount);*/
 
 		}
 		
@@ -97,7 +97,7 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		if (TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Player_SetByCaller_AttackType_Heavy))
 		{
 			UsedHeavyAttackComboCount = TagMagnitude.Value;
-			Debug::Print(TEXT("UsedHeavyAttackComboCount"), UsedHeavyAttackComboCount);
+			/*Debug::Print(TEXT("UsedHeavyAttackComboCount"), UsedHeavyAttackComboCount);*/
 		}
 	}
 
@@ -108,31 +108,32 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 		EvaluateParameters,                           // 参数收集器
 		TargetDefensePower                            // 结果存到这个变量里
 	);
-	Debug::Print(TEXT("TargetDefensePower"), TargetDefensePower);
+	/*Debug::Print(TEXT("TargetDefensePower"), TargetDefensePower);*/
 
-
+	// 7. 根据连击数计算伤害加成
 	if (UsedLightAttackComboCount != 0)
 	{
 		const float DamageIncreasePercentLight = (UsedLightAttackComboCount - 1) * 0.05 + 1.f;
 
 		BaseDamage *= DamageIncreasePercentLight;
-		Debug::Print(TEXT("ScaledBaseDamageLight"), BaseDamage);
+		/*Debug::Print(TEXT("ScaledBaseDamageLight"), BaseDamage);*/
 
 	}
 
 	if (UsedHeavyAttackComboCount != 0)
 	{
-		const float DamageIncreasePercentHeavey = (UsedHeavyAttackComboCount - 1) * 0.05 + 1.f;
+		const float DamageIncreasePercentHeavey = UsedHeavyAttackComboCount * 0.15 + 1.f;
 
 		BaseDamage *= DamageIncreasePercentHeavey;
-		Debug::Print(TEXT("ScaledBaseDamageHeavy"), BaseDamage);
+		/*Debug::Print(TEXT("ScaledBaseDamageHeavy"), BaseDamage);*/
 
 	}
 
+	// 8. 计算最终伤害：(基础伤害 × 连击加成) × 攻击力 ÷ 防御力
 	const float FinalDamageDone = BaseDamage * SourceAttackPower / TargetDefensePower;
 	Debug::Print(TEXT("FinalDamageDone"), FinalDamageDone);
 
-
+	// 9. 输出最终伤害，修改目标的"DamageTaken"属性
 	if (FinalDamageDone > 0.f)
 	{
 		OutExecutionOutput.AddOutputModifier(
