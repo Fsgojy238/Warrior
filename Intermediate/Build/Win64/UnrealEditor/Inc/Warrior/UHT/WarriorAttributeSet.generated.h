@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define WARRIOR_WarriorAttributeSet_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorAttributeSet(); \
 	friend struct Z_Construct_UClass_UWarriorAttributeSet_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UWarriorAttributeSet)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UWarriorAttributeSet(UWarriorAttributeSet&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UWarriorAttributeSet();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_19_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_22_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_21_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_22_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_22_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_24_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_WarriorAttributeSet_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
