@@ -10,12 +10,60 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWarriorWidgetBase() {}
 
 // Begin Cross Module References
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_Warrior();
+WARRIOR_API UClass* Z_Construct_UClass_UEnemyUIComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroUIComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorWidgetBase();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorWidgetBase_NoRegister();
 // End Cross Module References
+
+// Begin Class UWarriorWidgetBase Function BP_OnOwningEnemyUIComponentInitialized
+struct WarriorWidgetBase_eventBP_OnOwningEnemyUIComponentInitialized_Parms
+{
+	UEnemyUIComponent* OwningEnemyUIComponent;
+};
+static const FName NAME_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized = FName(TEXT("BP_OnOwningEnemyUIComponentInitialized"));
+void UWarriorWidgetBase::BP_OnOwningEnemyUIComponentInitialized(UEnemyUIComponent* OwningEnemyUIComponent)
+{
+	WarriorWidgetBase_eventBP_OnOwningEnemyUIComponentInitialized_Parms Parms;
+	Parms.OwningEnemyUIComponent=OwningEnemyUIComponent;
+	UFunction* Func = FindFunctionChecked(NAME_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "DisplayName", "On Owning Enemy UI Component Initialized" },
+		{ "ModuleRelativePath", "Public/Widegts/WarriorWidgetBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OwningEnemyUIComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningEnemyUIComponent;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::NewProp_OwningEnemyUIComponent = { "OwningEnemyUIComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorWidgetBase_eventBP_OnOwningEnemyUIComponentInitialized_Parms, OwningEnemyUIComponent), Z_Construct_UClass_UEnemyUIComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OwningEnemyUIComponent_MetaData), NewProp_OwningEnemyUIComponent_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::NewProp_OwningEnemyUIComponent,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorWidgetBase, nullptr, "BP_OnOwningEnemyUIComponentInitialized", nullptr, nullptr, Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::PropPointers), sizeof(WarriorWidgetBase_eventBP_OnOwningEnemyUIComponentInitialized_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::Function_MetaDataParams) };
+static_assert(sizeof(WarriorWidgetBase_eventBP_OnOwningEnemyUIComponentInitialized_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class UWarriorWidgetBase Function BP_OnOwningEnemyUIComponentInitialized
 
 // Begin Class UWarriorWidgetBase Function BP_OnOwningHeroUIComponentInitialized
 struct WarriorWidgetBase_eventBP_OnOwningHeroUIComponentInitialized_Parms
@@ -63,9 +111,56 @@ UFunction* Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningHeroUIComponentIn
 }
 // End Class UWarriorWidgetBase Function BP_OnOwningHeroUIComponentInitialized
 
+// Begin Class UWarriorWidgetBase Function InitEnemyCreatedWidget
+struct Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics
+{
+	struct WarriorWidgetBase_eventInitEnemyCreatedWidget_Parms
+	{
+		AActor* OwningEnemyActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Widegts/WarriorWidgetBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningEnemyActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::NewProp_OwningEnemyActor = { "OwningEnemyActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorWidgetBase_eventInitEnemyCreatedWidget_Parms, OwningEnemyActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::NewProp_OwningEnemyActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorWidgetBase, nullptr, "InitEnemyCreatedWidget", nullptr, nullptr, Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::WarriorWidgetBase_eventInitEnemyCreatedWidget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::WarriorWidgetBase_eventInitEnemyCreatedWidget_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarriorWidgetBase::execInitEnemyCreatedWidget)
+{
+	P_GET_OBJECT(AActor,Z_Param_OwningEnemyActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitEnemyCreatedWidget(Z_Param_OwningEnemyActor);
+	P_NATIVE_END;
+}
+// End Class UWarriorWidgetBase Function InitEnemyCreatedWidget
+
 // Begin Class UWarriorWidgetBase
 void UWarriorWidgetBase::StaticRegisterNativesUWarriorWidgetBase()
 {
+	UClass* Class = UWarriorWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "InitEnemyCreatedWidget", &UWarriorWidgetBase::execInitEnemyCreatedWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UWarriorWidgetBase);
 UClass* Z_Construct_UClass_UWarriorWidgetBase_NoRegister()
@@ -85,7 +180,9 @@ struct Z_Construct_UClass_UWarriorWidgetBase_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningEnemyUIComponentInitialized, "BP_OnOwningEnemyUIComponentInitialized" }, // 2023607347
 		{ &Z_Construct_UFunction_UWarriorWidgetBase_BP_OnOwningHeroUIComponentInitialized, "BP_OnOwningHeroUIComponentInitialized" }, // 1797497159
+		{ &Z_Construct_UFunction_UWarriorWidgetBase_InitEnemyCreatedWidget, "InitEnemyCreatedWidget" }, // 1240747238
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -134,10 +231,10 @@ UWarriorWidgetBase::~UWarriorWidgetBase() {}
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorWidgetBase, UWarriorWidgetBase::StaticClass, TEXT("UWarriorWidgetBase"), &Z_Registration_Info_UClass_UWarriorWidgetBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorWidgetBase), 4001096907U) },
+		{ Z_Construct_UClass_UWarriorWidgetBase, UWarriorWidgetBase::StaticClass, TEXT("UWarriorWidgetBase"), &Z_Registration_Info_UClass_UWarriorWidgetBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorWidgetBase), 1579798898U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_1990836372(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_1912996833(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

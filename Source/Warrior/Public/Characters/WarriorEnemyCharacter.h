@@ -24,6 +24,7 @@ class WARRIOR_API AWarriorEnemyCharacter : public AWarriorBaseCharacter
 
 	//~ Begin IPawnUIInterface Interface.
 	virtual UPawnUIComponent* GetPawnUIComponent() const override;
+	virtual UEnemyUIComponent* GetEnemeyUIComponent() const;
 	//~ End IPawnUIInterface Interface.
 
 protected:

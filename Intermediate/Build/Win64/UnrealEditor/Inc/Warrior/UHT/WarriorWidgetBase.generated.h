@@ -9,14 +9,20 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UEnemyUIComponent;
 class UHeroUIComponent;
 #ifdef WARRIOR_WarriorWidgetBase_generated_h
 #error "WarriorWidgetBase.generated.h already included, missing '#pragma once' in WarriorWidgetBase.h"
 #endif
 #define WARRIOR_WarriorWidgetBase_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_CALLBACK_WRAPPERS
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execInitEnemyCreatedWidget);
+
+
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_CALLBACK_WRAPPERS
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorWidgetBase(); \
 	friend struct Z_Construct_UClass_UWarriorWidgetBase_Statics; \
@@ -25,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UWarriorWidgetBase)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWarriorWidgetBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -39,13 +45,14 @@ public: \
 	NO_API virtual ~UWarriorWidgetBase();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_14_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_15_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_CALLBACK_WRAPPERS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_17_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_CALLBACK_WRAPPERS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Widegts_WarriorWidgetBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
