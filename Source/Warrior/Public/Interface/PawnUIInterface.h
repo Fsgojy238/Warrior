@@ -31,4 +31,5 @@ public:
 	virtual UHeroUIComponent* GetHeroUIComponent() const;
 
 	virtual UEnemyUIComponent* GetEnemeyUIComponent() const;
+	
 };
