@@ -150,6 +150,9 @@
     <Filter Include="Source\Warrior\Private\Controllers">
       <UniqueIdentifier>{427A409D-DA7D-36A6-A7B9-EC8DDDA6ED55}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Controllers\WarriorAIController.cpp">
+      <Filter>Source\Warrior\Private\Controllers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\Controllers\WarriorHeroController.cpp">
       <Filter>Source\Warrior\Private\Controllers</Filter>
     </ClCompile>
@@ -321,6 +324,9 @@
     <Filter Include="Source\Warrior\Public\Controllers">
       <UniqueIdentifier>{465C914F-3C14-35C1-91F2-13B6441A3F6A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\Controllers\WarriorAIController.h">
+      <Filter>Source\Warrior\Public\Controllers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\Controllers\WarriorHeroController.h">
       <Filter>Source\Warrior\Public\Controllers</Filter>
     </ClCompile>
