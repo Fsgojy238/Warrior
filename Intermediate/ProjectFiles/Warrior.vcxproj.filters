@@ -81,6 +81,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\GEExecCalc\GEExecCalc_DamageTaken.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\GEExecCalc</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\AI">
+      <UniqueIdentifier>{D76A10E6-74DA-3B17-B93F-B03971A2ADC2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AI\BTService_OrientToTargetActor.cpp">
+      <Filter>Source\Warrior\Private\AI</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AnimInstances">
       <UniqueIdentifier>{9B98FFC4-A24E-3C78-A4AB-038FDD7FFD34}</UniqueIdentifier>
     </Filter>
@@ -254,6 +260,12 @@
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\GEExecCalc\GEExecCalc_DamageTaken.h">
       <Filter>Source\Warrior\Public\AbilitySystem\GEExecCalc</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\AI">
+      <UniqueIdentifier>{F6BE9F9D-4B34-34C7-AC30-DF8A00729C0E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\AI\BTService_OrientToTargetActor.h">
+      <Filter>Source\Warrior\Public\AI</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\AnimInstances">
       <UniqueIdentifier>{1E769DC4-FF09-3BE9-AF67-CCCBBC5FF713}</UniqueIdentifier>
