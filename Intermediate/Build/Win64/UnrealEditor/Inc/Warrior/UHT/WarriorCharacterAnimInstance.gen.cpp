@@ -78,12 +78,17 @@ struct Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics
 		{ "ToolTip", "\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xd0\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xb6\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xcf\xbd\xef\xbf\xbd\xc9\xab\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd9\xa1\xef\xbf\xbd" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LocomotionDirection_MetaData[] = {
+		{ "Category", "AnimData|LocalmotionData" },
+		{ "ModuleRelativePath", "Public/AnimInstances/WarriorCharacterAnimInstance.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningCharacter;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningMovementComponent;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_GroundSpeed;
 	static void NewProp_bHasAcceleration_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bHasAcceleration;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_LocomotionDirection;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -99,11 +104,13 @@ void Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_bHasAccel
 	((UWarriorCharacterAnimInstance*)Obj)->bHasAcceleration = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_bHasAcceleration = { "bHasAcceleration", nullptr, (EPropertyFlags)0x0020080000030015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UWarriorCharacterAnimInstance), &Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_bHasAcceleration_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bHasAcceleration_MetaData), NewProp_bHasAcceleration_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_LocomotionDirection = { "LocomotionDirection", nullptr, (EPropertyFlags)0x0020080000030015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWarriorCharacterAnimInstance, LocomotionDirection), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LocomotionDirection_MetaData), NewProp_LocomotionDirection_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_OwningCharacter,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_OwningMovementComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_GroundSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_bHasAcceleration,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::NewProp_LocomotionDirection,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics::DependentSingletons[])() = {
@@ -147,10 +154,10 @@ UWarriorCharacterAnimInstance::~UWarriorCharacterAnimInstance() {}
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorCharacterAnimInstance, UWarriorCharacterAnimInstance::StaticClass, TEXT("UWarriorCharacterAnimInstance"), &Z_Registration_Info_UClass_UWarriorCharacterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorCharacterAnimInstance), 452445548U) },
+		{ Z_Construct_UClass_UWarriorCharacterAnimInstance, UWarriorCharacterAnimInstance::StaticClass, TEXT("UWarriorCharacterAnimInstance"), &Z_Registration_Info_UClass_UWarriorCharacterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorCharacterAnimInstance), 565434257U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_2642222977(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_3857633883(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

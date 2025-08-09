@@ -4,6 +4,7 @@
 #include "AnimInstances/WarriorCharacterAnimInstance.h"
 #include "Characters/WarriorBaseCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "KismetAnimationLibrary.h"
 
 // 初始化函数
 void UWarriorCharacterAnimInstance::NativeInitializeAnimation()
@@ -29,5 +30,8 @@ void UWarriorCharacterAnimInstance::NativeThreadSafeUpdateAnimation(float DeltaS
 	GroundSpeed = OwningCharacter->GetVelocity().Size2D();
 	// 检测加速度。使用SizeSquared2D（）而非Size2D（）是为了避免开平方运算
 	bHasAcceleration = OwningMovementComponent->GetCurrentAcceleration().SizeSquared2D()>0.f;
+
+	LocomotionDirection = UKismetAnimationLibrary::CalculateDirection(OwningCharacter->GetVelocity(), OwningCharacter->GetActorRotation());
+
 
 }
