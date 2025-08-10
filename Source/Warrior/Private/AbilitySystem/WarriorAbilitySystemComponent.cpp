@@ -69,3 +69,31 @@ void UWarriorAbilitySystemComponent::RemoveGrantedHeroWeaponAbilities(UPARAM(ref
 
 	InSpecHandlesToRemove.Empty();
 }
+
+//让AI随机使用一个带特定标签的能力
+bool UWarriorAbilitySystemComponent::TryActivateAbilityByTag(FGameplayTag AbiltiyTagToActivate)
+{
+	// 检查传入的能力标签是否合法
+	check(AbiltiyTagToActivate.IsValid());
+
+	//在所有能用的能力里，找出所有带有这个标签的能力，并放进数组里
+	TArray<FGameplayAbilitySpec*> FoundAbilitySpecs;
+	GetActivatableGameplayAbilitySpecsByAllMatchingTags(AbiltiyTagToActivate.GetSingleTagContainer(), FoundAbilitySpecs);
+
+	//如果找到了，就随机在数组里挑一个
+	if (!FoundAbilitySpecs.IsEmpty())
+	{
+		const int32 RandomAbilityIndex = FMath::RandRange(0, FoundAbilitySpecs.Num() - 1);
+		FGameplayAbilitySpec* SpecToActivate = FoundAbilitySpecs[RandomAbilityIndex];
+
+		check(SpecToActivate);
+
+		//如果选中了的能力当前没有在使用，就触发并使用
+		if (!SpecToActivate->IsActive())
+		{
+			return TryActivateAbility(SpecToActivate->Handle);
+		}
+	}
+
+	return false;
+}
