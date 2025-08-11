@@ -87,6 +87,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AI\BTService_OrientToTargetActor.cpp">
       <Filter>Source\Warrior\Private\AI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\AI\BTTask_RotateToFaceTarget.cpp">
+      <Filter>Source\Warrior\Private\AI</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AnimInstances">
       <UniqueIdentifier>{9B98FFC4-A24E-3C78-A4AB-038FDD7FFD34}</UniqueIdentifier>
     </Filter>
@@ -265,6 +268,9 @@
       <UniqueIdentifier>{F6BE9F9D-4B34-34C7-AC30-DF8A00729C0E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Public\AI\BTService_OrientToTargetActor.h">
+      <Filter>Source\Warrior\Public\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Public\AI\BTTask_RotateToFaceTarget.h">
       <Filter>Source\Warrior\Public\AI</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\AnimInstances">
