@@ -15,9 +15,10 @@ AWarriorBaseCharacter::AWarriorBaseCharacter()
 	GetMesh()->bReceivesDecals = false; //禁用网格体接收贴花（Decals），贴花是临时渲染效果（如弹痕、血迹），禁用后可优化性能。
 
 	WarriorAbilitySystemComponent = CreateDefaultSubobject<UWarriorAbilitySystemComponent>(TEXT("WarriorAbilitySystemComponent"));
+
 	WarriorAttributeSet = CreateDefaultSubobject<UWarriorAttributeSet>(TEXT("WarriorAttributeSet"));
 
-
+	MotionWarpingComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("MotionWarpingComponent"));
 }
 
 UAbilitySystemComponent* AWarriorBaseCharacter::GetAbilitySystemComponent() const

@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
+class APawn;
 class UPawnCombatComponent;
 enum class EWarriorConfirmType : uint8;
 enum class EWarriorValidType : uint8;
@@ -20,6 +21,7 @@ struct FGameplayTag;
 #define WARRIOR_WarriorFunctionLibrary_generated_h
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execIsTargetPawnHostile); \
 	DECLARE_FUNCTION(execBP_GetPawnCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execBP_DoesActorHaveTag); \
 	DECLARE_FUNCTION(execRemoveGameplayTagFromActorIfFound); \
