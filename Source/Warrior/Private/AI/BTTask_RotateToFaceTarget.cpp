@@ -59,7 +59,7 @@ EBTNodeResult::Type UBTTask_RotateToFaceTarget::ExecuteTask(UBehaviorTreeCompone
 
 	if (!Memory->IsValid())
 	{
-		return EBTNodeResult::Failed;
+		return EBTNodeResult::Failed;  //如果失败，会告诉行为树这个任务做不了，然后根据行为树的整体逻辑决定接下来干什么
 	}
 
 	if (HasReachedAnglePrecision(OwningPawn, TargetActor))
@@ -88,18 +88,24 @@ void UBTTask_RotateToFaceTarget::TickTask(UBehaviorTreeComponent& OwnerComp, uin
 	else
 	{
 		const FRotator LookAtRot = UKismetMathLibrary::FindLookAtRotation(Memory->OwningPawn->GetActorLocation(), Memory->TargetActor->GetActorLocation());
-		const FRotator TargetRot = FMath::RInterpTo(Memory->OwningPawn->GetActorRotation(), LookAtRot, DeltaSeconds, RotationInterpSpeed);
+		// RInterpTo参数：1，当前角色朝向 2，最终要转到的朝向 3，时间差（通常用DeltaSeconds） 4.插值速度，即转多块
+		const FRotator TargetRot = FMath::RInterpTo(Memory->OwningPawn->GetActorRotation(), LookAtRot, DeltaSeconds, RotationInterpSpeed); 
 
 		Memory->OwningPawn->SetActorRotation(TargetRot);
 	}
 }
 
+//判断角色是否已经差不多面朝目标
 bool UBTTask_RotateToFaceTarget::HasReachedAnglePrecision(APawn* QueryPawn, AActor* TargetActor) const
 {
+	// 算出角色当前“正前方”的方向
 	const FVector OwnerForward = QueryPawn->GetActorForwardVector();
+	// 算出“角色到目标”的方向，并标准化
 	const FVector OwnerToTargetNormalized = (TargetActor->GetActorLocation() - QueryPawn->GetActorLocation()).GetSafeNormal();
 
+	// 用“点积”计算两个方向的夹角
 	const float DotResult = FVector::DotProduct(OwnerForward, OwnerToTargetNormalized);
+	// 把点积结果转换成实际的角度差
 	const float AngleDiff = UKismetMathLibrary::DegAcos(DotResult);
 
 	return AngleDiff <= AnglePrecision;
