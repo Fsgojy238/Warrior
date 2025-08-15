@@ -9,6 +9,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "WarriorGameplayTags.h"
 
+#include "WarriorDebugHelper.h"
+
 UWarriorAbilitySystemComponent* UWarriorFunctionLibrary::NativeGetWarriorASCFromActor(AActor* InActor)
 {
 	check(InActor);
@@ -127,4 +129,18 @@ FGameplayTag UWarriorFunctionLibrary::ComputeHitReacDirectionTag(AActor* InAttac
 		return WarriorGameplayTags::Shared_Status_HitReact_Left;
 	}
 	return WarriorGameplayTags::Shared_Status_HitReact_Front;
+}
+
+bool UWarriorFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefender)
+{
+	check(InAttacker && InDefender);
+
+	// 点积计算，两个向量方向相反时，结果为负，方向垂直时结果为0，方向相同时结果为正
+	const float DotResult = FVector::DotProduct(InAttacker->GetActorForwardVector(), InDefender->GetActorForwardVector());
+
+	/*const FString DebugString = FString::Printf(TEXT("Dot Result: %f %s"), DotResult, DotResult < -0.1f ? TEXT("Valid Block") : TEXT("InvalidBlock"));
+
+	Debug::Print(DebugString, DotResult < -0.1f ? FColor::Green : FColor::Red);*/
+
+	return DotResult < -0.1f ? true : false;
 }
