@@ -6,6 +6,8 @@
 #include "AbilitySystem/Abilities/WarriorHeroGameplayAbility.h"
 #include "HeroGameplayAbility_TargetLock.generated.h"
 
+class UWarriorWidgetBase;
+
 /**
  * 
  */
@@ -24,12 +26,16 @@ private:
 	void TryLockOnTarget();
 	void GetAvailableActorsToLock();
 	AActor* GetNearestTargetFromAvailableActors(const TArray<AActor*>& InAvailableActors);
+	void DrawTargetLockWidget();
 
 	void CancelTargetLockAbility();
 	void CleanUp();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	float BoxTraceDistance = 5000.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	TSubclassOf<UWarriorWidgetBase> TargetLockWidgetClass;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	FVector TraceBoxSize = FVector(5000.f, 5000.f, 300.f);
@@ -46,4 +52,7 @@ private:
 
 	UPROPERTY()
 	AActor* CurrentLockedActor;
+
+	UPROPERTY()
+	UWarriorWidgetBase* DrawnTargetLockWidget;
 };
