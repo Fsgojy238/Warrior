@@ -121,16 +121,19 @@ void UHeroGameplayAbility_TargetLock::SetTargetLockWidgetPosition()
 		true
 	);
 
-	DrawnTargetLockWidget->WidgetTree->ForEachWidget(
-		[this](UWidget* FoundWidget)
-		{
-			if (USizeBox * FoundSizeBox = Cast<USizeBox>(FoundWidget))
+	if (TargetLockWidgetSize == FVector2D::ZeroVector)
+	{
+		DrawnTargetLockWidget->WidgetTree->ForEachWidget(
+			[this](UWidget* FoundWidget)
 			{
-				TargetLockWidgetSize.X = FoundSizeBox->GetWidthOverride();
-				TargetLockWidgetSize.Y = FoundSizeBox->GetHeightOverride();
+				if (USizeBox* FoundSizeBox = Cast<USizeBox>(FoundWidget))
+				{
+					TargetLockWidgetSize.X = FoundSizeBox->GetWidthOverride();
+					TargetLockWidgetSize.Y = FoundSizeBox->GetHeightOverride();
+				}
 			}
-		}
-	);
+		);
+	}
 
 	ScreenPosition -= (TargetLockWidgetSize / 2.f);
 

@@ -78,6 +78,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorHeroGameplayAbility.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\AbilitySystem\AbilityTasks">
+      <UniqueIdentifier>{34553E1C-B255-33ED-B7A9-2D487971B8BC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTasks\AbilityTask_ExecuteTaskOnTick.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AbilitySystem\GEExecCalc">
       <UniqueIdentifier>{D7D3D6A4-B818-38B6-9969-8FB3DAD68AA7}</UniqueIdentifier>
     </Filter>
@@ -263,6 +269,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\AbilitySystem\AbilityTasks">
+      <UniqueIdentifier>{93E20300-4005-38F4-BE97-5FA9E9D7CA76}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_ExecuteTaskOnTick.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\AbilityTasks</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\AbilitySystem\GEExecCalc">
       <UniqueIdentifier>{E6F579C0-14C2-3A47-B197-9CA5BBEE1561}</UniqueIdentifier>
