@@ -23,6 +23,10 @@ protected:
 private:
 	void TryLockOnTarget();
 	void GetAvailableActorsToLock();
+	AActor* GetNearestTargetFromAvailableActors(const TArray<AActor*>& InAvailableActors);
+
+	void CancelTargetLockAbility();
+	void CleanUp();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	float BoxTraceDistance = 5000.f;
@@ -30,12 +34,16 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	FVector TraceBoxSize = FVector(5000.f, 5000.f, 300.f);
 
+	//检测通道：筛选你想检测的东西
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
-	TArray<TEnumAsByte<EObjectTypeQuery>> BoxTraceChannel;
+	TArray<TEnumAsByte<EObjectTypeQuery>> BoxTraceChannel; //一个装着 “对象类型标签（EObjectTypeQuery）” 的数组
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	bool bShowPersistentDebugShape = false;
 
 	UPROPERTY()
-	TArray<AActor*> AvailableActorsToLock;
+	TArray<AActor*> AvailableActorsToLock; //指向AActor的指针数组
+
+	UPROPERTY()
+	AActor* CurrentLockedActor;
 };
