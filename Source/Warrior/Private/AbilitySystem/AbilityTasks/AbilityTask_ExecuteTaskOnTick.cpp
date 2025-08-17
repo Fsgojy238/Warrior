@@ -22,6 +22,7 @@ void UAbilityTask_ExecuteTaskOnTick::TickTask(float DeltaTime)
 	if (ShouldBroadcastAbilityTaskDelegates())
 	{
 		OnAbilityTaskTick.Broadcast(DeltaTime);
+
 	}
 	else
 	{
