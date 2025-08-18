@@ -36,20 +36,22 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	X=0.f：前后方向无偏移Y=55.f：向右偏移 55 厘米（角色右侧）Z=65.f：向上偏移 65 厘米（角色头顶方向）
 	*/
 	CameraBoom->SocketOffset = FVector(0.f, 55.f, 65.f); 
-	CameraBoom->bUsePawnControlRotation = true; //是否控制旋转
+	CameraBoom->bUsePawnControlRotation = true; //镜头跟随控制器旋转
 
 
 	//设置摄像机
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); //SocketName 是弹簧臂末端的一个特殊点，相机通常挂载在这个点上。
+	FollowCamera->bUsePawnControlRotation = false;
 
 	//配置角色移动属性
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 500.f, 0.f); //旋转速度
 	GetCharacterMovement()->MaxWalkSpeed = 400.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f; 
 
+	// 角色移动与镜头
 	GetCharacterMovement()->bOrientRotationToMovement = true; //角色自动转向移动方向。如果有八向移动的动画，可以尝试设置为false
-	GetCharacterMovement()->bUseControllerDesiredRotation = true;
+	GetCharacterMovement()->bUseControllerDesiredRotation = false;  // 角色是否跟随控制控制器朝向旋转
 
 
 	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));

@@ -22,21 +22,32 @@ protected:
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 	//~ Begin UGameplayAbility Interface.
 
+	// 每帧更新锁定相关逻辑
 	UFUNCTION(BlueprintCallable)
 	void OnTargetLockTick(float DeltaTime);
 
 private:
+	// 尝试锁定目标
 	void TryLockOnTarget();
+	// 获取范围内所有可被锁定的目标
 	void GetAvailableActorsToLock();
+	// 从可用目标列表中找到距离最近的目标
 	AActor* GetNearestTargetFromAvailableActors(const TArray<AActor*>& InAvailableActors);
+	// 绘制锁定相关的UI组件
 	void DrawTargetLockWidget();
+	// 更新锁定UI的位置
 	void SetTargetLockWidgetPosition();
+	void InitTargetLockMovement();
 
 	void CancelTargetLockAbility();
 	void CleanUp();
+	void ResetTargetLockMovement();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	float BoxTraceDistance = 5000.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	float TargetLockRotationInterpSpeed = 5.f;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	TSubclassOf<UWarriorWidgetBase> TargetLockWidgetClass;
@@ -51,6 +62,9 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	bool bShowPersistentDebugShape = false;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	float TargetLockMaxWalkSpeed = 200.f;
+
 	UPROPERTY()
 	TArray<AActor*> AvailableActorsToLock; //指向AActor的指针数组
 
@@ -62,4 +76,8 @@ private:
 
 	UPROPERTY()
 	FVector2D TargetLockWidgetSize = FVector2D::ZeroVector;
+
+	UPROPERTY()
+	float CachedDefaultMaxWalkSpeed;
+
 };

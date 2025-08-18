@@ -22,6 +22,15 @@ public:
 	//~ Begin IGenericTeamAgentInterface Interface.
 	virtual FGenericTeamId GetGenericTeamId() const;
 	//~ End IGenericTeamAgentInterface Interface
+	
+	////~ Begin APlayerControllerInterface Interface.
+	//virtual void SetupInputComponent() override;
+	////~ End APlayerControllerInterface Interface
+
+	//void HandleTurn(float Value);
+	//void HandleLookUp(float Value);
+
+	//bool IsTargetLocked();
 
 private:
 	FGenericTeamId HeroTeamID;
