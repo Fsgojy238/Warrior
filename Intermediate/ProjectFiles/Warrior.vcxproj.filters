@@ -213,6 +213,9 @@
     <Filter Include="Source\Warrior\Private\Items">
       <UniqueIdentifier>{7E912935-5489-38C9-8827-162368068E94}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Items\WarriorProjectileBase.cpp">
+      <Filter>Source\Warrior\Private\Items</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Items\Weapons">
       <UniqueIdentifier>{C0057D4A-A221-324E-B144-CACDF88D0B7D}</UniqueIdentifier>
     </Filter>
@@ -405,6 +408,9 @@
     <Filter Include="Source\Warrior\Public\Items">
       <UniqueIdentifier>{6DD88F64-AD61-3FD2-A571-CBD6D8CCD7C8}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\Items\WarriorProjectileBase.h">
+      <Filter>Source\Warrior\Public\Items</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Public\Items\Weapons">
       <UniqueIdentifier>{A6E3C4B5-91AA-3B68-990F-273A84903B7C}</UniqueIdentifier>
     </Filter>
