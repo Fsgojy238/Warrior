@@ -6,6 +6,8 @@
 #include "NiagaraComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 
+#include "WarriorDebugHelper.h"
+
 // Sets default values
 AWarriorProjectileBase::AWarriorProjectileBase()
 {
@@ -22,6 +24,9 @@ AWarriorProjectileBase::AWarriorProjectileBase()
 	ProjectileCollisionBox->SetCollisionResponseToChannel(ECC_WorldDynamic, ECR_Block);
 	// 设置对静态物体(如墙壁、地面)的碰撞响应为"阻挡"
 	ProjectileCollisionBox->SetCollisionResponseToChannel(ECC_WorldStatic, ECR_Block);
+
+	ProjectileCollisionBox->OnComponentHit.AddUniqueDynamic(this, &ThisClass::OnProjectileHit);
+	ProjectileCollisionBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &ThisClass::OnProjectileBeginOverlap);
 
 	ProjectileNiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("ProjectileNiagaraComponent"));
 	ProjectileNiagaraComponent->SetupAttachment(ProjectileCollisionBox);
@@ -41,6 +46,25 @@ void AWarriorProjectileBase::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if (ProjectileDamagePolicy == EProjectileDamagePolicy::OnBeginOverlap)
+	{
+		//给碰撞体设置一条规则：当这个碰撞盒碰到 ECC_Pawn 类型的物体（角色）时，采用 ECR_Overlap 响应
+		ProjectileCollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+	}
+}
+
+void AWarriorProjectileBase::OnProjectileHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (OtherActor)
+	{
+		Debug::Print(OtherActor->GetActorNameOrLabel());
+
+		Destroy();
+	}
+}
+
+void AWarriorProjectileBase::OnProjectileBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
 }
 
 
