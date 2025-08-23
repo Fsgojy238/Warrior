@@ -144,3 +144,20 @@ bool UWarriorFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefende
 
 	return DotResult < -0.1f ? true : false;
 }
+
+bool UWarriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle)
+{
+	// 1. 从发起者（InInstigator）身上获取能力系统组件（ASC）
+	//    能力系统组件是UE中处理技能、伤害、状态等的核心组件
+	UWarriorAbilitySystemComponent* SourcASC = NativeGetWarriorASCFromActor(InInstigator);
+
+	// 2. 从目标（InTargetActor）身上获取能力系统组件
+	UWarriorAbilitySystemComponent* TargetASC = NativeGetWarriorASCFromActor(InTargetActor);
+
+	// 3. 通过发起者的ASC，把效果配置（InSpecHandle）应用到目标的ASC上
+	//    这一步是实际执行"施加效果"的操作（比如造成伤害）
+	FActiveGameplayEffectHandle ActiveGameplayEffectHandle = SourcASC->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
+
+	// 4. 返回效果是否成功施加的结果
+	return ActiveGameplayEffectHandle.WasSuccessfullyApplied();
+}

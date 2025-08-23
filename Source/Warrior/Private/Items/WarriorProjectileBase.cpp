@@ -5,6 +5,9 @@
 #include "Components/BoxComponent.h"
 #include "NiagaraComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "WarriorFunctionLibrary.h"
+#include "WarriorGameplayTags.h"
+#include "AbilitySystemBlueprintLibrary.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -55,16 +58,63 @@ void AWarriorProjectileBase::BeginPlay()
 
 void AWarriorProjectileBase::OnProjectileHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor)
-	{
-		Debug::Print(OtherActor->GetActorNameOrLabel());
+	BP_OnSpawnProjectileHitFX(Hit.ImpactPoint);
 
+	APawn* HitPawn = Cast<APawn>(OtherActor);
+
+	if (!HitPawn || !UWarriorFunctionLibrary::IsTargetPawnHostile(GetInstigator(), HitPawn))
+	{
 		Destroy();
+		return;
 	}
+
+	bool bIsValidBlock = false;
+
+	const bool bIsPlayerBlocking = UWarriorFunctionLibrary::NativeDoesActorHaveTag(HitPawn, WarriorGameplayTags::Player_Status_Blocking);
+
+	if (bIsPlayerBlocking)
+	{
+		bIsValidBlock = UWarriorFunctionLibrary::IsValidBlock(this, HitPawn);
+	}
+
+	FGameplayEventData Data;
+	Data.Instigator = this;
+	Data.Target = HitPawn;
+
+	if (bIsValidBlock)
+	{
+		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+			HitPawn,
+			WarriorGameplayTags::Player_Event_SuccessfulBlock,
+			Data
+		);
+	}
+	else
+	{
+		HandleApplyProjectileDamage(HitPawn, Data);
+	}
+
+	Destroy();
 }
 
 void AWarriorProjectileBase::OnProjectileBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+}
+
+void AWarriorProjectileBase::HandleApplyProjectileDamage(APawn* InHitPawn, const FGameplayEventData& InPayload)
+{
+	checkf(ProjectileDamageEffectSpecHandle.IsValid(), TEXT("Forgot to assign a valid spec handle to the projectile: %s"), *GetActorNameOrLabel());
+
+	const bool bWasApplied = UWarriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(GetInstigator(), InHitPawn, ProjectileDamageEffectSpecHandle);
+
+	if (bWasApplied)
+	{
+		UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+			InHitPawn,
+			WarriorGameplayTags::Shared_Event_HitReact,
+			InPayload
+		);
+	}
 }
 
 

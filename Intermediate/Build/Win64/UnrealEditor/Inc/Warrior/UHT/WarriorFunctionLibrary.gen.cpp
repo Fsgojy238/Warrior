@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Warrior/Public/WarriorFunctionLibrary.h"
+#include "GameplayAbilities/Public/GameplayEffectTypes.h"
 #include "GameplayAbilities/Public/ScalableFloat.h"
 #include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
@@ -15,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorFunctionLibrary() {}
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_Warrior();
@@ -72,6 +74,77 @@ DEFINE_FUNCTION(UWarriorFunctionLibrary::execAddGameplayTagToActorIfNone)
 	P_NATIVE_END;
 }
 // End Class UWarriorFunctionLibrary Function AddGameplayTagToActorIfNone
+
+// Begin Class UWarriorFunctionLibrary Function ApplyGameplayEffectSpecHandleToTargetActor
+struct Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics
+{
+	struct WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms
+	{
+		AActor* InInstigator;
+		AActor* InTargetActor;
+		FGameplayEffectSpecHandle InSpecHandle;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xd6\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd""Actor\xca\xa9\xef\xbf\xbd\xd3\xa1\xef\xbf\xbdGameplayEffect\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Public/WarriorFunctionLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xd6\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd""Actor\xca\xa9\xef\xbf\xbd\xd3\xa1\xef\xbf\xbdGameplayEffect\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InSpecHandle_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InInstigator;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InTargetActor;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InSpecHandle;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_InInstigator = { "InInstigator", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms, InInstigator), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_InTargetActor = { "InTargetActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms, InTargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_InSpecHandle = { "InSpecHandle", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms, InSpecHandle), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InSpecHandle_MetaData), NewProp_InSpecHandle_MetaData) }; // 3383902265
+void Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms), &Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_InInstigator,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_InTargetActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_InSpecHandle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorFunctionLibrary, nullptr, "ApplyGameplayEffectSpecHandleToTargetActor", nullptr, nullptr, Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::WarriorFunctionLibrary_eventApplyGameplayEffectSpecHandleToTargetActor_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarriorFunctionLibrary::execApplyGameplayEffectSpecHandleToTargetActor)
+{
+	P_GET_OBJECT(AActor,Z_Param_InInstigator);
+	P_GET_OBJECT(AActor,Z_Param_InTargetActor);
+	P_GET_STRUCT_REF(FGameplayEffectSpecHandle,Z_Param_Out_InSpecHandle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UWarriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(Z_Param_InInstigator,Z_Param_InTargetActor,Z_Param_Out_InSpecHandle);
+	P_NATIVE_END;
+}
+// End Class UWarriorFunctionLibrary Function ApplyGameplayEffectSpecHandleToTargetActor
 
 // Begin Class UWarriorFunctionLibrary Function BP_DoesActorHaveTag
 struct Z_Construct_UFunction_UWarriorFunctionLibrary_BP_DoesActorHaveTag_Statics
@@ -473,6 +546,7 @@ void UWarriorFunctionLibrary::StaticRegisterNativesUWarriorFunctionLibrary()
 	UClass* Class = UWarriorFunctionLibrary::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AddGameplayTagToActorIfNone", &UWarriorFunctionLibrary::execAddGameplayTagToActorIfNone },
+		{ "ApplyGameplayEffectSpecHandleToTargetActor", &UWarriorFunctionLibrary::execApplyGameplayEffectSpecHandleToTargetActor },
 		{ "BP_DoesActorHaveTag", &UWarriorFunctionLibrary::execBP_DoesActorHaveTag },
 		{ "BP_GetPawnCombatComponentFromActorInfo", &UWarriorFunctionLibrary::execBP_GetPawnCombatComponentFromActorInfo },
 		{ "ComputeHitReacDirectionTag", &UWarriorFunctionLibrary::execComputeHitReacDirectionTag },
@@ -502,6 +576,7 @@ struct Z_Construct_UClass_UWarriorFunctionLibrary_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_AddGameplayTagToActorIfNone, "AddGameplayTagToActorIfNone" }, // 327192917
+		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_ApplyGameplayEffectSpecHandleToTargetActor, "ApplyGameplayEffectSpecHandleToTargetActor" }, // 1394809987
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_BP_DoesActorHaveTag, "BP_DoesActorHaveTag" }, // 3309680457
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_BP_GetPawnCombatComponentFromActorInfo, "BP_GetPawnCombatComponentFromActorInfo" }, // 609426827
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_ComputeHitReacDirectionTag, "ComputeHitReacDirectionTag" }, // 1743736440
@@ -557,10 +632,10 @@ UWarriorFunctionLibrary::~UWarriorFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorFunctionLibrary, UWarriorFunctionLibrary::StaticClass, TEXT("UWarriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorFunctionLibrary), 2829274139U) },
+		{ Z_Construct_UClass_UWarriorFunctionLibrary, UWarriorFunctionLibrary::StaticClass, TEXT("UWarriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorFunctionLibrary), 919833057U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_2551625589(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_2781134533(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
