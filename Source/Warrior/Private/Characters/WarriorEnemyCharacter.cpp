@@ -10,6 +10,7 @@
 #include "Components/WidgetComponent.h"
 #include "Widegts/WarriorWidgetBase.h"
 #include "Components/BoxComponent.h"
+#include "WarriorFunctionLibrary.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -107,7 +108,13 @@ void AWarriorEnemyCharacter::PostEditChangeProperty(struct FPropertyChangedEvent
 
 void AWarriorEnemyCharacter::OnBodyCollisionBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-
+	if (APawn* HitPawn = Cast<APawn>(OtherActor))
+	{
+		if (UWarriorFunctionLibrary::IsTargetPawnHostile(this, HitPawn))
+		{
+			EnemyCombatComponent->OnHitTargetActor(HitPawn);
+		}
+	}
 }
 
 void AWarriorEnemyCharacter::InitEnemyStartUpData()

@@ -16,4 +16,7 @@ class WARRIOR_API UEnemyCombatComponent : public UPawnCombatComponent
 	
 public:
 	virtual void OnHitTargetActor(AActor* HitActor);
+
+protected:
+	virtual void ToggleBodyCollsionBoxCollision(bool bShouldEnable, EToogleDamageType ToggleDamageType) override;
 };
