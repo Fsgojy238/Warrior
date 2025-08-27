@@ -84,6 +84,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTasks\AbilityTask_ExecuteTaskOnTick.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\AbilityTasks</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTasks\AbilityTask_WaitSpawnEnemies.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AbilitySystem\GEExecCalc">
       <UniqueIdentifier>{D7D3D6A4-B818-38B6-9969-8FB3DAD68AA7}</UniqueIdentifier>
     </Filter>
@@ -277,6 +280,9 @@
       <UniqueIdentifier>{93E20300-4005-38F4-BE97-5FA9E9D7CA76}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_ExecuteTaskOnTick.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_WaitSpawnEnemies.h">
       <Filter>Source\Warrior\Public\AbilitySystem\AbilityTasks</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\AbilitySystem\GEExecCalc">
