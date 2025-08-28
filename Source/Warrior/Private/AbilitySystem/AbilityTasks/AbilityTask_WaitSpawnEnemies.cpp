@@ -64,7 +64,7 @@ void UAbilityTask_WaitSpawnEnemies::OnGameplayEventReceived(const FGameplayEvent
 	else
 	{
 		// 如果小怪类型无效（比如，没选要召唤什么怪）：
-		if (ShouldBroadcastAbilityTaskDelegates())  // 检查是否需要发送通知
+		if (ShouldBroadcastAbilityTaskDelegates())  // 检查下Boss正常能召唤，却召唤失败的情况
 		{
 			// 广播“召唤失败”，传一个空数组
 			DidNotSpawn.Broadcast(TArray<AWarriorEnemyCharacter*>());
@@ -85,7 +85,7 @@ void UAbilityTask_WaitSpawnEnemies::OnEnemyClassLoaded()
 	// 检查：如果没加载到小怪类，或者没有游戏世界，召唤失败
 	if (!LoadedClass || !World)
 	{
-		if (ShouldBroadcastAbilityTaskDelegates())
+		if (ShouldBroadcastAbilityTaskDelegates()) // 检查下Boss正常能召唤，却召唤失败的情况
 		{
 			DidNotSpawn.Broadcast(TArray<AWarriorEnemyCharacter*>());  // 广播召唤失败
 		}
