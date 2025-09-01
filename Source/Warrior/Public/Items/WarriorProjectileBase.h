@@ -59,4 +59,6 @@ protected:
 private:
 	//处理投射物命中目标后造成的伤害
 	void HandleApplyProjectileDamage(APawn* InHitPawn, const FGameplayEventData& InPayload);
+
+	TArray<AActor*> OverlappedActors;
 };
