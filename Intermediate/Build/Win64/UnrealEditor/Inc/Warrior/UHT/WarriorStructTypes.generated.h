@@ -22,6 +22,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> WARRIOR_API UScriptStruct* StaticStruct<struct FWarriorHeroAbilitySet>();
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorStructTypes_h_32_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics; \
+	WARRIOR_API static class UScriptStruct* StaticStruct(); \
+	typedef FWarriorHeroAbilitySet Super;
+
+
+template<> WARRIOR_API UScriptStruct* StaticStruct<struct FWarriorHeroSpecialAbilitySet>();
+
+#define FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorStructTypes_h_45_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics; \
 	WARRIOR_API static class UScriptStruct* StaticStruct();
 

@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorStructTypes() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
@@ -21,6 +22,7 @@ UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroLinkedAnimLayer_NoRegister();
 WARRIOR_API UScriptStruct* Z_Construct_UScriptStruct_FWarriorHeroAbilitySet();
+WARRIOR_API UScriptStruct* Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet();
 WARRIOR_API UScriptStruct* Z_Construct_UScriptStruct_FWarriorHeroWeaponData();
 // End Cross Module References
 
@@ -94,6 +96,77 @@ UScriptStruct* Z_Construct_UScriptStruct_FWarriorHeroAbilitySet()
 }
 // End ScriptStruct FWarriorHeroAbilitySet
 
+// Begin ScriptStruct FWarriorHeroSpecialAbilitySet
+static_assert(std::is_polymorphic<FWarriorHeroSpecialAbilitySet>() == std::is_polymorphic<FWarriorHeroAbilitySet>(), "USTRUCT FWarriorHeroSpecialAbilitySet cannot be polymorphic unless super FWarriorHeroAbilitySet is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet;
+class UScriptStruct* FWarriorHeroSpecialAbilitySet::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet, (UObject*)Z_Construct_UPackage__Script_Warrior(), TEXT("WarriorHeroSpecialAbilitySet"));
+	}
+	return Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet.OuterSingleton;
+}
+template<> WARRIOR_API UScriptStruct* StaticStruct<FWarriorHeroSpecialAbilitySet>()
+{
+	return FWarriorHeroSpecialAbilitySet::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorStructTypes.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AbilityIconMaterial_MetaData[] = {
+		{ "Category", "WarriorHeroSpecialAbilitySet" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorStructTypes.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AbilityCooldownTag_MetaData[] = {
+		{ "Categories", "Player.Cooldown" },
+		{ "Category", "WarriorHeroSpecialAbilitySet" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorStructTypes.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_AbilityIconMaterial;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_AbilityCooldownTag;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWarriorHeroSpecialAbilitySet>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial = { "AbilityIconMaterial", nullptr, (EPropertyFlags)0x0014000000010015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroSpecialAbilitySet, AbilityIconMaterial), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AbilityIconMaterial_MetaData), NewProp_AbilityIconMaterial_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag = { "AbilityCooldownTag", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroSpecialAbilitySet, AbilityCooldownTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AbilityCooldownTag_MetaData), NewProp_AbilityCooldownTag_MetaData) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::NewProp_AbilityIconMaterial,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::NewProp_AbilityCooldownTag,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_Warrior,
+	Z_Construct_UScriptStruct_FWarriorHeroAbilitySet,
+	&NewStructOps,
+	"WarriorHeroSpecialAbilitySet",
+	Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::PropPointers),
+	sizeof(FWarriorHeroSpecialAbilitySet),
+	alignof(FWarriorHeroSpecialAbilitySet),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet()
+{
+	if (!Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet.InnerSingleton, Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet.InnerSingleton;
+}
+// End ScriptStruct FWarriorHeroSpecialAbilitySet
+
 // Begin ScriptStruct FWarriorHeroWeaponData
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_WarriorHeroWeaponData;
 class UScriptStruct* FWarriorHeroWeaponData::StaticStruct()
@@ -128,6 +201,11 @@ struct Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics
 		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorStructTypes.h" },
 		{ "TitleProperty", "InputTag" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpecialWeaponAbilities_MetaData[] = {
+		{ "Category", "WarriorHeroWeaponData" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorStructTypes.h" },
+		{ "TitleProperty", "InputTag" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WeaponBaseDamage_MetaData[] = {
 		{ "Category", "WarriorHeroWeaponData" },
 		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorStructTypes.h" },
@@ -141,6 +219,8 @@ struct Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_WeaponInputMappingContext;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_DefaultWeaponAbilities_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_DefaultWeaponAbilities;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_SpecialWeaponAbilities_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_SpecialWeaponAbilities;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_WeaponBaseDamage;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_SoftWeaponIconTexture;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -154,6 +234,8 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FWarrior
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_WeaponInputMappingContext = { "WeaponInputMappingContext", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroWeaponData, WeaponInputMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponInputMappingContext_MetaData), NewProp_WeaponInputMappingContext_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_DefaultWeaponAbilities_Inner = { "DefaultWeaponAbilities", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FWarriorHeroAbilitySet, METADATA_PARAMS(0, nullptr) }; // 4102101415
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_DefaultWeaponAbilities = { "DefaultWeaponAbilities", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroWeaponData, DefaultWeaponAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultWeaponAbilities_MetaData), NewProp_DefaultWeaponAbilities_MetaData) }; // 4102101415
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_SpecialWeaponAbilities_Inner = { "SpecialWeaponAbilities", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet, METADATA_PARAMS(0, nullptr) }; // 2851195164
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_SpecialWeaponAbilities = { "SpecialWeaponAbilities", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroWeaponData, SpecialWeaponAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpecialWeaponAbilities_MetaData), NewProp_SpecialWeaponAbilities_MetaData) }; // 2851195164
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_WeaponBaseDamage = { "WeaponBaseDamage", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroWeaponData, WeaponBaseDamage), Z_Construct_UScriptStruct_FScalableFloat, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponBaseDamage_MetaData), NewProp_WeaponBaseDamage_MetaData) }; // 703790095
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_SoftWeaponIconTexture = { "SoftWeaponIconTexture", nullptr, (EPropertyFlags)0x0014000000010015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FWarriorHeroWeaponData, SoftWeaponIconTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SoftWeaponIconTexture_MetaData), NewProp_SoftWeaponIconTexture_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::PropPointers[] = {
@@ -161,6 +243,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FW
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_WeaponInputMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_DefaultWeaponAbilities_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_DefaultWeaponAbilities,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_SpecialWeaponAbilities_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_SpecialWeaponAbilities,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_WeaponBaseDamage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewProp_SoftWeaponIconTexture,
 };
@@ -193,10 +277,11 @@ struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Warrio
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FWarriorHeroAbilitySet::StaticStruct, Z_Construct_UScriptStruct_FWarriorHeroAbilitySet_Statics::NewStructOps, TEXT("WarriorHeroAbilitySet"), &Z_Registration_Info_UScriptStruct_WarriorHeroAbilitySet, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWarriorHeroAbilitySet), 4102101415U) },
-		{ FWarriorHeroWeaponData::StaticStruct, Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewStructOps, TEXT("WarriorHeroWeaponData"), &Z_Registration_Info_UScriptStruct_WarriorHeroWeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWarriorHeroWeaponData), 3236480359U) },
+		{ FWarriorHeroSpecialAbilitySet::StaticStruct, Z_Construct_UScriptStruct_FWarriorHeroSpecialAbilitySet_Statics::NewStructOps, TEXT("WarriorHeroSpecialAbilitySet"), &Z_Registration_Info_UScriptStruct_WarriorHeroSpecialAbilitySet, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWarriorHeroSpecialAbilitySet), 2851195164U) },
+		{ FWarriorHeroWeaponData::StaticStruct, Z_Construct_UScriptStruct_FWarriorHeroWeaponData_Statics::NewStructOps, TEXT("WarriorHeroWeaponData"), &Z_Registration_Info_UScriptStruct_WarriorHeroWeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWarriorHeroWeaponData), 18401664U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorStructTypes_h_2034995895(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorStructTypes_h_505748993(TEXT("/Script/Warrior"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorStructTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorStructTypes_h_Statics::ScriptStructInfo),
 	nullptr, 0);

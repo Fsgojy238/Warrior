@@ -12,6 +12,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FGameplayAbilitySpecHandle;
 struct FGameplayTag;
 struct FWarriorHeroAbilitySet;
+struct FWarriorHeroSpecialAbilitySet;
 #ifdef WARRIOR_WarriorAbilitySystemComponent_generated_h
 #error "WarriorAbilitySystemComponent.generated.h already included, missing '#pragma once' in WarriorAbilitySystemComponent.h"
 #endif
