@@ -25,6 +25,10 @@ WARRIOR_API void FOnEquippedWeaponChangedDelegate_DelegateWrapper(const FMultica
 WARRIOR_API void FOnAbilityIconSlotUpdatedDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnAbilityIconSlotUpdatedDelegate, FGameplayTag AbilityInputTag, const TSoftObjectPtr<UMaterialInterface>& SoftAbilityIconMaterial);
 
 
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_HeroUIComponent_h_12_DELEGATE \
+WARRIOR_API void FOnAbilityCooldownBeginDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnAbilityCooldownBeginDelegate, FGameplayTag AbilityInputTag, float TotalCooldownTime, float RemainCooldownTime);
+
+
 #define FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_HeroUIComponent_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHeroUIComponent(); \
