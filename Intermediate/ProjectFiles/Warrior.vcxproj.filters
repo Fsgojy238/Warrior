@@ -231,6 +231,9 @@
     <Filter Include="Source\Warrior\Private\WarriorTypes">
       <UniqueIdentifier>{72F84900-286B-358E-A1E2-66BBF4F03429}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\WarriorTypes\WarriorCountDownAction.cpp">
+      <Filter>Source\Warrior\Private\WarriorTypes</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\WarriorTypes\WarriorStructTypes.cpp">
       <Filter>Source\Warrior\Private\WarriorTypes</Filter>
     </ClCompile>
@@ -429,6 +432,9 @@
     <Filter Include="Source\Warrior\Public\WarriorTypes">
       <UniqueIdentifier>{EE03F685-923F-38E8-8F8B-0062E0925ECC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorCountDownAction.h">
+      <Filter>Source\Warrior\Public\WarriorTypes</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorEnumTypes.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
     </ClCompile>

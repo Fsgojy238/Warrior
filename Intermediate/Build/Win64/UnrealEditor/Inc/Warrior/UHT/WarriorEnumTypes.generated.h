@@ -43,4 +43,21 @@ enum class EWarriorSuccessType : uint8;
 template<> struct TIsUEnumClass<EWarriorSuccessType> { enum { Value = true }; };
 template<> WARRIOR_API UEnum* StaticEnum<EWarriorSuccessType>();
 
+#define FOREACH_ENUM_EWARRIORCOUNTDOWNACTIONINPUT(op) \
+	op(EWarriorCountDownActionInput::Start) \
+	op(EWarriorCountDownActionInput::Cancel) 
+
+enum class EWarriorCountDownActionInput : uint8;
+template<> struct TIsUEnumClass<EWarriorCountDownActionInput> { enum { Value = true }; };
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorCountDownActionInput>();
+
+#define FOREACH_ENUM_EWARRIORCOUNTDOWNACTIONOUTPUT(op) \
+	op(EWarriorCountDownActionOutput::Updated) \
+	op(EWarriorCountDownActionOutput::Completed) \
+	op(EWarriorCountDownActionOutput::Cancelled) 
+
+enum class EWarriorCountDownActionOutput : uint8;
+template<> struct TIsUEnumClass<EWarriorCountDownActionOutput> { enum { Value = true }; };
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorCountDownActionOutput>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
