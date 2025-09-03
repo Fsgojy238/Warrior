@@ -21,6 +21,7 @@ struct FGameplayTag;
 #define WARRIOR_WarriorHeroGameplayAbility_generated_h
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetAbilityRemainingCooldownByTag); \
 	DECLARE_FUNCTION(execMakeHeroDamageEffectSpecHandle); \
 	DECLARE_FUNCTION(execGetHeroCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetHeroControllerFromActorInfo); \
