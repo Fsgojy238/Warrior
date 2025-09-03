@@ -8,6 +8,7 @@
 #include "GenericTeamAgentInterface.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "WarriorGameplayTags.h"
+#include "WarriorTypes/WarriorCountDownAction.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -162,7 +163,55 @@ bool UWarriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor*
 	return ActiveGameplayEffectHandle.WasSuccessfullyApplied();
 }
 
+// 自定义函数库中的倒计时控制函数
+// 作用：启动或取消一个倒计时（如技能CD），通过延迟动作机制实时更新剩余时间
 void UWarriorFunctionLibrary::CountDown(const UObject* WorldContextObject, float TotalTime, float UpdateInterval, float& OutRemainingTime, EWarriorCountDownActionInput CountDownInput, EWarriorCountDownActionOutput& CountDownOutput, FLatentActionInfo LatentInfo)
 {
+	UWorld* World = nullptr;  // 游戏世界指针（UE中管理所有实体和逻辑的核心）
 
+	// 从上下文对象中获取当前游戏世界（没有世界则无法运行倒计时）
+	if (GEngine)
+	{
+		World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull);
+	}
+
+	// 如果获取世界失败，直接返回（无法执行倒计时）
+	if (!World)
+	{
+		return;
+	}
+
+	// 获取世界中的"延迟动作管理器"（负责管理所有"边等边干活"的任务）
+	FLatentActionManager& LatentActionManager = World->GetLatentActionManager();
+
+	// 查找是否已经存在相同的倒计时动作（通过唯一标识UUID和目标对象判断，避免重复创建）
+	FWarriorCountDownAction* FoundAction = LatentActionManager.FindExistingAction<FWarriorCountDownAction>(
+		LatentInfo.CallbackTarget,  // 回调目标对象（如技能组件）
+		LatentInfo.UUID             // 每个倒计时的唯一标识（避免混淆不同技能的CD）
+	);
+
+	// 如果输入指令是"开始倒计时"
+	if (CountDownInput == EWarriorCountDownActionInput::Start)
+	{
+		// 如果不存在相同的倒计时动作，就创建一个新的并添加到管理器中
+		if (!FoundAction)
+		{
+			LatentActionManager.AddNewAction(
+				LatentInfo.CallbackTarget,  // 动作的所属对象
+				LatentInfo.UUID,            // 唯一标识
+				// 创建新的倒计时实例（传入参数初始化）
+				new FWarriorCountDownAction(TotalTime, UpdateInterval, OutRemainingTime, CountDownOutput, LatentInfo)
+			);
+		}
+	}
+
+	// 如果输入指令是"取消倒计时"
+	if (CountDownInput == EWarriorCountDownActionInput::Cancel)
+	{
+		// 如果存在该倒计时动作，就取消它
+		if (FoundAction)
+		{
+			FoundAction->CancelAction();  // 调用取消逻辑（如停止计时、重置状态）
+		}
+	}
 }

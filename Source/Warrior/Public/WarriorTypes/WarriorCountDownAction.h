@@ -8,11 +8,15 @@
 class FWarriorCountDownAction : public FPendingLatentAction
 {
 public: 
-	FWarriorCountDownAction(float InTotalCountTime, float InUpdateInterval, float& InOutRemainingTime, EWarriorCountDownActionOutput& InCountDownOutput, const FLatentActionInfo& LatentInfo)
-		: bNeedToCancel(false), TotalCountDownTime(InTotalCountTime), UpdateInterval(InUpdateInterval), OutRemainingTime(InOutRemainingTime),
+	FWarriorCountDownAction(float InTotalDownCountTime, float InUpdateInterval, float& InOutRemainingTime, EWarriorCountDownActionOutput& InCountDownOutput, const FLatentActionInfo& LatentInfo)
+		: bNeedToCancel(false), TotalCountDownTime(InTotalDownCountTime), UpdateInterval(InUpdateInterval), OutRemainingTime(InOutRemainingTime),
 		CountDownOutput(InCountDownOutput), ExecutionFucntion(LatentInfo.ExecutionFunction), OutputLink(LatentInfo.Linkage), CallbackTarget(LatentInfo.CallbackTarget),
 		ElapsedInterval(0.f), ElapsedTimeSinceStart(0.f)
 	{}
+
+	virtual void UpdateOperation(FLatentResponse& Response) override;
+
+	void CancelAction();
 
 private:
 	bool bNeedToCancel;               // 是否需要取消倒计时（比如技能被打断）
