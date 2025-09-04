@@ -82,6 +82,9 @@ bool UWarriorHeroGameplayAbility::GetAbilityRemainingCooldownByTag(FGameplayTag 
 {
 	check(InCooldownTag.IsValid());
 
+	TotalCooldownTime = 0.f;
+	RemainCooldownTime = 0.f;
+
 	FGameplayEffectQuery CooldownQuery = FGameplayEffectQuery::MakeQuery_MatchAnyOwningTags(InCooldownTag.GetSingleTagContainer());
 
 	TArray<TPair<float, float>> TimeRemainingAndDuration = GetWarriorAbilitySystemComponentFromActorInfo()->GetActiveEffectsTimeRemainingAndDuration(CooldownQuery);

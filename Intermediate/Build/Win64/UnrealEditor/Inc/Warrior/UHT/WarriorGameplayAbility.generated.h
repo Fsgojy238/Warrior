@@ -15,12 +15,14 @@ class UWarriorAbilitySystemComponent;
 enum class EWarriorSuccessType : uint8;
 struct FActiveGameplayEffectHandle;
 struct FGameplayEffectSpecHandle;
+struct FHitResult;
 #ifdef WARRIOR_WarriorGameplayAbility_generated_h
 #error "WarriorGameplayAbility.generated.h already included, missing '#pragma once' in WarriorGameplayAbility.h"
 #endif
 #define WARRIOR_WarriorGameplayAbility_generated_h
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execApplyGameplayEffectSpecHandleToHitResults); \
 	DECLARE_FUNCTION(execBP_ApplyEffectSpecHandleToTarget); \
 	DECLARE_FUNCTION(execGetWarriorAbilitySystemComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetPawnCombatComponentFromActorInfo);

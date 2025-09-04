@@ -8,11 +8,13 @@
 #include "Warrior/Public/AbilitySystem/Abilities/WarriorGameplayAbility.h"
 #include "GameplayAbilities/Public/ActiveGameplayEffectHandle.h"
 #include "GameplayAbilities/Public/GameplayEffectTypes.h"
+#include "Runtime/Engine/Classes/Engine/HitResult.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWarriorGameplayAbility() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FActiveGameplayEffectHandle();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
@@ -76,6 +78,63 @@ UEnum* Z_Construct_UEnum_Warrior_EWarriorAbilityActivationPolicy()
 	return Z_Registration_Info_UEnum_EWarriorAbilityActivationPolicy.InnerSingleton;
 }
 // End Enum EWarriorAbilityActivationPolicy
+
+// Begin Class UWarriorGameplayAbility Function ApplyGameplayEffectSpecHandleToHitResults
+struct Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics
+{
+	struct WarriorGameplayAbility_eventApplyGameplayEffectSpecHandleToHitResults_Parms
+	{
+		FGameplayEffectSpecHandle InSpecHandle;
+		TArray<FHitResult> InHitResults;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|Ability" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/WarriorGameplayAbility.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InSpecHandle_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InHitResults_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InSpecHandle;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InHitResults_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_InHitResults;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::NewProp_InSpecHandle = { "InSpecHandle", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorGameplayAbility_eventApplyGameplayEffectSpecHandleToHitResults_Parms, InSpecHandle), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InSpecHandle_MetaData), NewProp_InSpecHandle_MetaData) }; // 3383902265
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::NewProp_InHitResults_Inner = { "InHitResults", nullptr, (EPropertyFlags)0x0000008000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(0, nullptr) }; // 4100991306
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::NewProp_InHitResults = { "InHitResults", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorGameplayAbility_eventApplyGameplayEffectSpecHandleToHitResults_Parms, InHitResults), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InHitResults_MetaData), NewProp_InHitResults_MetaData) }; // 4100991306
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::NewProp_InSpecHandle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::NewProp_InHitResults_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::NewProp_InHitResults,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorGameplayAbility, nullptr, "ApplyGameplayEffectSpecHandleToHitResults", nullptr, nullptr, Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::WarriorGameplayAbility_eventApplyGameplayEffectSpecHandleToHitResults_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::WarriorGameplayAbility_eventApplyGameplayEffectSpecHandleToHitResults_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarriorGameplayAbility::execApplyGameplayEffectSpecHandleToHitResults)
+{
+	P_GET_STRUCT_REF(FGameplayEffectSpecHandle,Z_Param_Out_InSpecHandle);
+	P_GET_TARRAY_REF(FHitResult,Z_Param_Out_InHitResults);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyGameplayEffectSpecHandleToHitResults(Z_Param_Out_InSpecHandle,Z_Param_Out_InHitResults);
+	P_NATIVE_END;
+}
+// End Class UWarriorGameplayAbility Function ApplyGameplayEffectSpecHandleToHitResults
 
 // Begin Class UWarriorGameplayAbility Function BP_ApplyEffectSpecHandleToTarget
 struct Z_Construct_UFunction_UWarriorGameplayAbility_BP_ApplyEffectSpecHandleToTarget_Statics
@@ -237,6 +296,7 @@ void UWarriorGameplayAbility::StaticRegisterNativesUWarriorGameplayAbility()
 {
 	UClass* Class = UWarriorGameplayAbility::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyGameplayEffectSpecHandleToHitResults", &UWarriorGameplayAbility::execApplyGameplayEffectSpecHandleToHitResults },
 		{ "BP_ApplyEffectSpecHandleToTarget", &UWarriorGameplayAbility::execBP_ApplyEffectSpecHandleToTarget },
 		{ "GetPawnCombatComponentFromActorInfo", &UWarriorGameplayAbility::execGetPawnCombatComponentFromActorInfo },
 		{ "GetWarriorAbilitySystemComponentFromActorInfo", &UWarriorGameplayAbility::execGetWarriorAbilitySystemComponentFromActorInfo },
@@ -271,6 +331,7 @@ struct Z_Construct_UClass_UWarriorGameplayAbility_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWarriorGameplayAbility_ApplyGameplayEffectSpecHandleToHitResults, "ApplyGameplayEffectSpecHandleToHitResults" }, // 1203834158
 		{ &Z_Construct_UFunction_UWarriorGameplayAbility_BP_ApplyEffectSpecHandleToTarget, "BP_ApplyEffectSpecHandleToTarget" }, // 1298987386
 		{ &Z_Construct_UFunction_UWarriorGameplayAbility_GetPawnCombatComponentFromActorInfo, "GetPawnCombatComponentFromActorInfo" }, // 1384885086
 		{ &Z_Construct_UFunction_UWarriorGameplayAbility_GetWarriorAbilitySystemComponentFromActorInfo, "GetWarriorAbilitySystemComponentFromActorInfo" }, // 1109971258
@@ -332,10 +393,10 @@ struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Abilit
 		{ EWarriorAbilityActivationPolicy_StaticEnum, TEXT("EWarriorAbilityActivationPolicy"), &Z_Registration_Info_UEnum_EWarriorAbilityActivationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1168535515U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorGameplayAbility, UWarriorGameplayAbility::StaticClass, TEXT("UWarriorGameplayAbility"), &Z_Registration_Info_UClass_UWarriorGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorGameplayAbility), 2826036593U) },
+		{ Z_Construct_UClass_UWarriorGameplayAbility, UWarriorGameplayAbility::StaticClass, TEXT("UWarriorGameplayAbility"), &Z_Registration_Info_UClass_UWarriorGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorGameplayAbility), 1021267438U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_2672628433(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_2011817846(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorGameplayAbility_h_Statics::EnumInfo));
