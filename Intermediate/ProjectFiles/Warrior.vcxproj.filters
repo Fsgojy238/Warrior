@@ -219,6 +219,15 @@
     <ClCompile Include="..\..\Source\Warrior\Private\Items\WarriorProjectileBase.cpp">
       <Filter>Source\Warrior\Private\Items</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\Items\PickUps">
+      <UniqueIdentifier>{9B643E47-537A-3A9B-9986-23F774D7BCD2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Items\PickUps\WarriorPickUpBase.cpp">
+      <Filter>Source\Warrior\Private\Items\PickUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\Items\PickUps\WarriorStoneBase.cpp">
+      <Filter>Source\Warrior\Private\Items\PickUps</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Items\Weapons">
       <UniqueIdentifier>{C0057D4A-A221-324E-B144-CACDF88D0B7D}</UniqueIdentifier>
     </Filter>
@@ -419,6 +428,15 @@
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Public\Items\WarriorProjectileBase.h">
       <Filter>Source\Warrior\Public\Items</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\Items\PickUps">
+      <UniqueIdentifier>{5C67914B-AB7D-363A-8B7C-51092E561B53}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\Items\PickUps\WarriorPickUpBase.h">
+      <Filter>Source\Warrior\Public\Items\PickUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Public\Items\PickUps\WarriorStoneBase.h">
+      <Filter>Source\Warrior\Public\Items\PickUps</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\Items\Weapons">
       <UniqueIdentifier>{A6E3C4B5-91AA-3B68-990F-273A84903B7C}</UniqueIdentifier>
