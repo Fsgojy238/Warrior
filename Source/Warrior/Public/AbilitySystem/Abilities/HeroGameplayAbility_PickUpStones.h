@@ -25,8 +25,11 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void CollectStones();
 
+	UFUNCTION(BlueprintCallable)
+	void ConsumeStones();
+
 private:
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY()
 	TArray<AWarriorStoneBase*> CollectedStones;
 
 	UPROPERTY(EditDefaultsOnly)

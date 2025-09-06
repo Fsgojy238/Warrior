@@ -14,7 +14,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define WARRIOR_WarriorStoneBase_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_CALLBACK_WRAPPERS
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWarriorStoneBase(); \
 	friend struct Z_Construct_UClass_AWarriorStoneBase_Statics; \
@@ -23,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(AWarriorStoneBase)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWarriorStoneBase(); \
 private: \
@@ -37,12 +38,13 @@ public: \
 	NO_API virtual ~AWarriorStoneBase();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_12_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_15_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_14_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_15_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_15_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_CALLBACK_WRAPPERS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorStoneBase_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
