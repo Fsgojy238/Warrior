@@ -9,6 +9,7 @@
 class AWarriorHeroCharacter;
 class AWarriorHeroController;
 class UHeroCombatComponent;
+class UHeroUIComponent;
 /**
  * 
  */
@@ -32,6 +33,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Warrior|Ability")
 	bool GetAbilityRemainingCooldownByTag(FGameplayTag InCooldownTag, float& TotalCooldownTime, float& RemainCooldownTime);
+
+	UFUNCTION(BlueprintPure, Category = "Warrior|Ability")
+	UHeroUIComponent* GetHeroUIComponentFromActorInfo();
 
 private:
 	// »º´æ

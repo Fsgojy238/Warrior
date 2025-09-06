@@ -99,3 +99,8 @@ bool UWarriorHeroGameplayAbility::GetAbilityRemainingCooldownByTag(FGameplayTag 
 
 }
 
+UHeroUIComponent* UWarriorHeroGameplayAbility::GetHeroUIComponentFromActorInfo()
+{
+	return GetHeroCharacterFromActorInfo()->GetHeroUIComponent();
+}
+

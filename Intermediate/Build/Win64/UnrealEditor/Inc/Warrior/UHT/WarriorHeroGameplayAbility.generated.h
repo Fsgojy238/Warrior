@@ -13,6 +13,7 @@ class AWarriorHeroCharacter;
 class AWarriorHeroController;
 class UGameplayEffect;
 class UHeroCombatComponent;
+class UHeroUIComponent;
 struct FGameplayEffectSpecHandle;
 struct FGameplayTag;
 #ifdef WARRIOR_WarriorHeroGameplayAbility_generated_h
@@ -20,7 +21,8 @@ struct FGameplayTag;
 #endif
 #define WARRIOR_WarriorHeroGameplayAbility_generated_h
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetHeroUIComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetAbilityRemainingCooldownByTag); \
 	DECLARE_FUNCTION(execMakeHeroDamageEffectSpecHandle); \
 	DECLARE_FUNCTION(execGetHeroCombatComponentFromActorInfo); \
@@ -28,7 +30,7 @@ struct FGameplayTag;
 	DECLARE_FUNCTION(execGetHeroCharacterFromActorInfo);
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorHeroGameplayAbility(); \
 	friend struct Z_Construct_UClass_UWarriorHeroGameplayAbility_Statics; \
@@ -37,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(UWarriorHeroGameplayAbility)
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWarriorHeroGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -51,13 +53,13 @@ public: \
 	NO_API virtual ~UWarriorHeroGameplayAbility();
 
 
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_15_PROLOG
-#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_GENERATED_BODY \
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_16_PROLOG
+#define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_INCLASS_NO_PURE_DECLS \
-	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_18_ENHANCED_CONSTRUCTORS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_INCLASS_NO_PURE_DECLS \
+	FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
