@@ -45,7 +45,7 @@ public: \
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AWarriorSurvivalGameMode(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AWarriorSurvivalGameMode(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AWarriorSurvivalGameMode(AWarriorSurvivalGameMode&&); \
@@ -53,7 +53,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AWarriorSurvivalGameMode); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AWarriorSurvivalGameMode); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWarriorSurvivalGameMode) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWarriorSurvivalGameMode) \
 	NO_API virtual ~AWarriorSurvivalGameMode();
 
 

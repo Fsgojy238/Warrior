@@ -412,7 +412,7 @@ template<> WARRIOR_API UClass* StaticClass<AWarriorSurvivalGameMode>()
 {
 	return AWarriorSurvivalGameMode::StaticClass();
 }
-AWarriorSurvivalGameMode::AWarriorSurvivalGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
+AWarriorSurvivalGameMode::AWarriorSurvivalGameMode() {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorSurvivalGameMode);
 AWarriorSurvivalGameMode::~AWarriorSurvivalGameMode() {}
 // End Class AWarriorSurvivalGameMode
