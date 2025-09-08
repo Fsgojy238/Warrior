@@ -72,6 +72,26 @@ private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta =(AllowPrivateAccess = "true"))
 	UDataTable* EnemyWaveSpawnerDataTable;
 
+	UPROPERTY()
+	float TimeCounter = 0.f;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
+	int32 CurrentWaveCount = 1;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
+	int32 TotalWavesToSpawn;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
+	float SpawnNewWaveWaitTime = 5.f;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
+	float SpawnEnemiesDelayTime = 2.f;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
+	float WaveCompletedWaitTime = 8.f;
+
 	void SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState InSurvialGameModeState);
+
+	bool HaveFinishedAllWaves() const;
 
 };
