@@ -207,6 +207,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\GameModes\WarriorBaseGameMode.cpp">
       <Filter>Source\Warrior\Private\GameModes</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\GameModes\WarriorSurvivalGameMode.cpp">
+      <Filter>Source\Warrior\Private\GameModes</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Interface">
       <UniqueIdentifier>{98A6F510-EF9B-35C9-84D1-49F98D0CDC13}</UniqueIdentifier>
     </Filter>
@@ -418,6 +421,9 @@
       <UniqueIdentifier>{3B652AF5-C50C-31D0-A775-F1AFA9747A91}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Public\GameModes\WarriorBaseGameMode.h">
+      <Filter>Source\Warrior\Public\GameModes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Public\GameModes\WarriorSurvivalGameMode.h">
       <Filter>Source\Warrior\Public\GameModes</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\Interface">
