@@ -63,6 +63,18 @@ protected:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	void SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState InSurvialGameModeState);
+	bool HaveFinishedAllWaves() const;
+	void PreLoadNextWaveEnemies();
+	FWarriorEnemyWaveSpawnerTableRow* GetCurrentWaveSpawnerTableRow() const;
+	int32 TrySpawnWaveEnemies();
+	bool ShouldKeepSpawnEnemies() const;
+
+	/*
+	1.检查TargetPoint是否有效
+
+	*/
+
 	UPROPERTY()
 	EWarriorSurvialGameModeState CurrentSurvialGameModeState;
 
@@ -75,37 +87,40 @@ private:
 	UPROPERTY()
 	float TimeCounter = 0.f;
 
+	// 当前波次
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	int32 CurrentWaveCount = 1;
 
+	// 当前波次中仍存活的敌人数量
+	UPROPERTY()
+	int32 CurrentSpawnedEnemiesCounter = 0;
+
+	// 本波次已经生成的敌人总数
+	UPROPERTY()
+	int32 TotalSpawnedEnemiesThisWaveCounter = 0;
+
+	// 生成点数组
+	UPROPERTY()
+	TArray<AActor*> TargetPointsArray;
+
+	// 整个游戏中总共需要的波次数量
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	int32 TotalWavesToSpawn;
 
+	// 新波次来临倒计时
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	float SpawnNewWaveWaitTime = 5.f;
 
+	// 通知“波次开始！”的延迟时间（比如Wave1）
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	float SpawnEnemiesDelayTime = 2.f;
 
+	// 生成
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	float WaveCompletedWaitTime = 8.f;
 
 	UPROPERTY()
 	TMap< TSoftClassPtr<AWarriorEnemyCharacter>, UClass* > PreLoadedEnemyClassMap;
 
-	void SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState InSurvialGameModeState);
-
-	bool HaveFinishedAllWaves() const;
-
-	void PreLoadNextWaveEnemies();
-
-	FWarriorEnemyWaveSpawnerTableRow* GetCurrentWaveSpawnerTableRow() const;
-
-
-	/*
-	1.获得表的行名，通过工具函数，用行名获得FWarriorEnemyWaveSpawnInfo
-	2.通过获得的FWarriorEnemyWaveSpawnInfo，获取里面的敌人SoftPtr
-	3.异步加载
 	
-	*/
 };
