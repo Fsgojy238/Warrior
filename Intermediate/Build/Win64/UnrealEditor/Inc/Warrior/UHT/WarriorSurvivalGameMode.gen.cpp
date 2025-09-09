@@ -10,6 +10,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWarriorSurvivalGameMode() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UDataTable_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
 UPackage* Z_Construct_UPackage__Script_Warrior();
@@ -339,6 +341,9 @@ struct Z_Construct_UClass_AWarriorSurvivalGameMode_Statics
 		{ "Category", "WaveDefinition" },
 		{ "ModuleRelativePath", "Public/GameModes/WarriorSurvivalGameMode.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PreLoadedEnemyClassMap_MetaData[] = {
+		{ "ModuleRelativePath", "Public/GameModes/WarriorSurvivalGameMode.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentSurvialGameModeState_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_CurrentSurvialGameModeState;
@@ -350,6 +355,9 @@ struct Z_Construct_UClass_AWarriorSurvivalGameMode_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SpawnNewWaveWaitTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SpawnEnemiesDelayTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_WaveCompletedWaitTime;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_PreLoadedEnemyClassMap_ValueProp;
+	static const UECodeGen_Private::FSoftClassPropertyParams NewProp_PreLoadedEnemyClassMap_Key_KeyProp;
+	static const UECodeGen_Private::FMapPropertyParams NewProp_PreLoadedEnemyClassMap;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -367,6 +375,9 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AWarriorSurvivalG
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_SpawnNewWaveWaitTime = { "SpawnNewWaveWaitTime", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorSurvivalGameMode, SpawnNewWaveWaitTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnNewWaveWaitTime_MetaData), NewProp_SpawnNewWaveWaitTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_SpawnEnemiesDelayTime = { "SpawnEnemiesDelayTime", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorSurvivalGameMode, SpawnEnemiesDelayTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnEnemiesDelayTime_MetaData), NewProp_SpawnEnemiesDelayTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_WaveCompletedWaitTime = { "WaveCompletedWaitTime", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorSurvivalGameMode, WaveCompletedWaitTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WaveCompletedWaitTime_MetaData), NewProp_WaveCompletedWaitTime_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_PreLoadedEnemyClassMap_ValueProp = { "PreLoadedEnemyClassMap", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UClass_UClass, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FSoftClassPropertyParams Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_PreLoadedEnemyClassMap_Key_KeyProp = { "PreLoadedEnemyClassMap_Key", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::SoftClass, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AWarriorEnemyCharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_PreLoadedEnemyClassMap = { "PreLoadedEnemyClassMap", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorSurvivalGameMode, PreLoadedEnemyClassMap), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PreLoadedEnemyClassMap_MetaData), NewProp_PreLoadedEnemyClassMap_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_CurrentSurvialGameModeState_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_CurrentSurvialGameModeState,
@@ -378,6 +389,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWarriorS
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_SpawnNewWaveWaitTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_SpawnEnemiesDelayTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_WaveCompletedWaitTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_PreLoadedEnemyClassMap_ValueProp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_PreLoadedEnemyClassMap_Key_KeyProp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::NewProp_PreLoadedEnemyClassMap,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AWarriorSurvivalGameMode_Statics::DependentSingletons[])() = {
@@ -428,10 +442,10 @@ struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameMo
 		{ FWarriorEnemyWaveSpawnerTableRow::StaticStruct, Z_Construct_UScriptStruct_FWarriorEnemyWaveSpawnerTableRow_Statics::NewStructOps, TEXT("WarriorEnemyWaveSpawnerTableRow"), &Z_Registration_Info_UScriptStruct_WarriorEnemyWaveSpawnerTableRow, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWarriorEnemyWaveSpawnerTableRow), 1551263895U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorSurvivalGameMode, AWarriorSurvivalGameMode::StaticClass, TEXT("AWarriorSurvivalGameMode"), &Z_Registration_Info_UClass_AWarriorSurvivalGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorSurvivalGameMode), 2693427885U) },
+		{ Z_Construct_UClass_AWarriorSurvivalGameMode, AWarriorSurvivalGameMode::StaticClass, TEXT("AWarriorSurvivalGameMode"), &Z_Registration_Info_UClass_AWarriorSurvivalGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorSurvivalGameMode), 2261351976U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_2054815542(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_2936456861(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_Statics::EnumInfo));

@@ -90,8 +90,22 @@ private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	float WaveCompletedWaitTime = 8.f;
 
+	UPROPERTY()
+	TMap< TSoftClassPtr<AWarriorEnemyCharacter>, UClass* > PreLoadedEnemyClassMap;
+
 	void SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState InSurvialGameModeState);
 
 	bool HaveFinishedAllWaves() const;
 
+	void PreLoadNextWaveEnemies();
+
+	FWarriorEnemyWaveSpawnerTableRow* GetCurrentWaveSpawnerTableRow() const;
+
+
+	/*
+	1.获得表的行名，通过工具函数，用行名获得FWarriorEnemyWaveSpawnInfo
+	2.通过获得的FWarriorEnemyWaveSpawnInfo，获取里面的敌人SoftPtr
+	3.异步加载
+	
+	*/
 };
