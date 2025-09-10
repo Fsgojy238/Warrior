@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 enum class EWarriorSurvialGameModeState : uint8;
 #ifdef WARRIOR_WarriorSurvivalGameMode_generated_h
 #error "WarriorSurvivalGameMode.generated.h already included, missing '#pragma once' in WarriorSurvivalGameMode.h"
@@ -32,6 +33,10 @@ template<> WARRIOR_API UScriptStruct* StaticStruct<struct FWarriorEnemyWaveSpawn
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_51_DELEGATE \
 WARRIOR_API void FOnSurvialGameModeStateChangedDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnSurvialGameModeStateChangedDelegate, EWarriorSurvialGameModeState CurrentState);
+
+
+#define FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnEnemyDestoryed);
 
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_INCLASS_NO_PURE_DECLS \
@@ -61,6 +66,7 @@ public: \
 #define FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_INCLASS_NO_PURE_DECLS \
 	FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorSurvivalGameMode_h_59_ENHANCED_CONSTRUCTORS \
 private: \

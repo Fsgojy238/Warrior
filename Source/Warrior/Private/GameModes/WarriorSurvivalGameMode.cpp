@@ -29,38 +29,38 @@ void AWarriorSurvivalGameMode::Tick(float DeltaTime)
 
 	if (CurrentSurvialGameModeState == EWarriorSurvialGameModeState::WaitSpawnNewWave)
 	{
-		TimeCounter += DeltaTime;
+		StateChangeTimeCounter += DeltaTime;
 
-		if (TimeCounter >= SpawnNewWaveWaitTime)
+		if (StateChangeTimeCounter >= SpawnNewWaveWaitTime)
 		{
 			SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState::SpawningNewWave);
 
-			TimeCounter = 0.f;
+			StateChangeTimeCounter = 0.f;
 		}
 	}
 
 	if (CurrentSurvialGameModeState == EWarriorSurvialGameModeState::SpawningNewWave)
 	{
-		TimeCounter += DeltaTime;
+		StateChangeTimeCounter += DeltaTime;
 
-		if (TimeCounter >= SpawnEnemiesDelayTime)
+		if (StateChangeTimeCounter >= SpawnEnemiesDelayTime)
 		{
 			// 开始生成敌人
 			CurrentSpawnedEnemiesCounter += TrySpawnWaveEnemies();
 
 			SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState::InProgress);
 
-			TimeCounter = 0.f;
+			StateChangeTimeCounter = 0.f;
 		}
 	}
 
 	if (CurrentSurvialGameModeState == EWarriorSurvialGameModeState::WaveCompleted)
 	{
-		TimeCounter += DeltaTime;
+		StateChangeTimeCounter += DeltaTime;
 
-		if (TimeCounter >= WaveCompletedWaitTime)
+		if (StateChangeTimeCounter >= WaveCompletedWaitTime)
 		{
-			TimeCounter = 0.f;
+			StateChangeTimeCounter = 0.f;
 
 			CurrentWaveCount++;
 
@@ -96,6 +96,8 @@ void AWarriorSurvivalGameMode::PreLoadNextWaveEnemies()
 	{
 		return;
 	}
+
+	PreLoadedEnemyClassMap.Empty();
 
 	for (const FWarriorEnemyWaveSpawnInfo& SpawnerInfo : GetCurrentWaveSpawnerTableRow()->EnemyWaveSpawnerDefinitions)
 	{
@@ -162,6 +164,9 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 		// 随机一下本次要生成的敌人数量
 		const int32 NumToSpawn = FMath::RandRange(SpawnerInfo.MinPerSpawnCount, SpawnerInfo.MaxPerSpawnCount);
 
+		FString Num = FString::FromInt(NumToSpawn);
+		Debug::Print(Num);
+
 		// 从预加载的TMap中找到要生成的敌人类型
 		UClass* LoadedEnemyClass = PreLoadedEnemyClassMap.FindChecked(SpawnerInfo.SoftEnemyClassToSpawn);
 
@@ -190,14 +195,17 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 			// 如果生成成功，更新计数
 			if (SpawnedEnemy)
 			{
-				EnemiesSpawnedThisTime++;
-				TotalSpawnedEnemiesThisWaveCounter++;
-			}
+				SpawnedEnemy->OnDestroyed.AddUniqueDynamic(this, &ThisClass::OnEnemyDestoryed);
 
-			// 检查是否需要停止生成（比如达到本波次最大数量）
-			if (ShouldKeepSpawnEnemies())
-			{
-				return EnemiesSpawnedThisTime;
+				EnemiesSpawnedThisTime++;
+				// 这里因为是在for循环里，所以TotalSpawnedEnemiesThisWaveCounter最终会等于NumToSpawn 
+				TotalSpawnedEnemiesThisWaveCounter++;
+
+				// 检查是否需要停止生成（比如达到本波次最大数量）
+				if (!ShouldKeepSpawnEnemies())
+				{
+					return EnemiesSpawnedThisTime;
+				}
 			}
 		}
 	}
@@ -209,4 +217,29 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 bool AWarriorSurvivalGameMode::ShouldKeepSpawnEnemies() const
 {
 	return TotalSpawnedEnemiesThisWaveCounter < GetCurrentWaveSpawnerTableRow()->TotalEnemyToSpawnThisWave;
+}
+
+// 当敌人被销毁（死亡）时触发的回调函数
+void AWarriorSurvivalGameMode::OnEnemyDestoryed(AActor* DestroyedActor)
+{
+	// 敌人死亡，当前波次的存活敌人数量减1
+	CurrentSpawnedEnemiesCounter--;
+
+	Debug::Print(FString::Printf(TEXT("CurrentSpawnedEnemiesCounter:%i, TotalSpawnedEnemiesThisWaveCounter:%i"), CurrentSpawnedEnemiesCounter, TotalSpawnedEnemiesThisWaveCounter));
+
+	// 本波次是否达到计划生成的总数量
+	if (ShouldKeepSpawnEnemies())
+	{
+		// 未达到，生成新的敌人，并把新生成的数量加到当前存活数中
+		CurrentSpawnedEnemiesCounter += TrySpawnWaveEnemies();
+	}
+	// 达到了，本波次敌人全被消灭
+	else if (CurrentSpawnedEnemiesCounter==0)
+	{
+		// 重置计数器，为下一次波次做准备
+		TotalSpawnedEnemiesThisWaveCounter = 0;
+		CurrentSpawnedEnemiesCounter = 0;
+
+		SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState::WaveCompleted);
+	}
 }

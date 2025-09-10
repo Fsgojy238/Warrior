@@ -70,6 +70,9 @@ private:
 	int32 TrySpawnWaveEnemies();
 	bool ShouldKeepSpawnEnemies() const;
 
+	UFUNCTION()
+	void OnEnemyDestoryed(AActor* DestroyedActor);
+
 	/*
 	1.检查TargetPoint是否有效
 
@@ -84,8 +87,9 @@ private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta =(AllowPrivateAccess = "true"))
 	UDataTable* EnemyWaveSpawnerDataTable;
 
+	// 单波次内不同状态变换计数器
 	UPROPERTY()
-	float TimeCounter = 0.f;
+	float StateChangeTimeCounter = 0.f;
 
 	// 当前波次
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
