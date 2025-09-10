@@ -126,5 +126,9 @@ private:
 	UPROPERTY()
 	TMap< TSoftClassPtr<AWarriorEnemyCharacter>, UClass* > PreLoadedEnemyClassMap;
 
+public:
+	UFUNCTION(BlueprintCallable)
+	void RegisterSpawnedEnemies(const TArray<AWarriorEnemyCharacter*>& InEnemiesToRegister);
+
 	
 };
