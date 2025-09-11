@@ -115,7 +115,7 @@ void AWarriorSurvivalGameMode::PreLoadNextWaveEnemies()
 					{
 						PreLoadedEnemyClassMap.Emplace(SpawnerInfo.SoftEnemyClassToSpawn, LoadedEnemyClass);
 
-						Debug::Print(LoadedEnemyClass->GetName() + TEXT(" is loaded"));
+						/*Debug::Print(LoadedEnemyClass->GetName() + TEXT(" is loaded"));*/
 					}
 				}
 			)
@@ -163,9 +163,6 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 
 		// 随机一下本次要生成的敌人数量
 		const int32 NumToSpawn = FMath::RandRange(SpawnerInfo.MinPerSpawnCount, SpawnerInfo.MaxPerSpawnCount);
-
-		FString Num = FString::FromInt(NumToSpawn);
-		Debug::Print(Num);
 
 		// 从预加载的TMap中找到要生成的敌人类型
 		UClass* LoadedEnemyClass = PreLoadedEnemyClassMap.FindChecked(SpawnerInfo.SoftEnemyClassToSpawn);

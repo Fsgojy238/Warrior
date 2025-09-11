@@ -60,4 +60,14 @@ enum class EWarriorCountDownActionOutput : uint8;
 template<> struct TIsUEnumClass<EWarriorCountDownActionOutput> { enum { Value = true }; };
 template<> WARRIOR_API UEnum* StaticEnum<EWarriorCountDownActionOutput>();
 
+#define FOREACH_ENUM_EWARRIORGAMEDIFFICULTY(op) \
+	op(EWarriorGameDifficulty::Easy) \
+	op(EWarriorGameDifficulty::Normal) \
+	op(EWarriorGameDifficulty::Hard) \
+	op(EWarriorGameDifficulty::VeryHard) 
+
+enum class EWarriorGameDifficulty : uint8;
+template<> struct TIsUEnumClass<EWarriorGameDifficulty> { enum { Value = true }; };
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorGameDifficulty>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

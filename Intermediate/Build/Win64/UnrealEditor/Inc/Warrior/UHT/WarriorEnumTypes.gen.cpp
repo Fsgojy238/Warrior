@@ -14,6 +14,7 @@ UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorConfirmType();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionInput();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionOutput();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorSuccessType();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorValidType();
 // End Cross Module References
@@ -275,6 +276,62 @@ UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionOutput()
 }
 // End Enum EWarriorCountDownActionOutput
 
+// Begin Enum EWarriorGameDifficulty
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EWarriorGameDifficulty;
+static UEnum* EWarriorGameDifficulty_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EWarriorGameDifficulty.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EWarriorGameDifficulty.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Warrior_EWarriorGameDifficulty, (UObject*)Z_Construct_UPackage__Script_Warrior(), TEXT("EWarriorGameDifficulty"));
+	}
+	return Z_Registration_Info_UEnum_EWarriorGameDifficulty.OuterSingleton;
+}
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorGameDifficulty>()
+{
+	return EWarriorGameDifficulty_StaticEnum();
+}
+struct Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Easy.Name", "EWarriorGameDifficulty::Easy" },
+		{ "Hard.Name", "EWarriorGameDifficulty::Hard" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorEnumTypes.h" },
+		{ "Normal.Name", "EWarriorGameDifficulty::Normal" },
+		{ "VeryHard.Name", "EWarriorGameDifficulty::VeryHard" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EWarriorGameDifficulty::Easy", (int64)EWarriorGameDifficulty::Easy },
+		{ "EWarriorGameDifficulty::Normal", (int64)EWarriorGameDifficulty::Normal },
+		{ "EWarriorGameDifficulty::Hard", (int64)EWarriorGameDifficulty::Hard },
+		{ "EWarriorGameDifficulty::VeryHard", (int64)EWarriorGameDifficulty::VeryHard },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Warrior,
+	nullptr,
+	"EWarriorGameDifficulty",
+	"EWarriorGameDifficulty",
+	Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty()
+{
+	if (!Z_Registration_Info_UEnum_EWarriorGameDifficulty.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EWarriorGameDifficulty.InnerSingleton, Z_Construct_UEnum_Warrior_EWarriorGameDifficulty_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EWarriorGameDifficulty.InnerSingleton;
+}
+// End Enum EWarriorGameDifficulty
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics
 {
@@ -284,9 +341,10 @@ struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Warrio
 		{ EWarriorSuccessType_StaticEnum, TEXT("EWarriorSuccessType"), &Z_Registration_Info_UEnum_EWarriorSuccessType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3005604401U) },
 		{ EWarriorCountDownActionInput_StaticEnum, TEXT("EWarriorCountDownActionInput"), &Z_Registration_Info_UEnum_EWarriorCountDownActionInput, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3648965920U) },
 		{ EWarriorCountDownActionOutput_StaticEnum, TEXT("EWarriorCountDownActionOutput"), &Z_Registration_Info_UEnum_EWarriorCountDownActionOutput, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1618345052U) },
+		{ EWarriorGameDifficulty_StaticEnum, TEXT("EWarriorGameDifficulty"), &Z_Registration_Info_UEnum_EWarriorGameDifficulty, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1999907421U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_4017879569(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_4282538821(TEXT("/Script/Warrior"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics::EnumInfo));
