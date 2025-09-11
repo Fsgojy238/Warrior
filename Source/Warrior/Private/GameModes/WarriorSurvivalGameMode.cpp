@@ -222,7 +222,7 @@ void AWarriorSurvivalGameMode::OnEnemyDestoryed(AActor* DestroyedActor)
 	// 敌人死亡，当前波次的存活敌人数量减1
 	CurrentSpawnedEnemiesCounter--;
 
-	Debug::Print(FString::Printf(TEXT("CurrentSpawnedEnemiesCounter:%i, TotalSpawnedEnemiesThisWaveCounter:%i"), CurrentSpawnedEnemiesCounter, TotalSpawnedEnemiesThisWaveCounter));
+	/*Debug::Print(FString::Printf(TEXT("CurrentSpawnedEnemiesCounter:%i, TotalSpawnedEnemiesThisWaveCounter:%i"), CurrentSpawnedEnemiesCounter, TotalSpawnedEnemiesThisWaveCounter));*/
 
 	// 本波次是否达到计划生成的总数量
 	if (ShouldKeepSpawnEnemies())
