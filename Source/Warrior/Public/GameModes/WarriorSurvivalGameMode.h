@@ -116,7 +116,7 @@ private:
 	float SpawnNewWaveWaitTime = 5.f;
 
 	// 通知“波次开始！”的延迟时间（比如Wave1）
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "WaveDefinition", meta = (AllowPrivateAccess = "true"))
 	float SpawnEnemiesDelayTime = 2.f;
 
 	// 生成
