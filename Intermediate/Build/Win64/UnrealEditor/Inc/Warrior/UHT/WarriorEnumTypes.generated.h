@@ -70,4 +70,12 @@ enum class EWarriorGameDifficulty : uint8;
 template<> struct TIsUEnumClass<EWarriorGameDifficulty> { enum { Value = true }; };
 template<> WARRIOR_API UEnum* StaticEnum<EWarriorGameDifficulty>();
 
+#define FOREACH_ENUM_EWARRIORINPUTMODE(op) \
+	op(EWarriorInputMode::GameOnly) \
+	op(EWarriorInputMode::UIOnly) 
+
+enum class EWarriorInputMode : uint8;
+template<> struct TIsUEnumClass<EWarriorInputMode> { enum { Value = true }; };
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorInputMode>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

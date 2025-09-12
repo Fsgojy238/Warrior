@@ -201,6 +201,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\DataAssets\StartUpData\DataAsset_StartUpDataBase.cpp">
       <Filter>Source\Warrior\Private\DataAssets\StartUpData</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\GameInstances">
+      <UniqueIdentifier>{15594ACD-2994-3B0E-AFE0-0196676A712C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\GameInstances\WarriorGameInstance.cpp">
+      <Filter>Source\Warrior\Private\GameInstances</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\GameModes">
       <UniqueIdentifier>{0D1A8259-3380-3B26-91BB-A7128220098B}</UniqueIdentifier>
     </Filter>
@@ -416,6 +422,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_StartUpDataBase.h">
       <Filter>Source\Warrior\Public\DataAssets\StartUpData</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\GameInstances">
+      <UniqueIdentifier>{E9F0B5CF-21AD-3CA0-B62A-544FB64B428C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\GameInstances\WarriorGameInstance.h">
+      <Filter>Source\Warrior\Public\GameInstances</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\GameModes">
       <UniqueIdentifier>{3B652AF5-C50C-31D0-A775-F1AFA9747A91}</UniqueIdentifier>

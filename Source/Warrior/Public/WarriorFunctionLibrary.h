@@ -11,6 +11,7 @@
 class UWarriorAbilitySystemComponent;
 class UPawnCombatComponent;
 struct FScalableFloat;
+class UWarriorGameInstance;
 
 /**
  * 
@@ -62,5 +63,14 @@ public:
 		UPARAM(DisplayName = "Output") EWarriorCountDownActionOutput& CountDownOutput,
 		FLatentActionInfo LatentInfo);
 
+
+	/*
+	* meta标签：告诉蓝图引擎：“WorldContextObject 这个参数是世界上下文，你（引擎）要自动帮我填，不用用户手动传”。
+	*/
+	UFUNCTION(BlueprintPure, Category = "Warrior|FunctionLibrary", meta = (WorldContext = "WorldContextObject"))
+	static UWarriorGameInstance* GetWarriorGameInstance(const UObject* WorldContextObject);
+
+	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (WorldContext = "WorldContextObject"))
+	static void ToggleInputMode(const UObject* WorldContextObject, EWarriorInputMode InInputMode);
 
 };

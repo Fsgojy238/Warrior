@@ -15,6 +15,7 @@ WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorConfirmType();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionInput();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionOutput();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorInputMode();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorSuccessType();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorValidType();
 // End Cross Module References
@@ -332,6 +333,58 @@ UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty()
 }
 // End Enum EWarriorGameDifficulty
 
+// Begin Enum EWarriorInputMode
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EWarriorInputMode;
+static UEnum* EWarriorInputMode_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EWarriorInputMode.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EWarriorInputMode.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Warrior_EWarriorInputMode, (UObject*)Z_Construct_UPackage__Script_Warrior(), TEXT("EWarriorInputMode"));
+	}
+	return Z_Registration_Info_UEnum_EWarriorInputMode.OuterSingleton;
+}
+template<> WARRIOR_API UEnum* StaticEnum<EWarriorInputMode>()
+{
+	return EWarriorInputMode_StaticEnum();
+}
+struct Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "GameOnly.Name", "EWarriorInputMode::GameOnly" },
+		{ "ModuleRelativePath", "Public/WarriorTypes/WarriorEnumTypes.h" },
+		{ "UIOnly.Name", "EWarriorInputMode::UIOnly" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EWarriorInputMode::GameOnly", (int64)EWarriorInputMode::GameOnly },
+		{ "EWarriorInputMode::UIOnly", (int64)EWarriorInputMode::UIOnly },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Warrior,
+	nullptr,
+	"EWarriorInputMode",
+	"EWarriorInputMode",
+	Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Warrior_EWarriorInputMode()
+{
+	if (!Z_Registration_Info_UEnum_EWarriorInputMode.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EWarriorInputMode.InnerSingleton, Z_Construct_UEnum_Warrior_EWarriorInputMode_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EWarriorInputMode.InnerSingleton;
+}
+// End Enum EWarriorInputMode
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics
 {
@@ -342,9 +395,10 @@ struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Warrio
 		{ EWarriorCountDownActionInput_StaticEnum, TEXT("EWarriorCountDownActionInput"), &Z_Registration_Info_UEnum_EWarriorCountDownActionInput, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3648965920U) },
 		{ EWarriorCountDownActionOutput_StaticEnum, TEXT("EWarriorCountDownActionOutput"), &Z_Registration_Info_UEnum_EWarriorCountDownActionOutput, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1618345052U) },
 		{ EWarriorGameDifficulty_StaticEnum, TEXT("EWarriorGameDifficulty"), &Z_Registration_Info_UEnum_EWarriorGameDifficulty, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1999907421U) },
+		{ EWarriorInputMode_StaticEnum, TEXT("EWarriorInputMode"), &Z_Registration_Info_UEnum_EWarriorInputMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 279901939U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_4282538821(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_1839274443(TEXT("/Script/Warrior"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorTypes_WarriorEnumTypes_h_Statics::EnumInfo));
