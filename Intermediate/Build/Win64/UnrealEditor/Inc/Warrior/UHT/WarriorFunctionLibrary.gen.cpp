@@ -30,6 +30,7 @@ WARRIOR_API UClass* Z_Construct_UClass_UWarriorGameInstance_NoRegister();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorConfirmType();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionInput();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionOutput();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorInputMode();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorValidType();
 // End Cross Module References
@@ -695,6 +696,52 @@ DEFINE_FUNCTION(UWarriorFunctionLibrary::execRemoveGameplayTagFromActorIfFound)
 }
 // End Class UWarriorFunctionLibrary Function RemoveGameplayTagFromActorIfFound
 
+// Begin Class UWarriorFunctionLibrary Function SaveCurrentDifficulty
+struct Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics
+{
+	struct WarriorFunctionLibrary_eventSaveCurrentDifficulty_Parms
+	{
+		EWarriorGameDifficulty InGameDifficulty;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+		{ "ModuleRelativePath", "Public/WarriorFunctionLibrary.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_InGameDifficulty_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_InGameDifficulty;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::NewProp_InGameDifficulty_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::NewProp_InGameDifficulty = { "InGameDifficulty", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorFunctionLibrary_eventSaveCurrentDifficulty_Parms, InGameDifficulty), Z_Construct_UEnum_Warrior_EWarriorGameDifficulty, METADATA_PARAMS(0, nullptr) }; // 1999907421
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::NewProp_InGameDifficulty_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::NewProp_InGameDifficulty,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorFunctionLibrary, nullptr, "SaveCurrentDifficulty", nullptr, nullptr, Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::WarriorFunctionLibrary_eventSaveCurrentDifficulty_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::WarriorFunctionLibrary_eventSaveCurrentDifficulty_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarriorFunctionLibrary::execSaveCurrentDifficulty)
+{
+	P_GET_ENUM(EWarriorGameDifficulty,Z_Param_InGameDifficulty);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	UWarriorFunctionLibrary::SaveCurrentDifficulty(EWarriorGameDifficulty(Z_Param_InGameDifficulty));
+	P_NATIVE_END;
+}
+// End Class UWarriorFunctionLibrary Function SaveCurrentDifficulty
+
 // Begin Class UWarriorFunctionLibrary Function ToggleInputMode
 struct Z_Construct_UFunction_UWarriorFunctionLibrary_ToggleInputMode_Statics
 {
@@ -750,6 +797,61 @@ DEFINE_FUNCTION(UWarriorFunctionLibrary::execToggleInputMode)
 }
 // End Class UWarriorFunctionLibrary Function ToggleInputMode
 
+// Begin Class UWarriorFunctionLibrary Function TryLoadSavedGameDifficulty
+struct Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics
+{
+	struct WarriorFunctionLibrary_eventTryLoadSavedGameDifficulty_Parms
+	{
+		EWarriorGameDifficulty OutSavedDifficulty;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+		{ "ModuleRelativePath", "Public/WarriorFunctionLibrary.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_OutSavedDifficulty_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_OutSavedDifficulty;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_OutSavedDifficulty_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_OutSavedDifficulty = { "OutSavedDifficulty", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorFunctionLibrary_eventTryLoadSavedGameDifficulty_Parms, OutSavedDifficulty), Z_Construct_UEnum_Warrior_EWarriorGameDifficulty, METADATA_PARAMS(0, nullptr) }; // 1999907421
+void Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((WarriorFunctionLibrary_eventTryLoadSavedGameDifficulty_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarriorFunctionLibrary_eventTryLoadSavedGameDifficulty_Parms), &Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_OutSavedDifficulty_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_OutSavedDifficulty,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorFunctionLibrary, nullptr, "TryLoadSavedGameDifficulty", nullptr, nullptr, Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::WarriorFunctionLibrary_eventTryLoadSavedGameDifficulty_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::WarriorFunctionLibrary_eventTryLoadSavedGameDifficulty_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarriorFunctionLibrary::execTryLoadSavedGameDifficulty)
+{
+	P_GET_ENUM_REF(EWarriorGameDifficulty,Z_Param_Out_OutSavedDifficulty);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UWarriorFunctionLibrary::TryLoadSavedGameDifficulty((EWarriorGameDifficulty&)(Z_Param_Out_OutSavedDifficulty));
+	P_NATIVE_END;
+}
+// End Class UWarriorFunctionLibrary Function TryLoadSavedGameDifficulty
+
 // Begin Class UWarriorFunctionLibrary
 void UWarriorFunctionLibrary::StaticRegisterNativesUWarriorFunctionLibrary()
 {
@@ -766,7 +868,9 @@ void UWarriorFunctionLibrary::StaticRegisterNativesUWarriorFunctionLibrary()
 		{ "IsTargetPawnHostile", &UWarriorFunctionLibrary::execIsTargetPawnHostile },
 		{ "IsValidBlock", &UWarriorFunctionLibrary::execIsValidBlock },
 		{ "RemoveGameplayTagFromActorIfFound", &UWarriorFunctionLibrary::execRemoveGameplayTagFromActorIfFound },
+		{ "SaveCurrentDifficulty", &UWarriorFunctionLibrary::execSaveCurrentDifficulty },
 		{ "ToggleInputMode", &UWarriorFunctionLibrary::execToggleInputMode },
+		{ "TryLoadSavedGameDifficulty", &UWarriorFunctionLibrary::execTryLoadSavedGameDifficulty },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -799,7 +903,9 @@ struct Z_Construct_UClass_UWarriorFunctionLibrary_Statics
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 1882979702
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_IsValidBlock, "IsValidBlock" }, // 3015361979
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_RemoveGameplayTagFromActorIfFound, "RemoveGameplayTagFromActorIfFound" }, // 2219379183
+		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_SaveCurrentDifficulty, "SaveCurrentDifficulty" }, // 2061409311
 		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_ToggleInputMode, "ToggleInputMode" }, // 1392347725
+		{ &Z_Construct_UFunction_UWarriorFunctionLibrary_TryLoadSavedGameDifficulty, "TryLoadSavedGameDifficulty" }, // 981518261
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -848,10 +954,10 @@ UWarriorFunctionLibrary::~UWarriorFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorFunctionLibrary, UWarriorFunctionLibrary::StaticClass, TEXT("UWarriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorFunctionLibrary), 420347362U) },
+		{ Z_Construct_UClass_UWarriorFunctionLibrary, UWarriorFunctionLibrary::StaticClass, TEXT("UWarriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorFunctionLibrary), 682281254U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_4142930079(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_805444041(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_WarriorFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -249,6 +249,12 @@
     <ClCompile Include="..\..\Source\Warrior\Private\Items\Weapons\WarriorWeaponBase.cpp">
       <Filter>Source\Warrior\Private\Items\Weapons</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\SaveGame">
+      <UniqueIdentifier>{34C7A559-0874-357C-9DA3-D4F35F5D911B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\SaveGame\WarriorSaveGame.cpp">
+      <Filter>Source\Warrior\Private\SaveGame</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\WarriorTypes">
       <UniqueIdentifier>{72F84900-286B-358E-A1E2-66BBF4F03429}</UniqueIdentifier>
     </Filter>
@@ -470,6 +476,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Public\Items\Weapons\WarriorWeaponBase.h">
       <Filter>Source\Warrior\Public\Items\Weapons</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public\SaveGame">
+      <UniqueIdentifier>{7648E699-28DE-3362-8250-6D0B902F417F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Public\SaveGame\WarriorSaveGame.h">
+      <Filter>Source\Warrior\Public\SaveGame</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public\WarriorTypes">
       <UniqueIdentifier>{EE03F685-923F-38E8-8F8B-0062E0925ECC}</UniqueIdentifier>
