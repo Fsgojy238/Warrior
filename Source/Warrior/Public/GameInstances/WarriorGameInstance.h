@@ -38,6 +38,13 @@ protected:
 	TArray<FWarriorGameLevelSet> GameLevelSets;
 
 public:
+	virtual void Init() override;
+
+	virtual void OnPreLoadMap(const FString& MapName);
+
+	virtual void OnDestinationWorldLoaded(UWorld* LoadedWorld);
+
+
 	UFUNCTION(BlueprintPure, meta = (GameplayTagFilter = "GameData.Level"))
 	TSoftObjectPtr<UWorld> GetGameLevelByTag(FGameplayTag InTag) const;
 

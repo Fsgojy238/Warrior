@@ -61,6 +61,7 @@ class WARRIOR_API AWarriorSurvivalGameMode : public AWarriorBaseGameMode
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
+	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 
 private:
 	void SetCurrentSurvialGameModeState(EWarriorSurvialGameModeState InSurvialGameModeState);
@@ -72,11 +73,6 @@ private:
 
 	UFUNCTION()
 	void OnEnemyDestoryed(AActor* DestroyedActor);
-
-	/*
-	1.检查TargetPoint是否有效
-
-	*/
 
 	UPROPERTY()
 	EWarriorSurvialGameModeState CurrentSurvialGameModeState;
