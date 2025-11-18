@@ -13,14 +13,20 @@ void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(UWarriorAbilitySys
 	GrantAbilities(ActivateOnGivenAbilities, InASCToGive, ApplyLevel);
 	GrantAbilities(ReactiveAbilities, InASCToGive, ApplyLevel);
 
+	// 检查是否存在需要在启动时应用的游戏效果
 	if (!StartUpGameplayEffects.IsEmpty())
 	{
+		// 遍历所有启动游戏效果类
 		for (const TSubclassOf < UGameplayEffect >& EffectClass : StartUpGameplayEffects)
 		{
-			if(!EffectClass) continue;
+			// 跳过无效的效果类（避免空指针错误）
+			if (!EffectClass) continue;
 
+			// 获取游戏效果的默认对象（CDO），用于创建可应用的实例
 			UGameplayEffect* EffectCDO = EffectClass->GetDefaultObject<UGameplayEffect>();
 
+			// 通过能力系统组件（ASC）将效果应用到自身
+			// 参数：效果实例、应用等级、效果上下文（包含施法者等信息）
 			InASCToGive->ApplyGameplayEffectToSelf(
 				EffectCDO,
 				ApplyLevel,

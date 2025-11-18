@@ -5,13 +5,15 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AbilitySystem/Abilities/WarriorHeroGameplayAbility.h"
-#include "GameplayAbilities/Public/GameplayEffectTypes.h"
-#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
+#include "AbilitySystem/Abilities/WarriorHeroGameplayAbility.h"
+#include "GameplayEffectTypes.h"
+#include "GameplayTagContainer.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorHeroGameplayAbility() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
@@ -24,9 +26,9 @@ WARRIOR_API UClass* Z_Construct_UClass_UHeroUIComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorGameplayAbility();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UWarriorHeroGameplayAbility Function GetAbilityRemainingCooldownByTag
+// ********** Begin Class UWarriorHeroGameplayAbility Function GetAbilityRemainingCooldownByTag ****
 struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics
 {
 	struct WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms
@@ -50,7 +52,7 @@ struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCool
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::NewProp_InCooldownTag = { "InCooldownTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms, InCooldownTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::NewProp_InCooldownTag = { "InCooldownTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms, InCooldownTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 133831994
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::NewProp_TotalCooldownTime = { "TotalCooldownTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms, TotalCooldownTime), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::NewProp_RemainCooldownTime = { "RemainCooldownTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms, RemainCooldownTime), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -65,7 +67,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetAbilityRemainingCooldownByTag", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetAbilityRemainingCooldownByTag", Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag_Statics::WarriorHeroGameplayAbility_eventGetAbilityRemainingCooldownByTag_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag()
 {
@@ -86,9 +88,9 @@ DEFINE_FUNCTION(UWarriorHeroGameplayAbility::execGetAbilityRemainingCooldownByTa
 	*(bool*)Z_Param__Result=P_THIS->GetAbilityRemainingCooldownByTag(Z_Param_InCooldownTag,Z_Param_Out_TotalCooldownTime,Z_Param_Out_RemainCooldownTime);
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroGameplayAbility Function GetAbilityRemainingCooldownByTag
+// ********** End Class UWarriorHeroGameplayAbility Function GetAbilityRemainingCooldownByTag ******
 
-// Begin Class UWarriorHeroGameplayAbility Function GetHeroCharacterFromActorInfo
+// ********** Begin Class UWarriorHeroGameplayAbility Function GetHeroCharacterFromActorInfo *******
 struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics
 {
 	struct WarriorHeroGameplayAbility_eventGetHeroCharacterFromActorInfo_Parms
@@ -110,7 +112,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroCharacterFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroCharacterFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroCharacterFromActorInfo", Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroCharacterFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroCharacterFromActorInfo_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo()
 {
@@ -128,9 +130,9 @@ DEFINE_FUNCTION(UWarriorHeroGameplayAbility::execGetHeroCharacterFromActorInfo)
 	*(AWarriorHeroCharacter**)Z_Param__Result=P_THIS->GetHeroCharacterFromActorInfo();
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroGameplayAbility Function GetHeroCharacterFromActorInfo
+// ********** End Class UWarriorHeroGameplayAbility Function GetHeroCharacterFromActorInfo *********
 
-// Begin Class UWarriorHeroGameplayAbility Function GetHeroCombatComponentFromActorInfo
+// ********** Begin Class UWarriorHeroGameplayAbility Function GetHeroCombatComponentFromActorInfo *
 struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics
 {
 	struct WarriorHeroGameplayAbility_eventGetHeroCombatComponentFromActorInfo_Parms
@@ -155,7 +157,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroCombatComponentFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroCombatComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroCombatComponentFromActorInfo", Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroCombatComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroCombatComponentFromActorInfo_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo()
 {
@@ -173,9 +175,9 @@ DEFINE_FUNCTION(UWarriorHeroGameplayAbility::execGetHeroCombatComponentFromActor
 	*(UHeroCombatComponent**)Z_Param__Result=P_THIS->GetHeroCombatComponentFromActorInfo();
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroGameplayAbility Function GetHeroCombatComponentFromActorInfo
+// ********** End Class UWarriorHeroGameplayAbility Function GetHeroCombatComponentFromActorInfo ***
 
-// Begin Class UWarriorHeroGameplayAbility Function GetHeroControllerFromActorInfo
+// ********** Begin Class UWarriorHeroGameplayAbility Function GetHeroControllerFromActorInfo ******
 struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics
 {
 	struct WarriorHeroGameplayAbility_eventGetHeroControllerFromActorInfo_Parms
@@ -197,7 +199,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroControllerFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroControllerFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroControllerFromActorInfo", Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroControllerFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroControllerFromActorInfo_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo()
 {
@@ -215,9 +217,9 @@ DEFINE_FUNCTION(UWarriorHeroGameplayAbility::execGetHeroControllerFromActorInfo)
 	*(AWarriorHeroController**)Z_Param__Result=P_THIS->GetHeroControllerFromActorInfo();
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroGameplayAbility Function GetHeroControllerFromActorInfo
+// ********** End Class UWarriorHeroGameplayAbility Function GetHeroControllerFromActorInfo ********
 
-// Begin Class UWarriorHeroGameplayAbility Function GetHeroUIComponentFromActorInfo
+// ********** Begin Class UWarriorHeroGameplayAbility Function GetHeroUIComponentFromActorInfo *****
 struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics
 {
 	struct WarriorHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms
@@ -242,7 +244,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroUIComponentFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "GetHeroUIComponentFromActorInfo", Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo_Statics::WarriorHeroGameplayAbility_eventGetHeroUIComponentFromActorInfo_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo()
 {
@@ -260,9 +262,9 @@ DEFINE_FUNCTION(UWarriorHeroGameplayAbility::execGetHeroUIComponentFromActorInfo
 	*(UHeroUIComponent**)Z_Param__Result=P_THIS->GetHeroUIComponentFromActorInfo();
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroGameplayAbility Function GetHeroUIComponentFromActorInfo
+// ********** End Class UWarriorHeroGameplayAbility Function GetHeroUIComponentFromActorInfo *******
 
-// Begin Class UWarriorHeroGameplayAbility Function MakeHeroDamageEffectSpecHandle
+// ********** Begin Class UWarriorHeroGameplayAbility Function MakeHeroDamageEffectSpecHandle ******
 struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics
 {
 	struct WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms
@@ -289,9 +291,9 @@ struct Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpe
 };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_EffectClass = { "EffectClass", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, EffectClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UGameplayEffect_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_InWeaponBaseDamage = { "InWeaponBaseDamage", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, InWeaponBaseDamage), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_InCurrentAttackTypeTag = { "InCurrentAttackTypeTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, InCurrentAttackTypeTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_InCurrentAttackTypeTag = { "InCurrentAttackTypeTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, InCurrentAttackTypeTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 133831994
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_InUsedComboCount = { "InUsedComboCount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, InUsedComboCount), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, ReturnValue), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(0, nullptr) }; // 3383902265
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms, ReturnValue), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(0, nullptr) }; // 4275563785
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_EffectClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_InWeaponBaseDamage,
@@ -300,7 +302,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "MakeHeroDamageEffectSpecHandle", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroGameplayAbility, nullptr, "MakeHeroDamageEffectSpecHandle", Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle_Statics::WarriorHeroGameplayAbility_eventMakeHeroDamageEffectSpecHandle_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle()
 {
@@ -322,9 +324,9 @@ DEFINE_FUNCTION(UWarriorHeroGameplayAbility::execMakeHeroDamageEffectSpecHandle)
 	*(FGameplayEffectSpecHandle*)Z_Param__Result=P_THIS->MakeHeroDamageEffectSpecHandle(Z_Param_EffectClass,Z_Param_InWeaponBaseDamage,Z_Param_InCurrentAttackTypeTag,Z_Param_InUsedComboCount);
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroGameplayAbility Function MakeHeroDamageEffectSpecHandle
+// ********** End Class UWarriorHeroGameplayAbility Function MakeHeroDamageEffectSpecHandle ********
 
-// Begin Class UWarriorHeroGameplayAbility
+// ********** Begin Class UWarriorHeroGameplayAbility **********************************************
 void UWarriorHeroGameplayAbility::StaticRegisterNativesUWarriorHeroGameplayAbility()
 {
 	UClass* Class = UWarriorHeroGameplayAbility::StaticClass();
@@ -338,10 +340,34 @@ void UWarriorHeroGameplayAbility::StaticRegisterNativesUWarriorHeroGameplayAbili
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UWarriorHeroGameplayAbility);
+FClassRegistrationInfo Z_Registration_Info_UClass_UWarriorHeroGameplayAbility;
+UClass* UWarriorHeroGameplayAbility::GetPrivateStaticClass()
+{
+	using TClass = UWarriorHeroGameplayAbility;
+	if (!Z_Registration_Info_UClass_UWarriorHeroGameplayAbility.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorHeroGameplayAbility"),
+			Z_Registration_Info_UClass_UWarriorHeroGameplayAbility.InnerSingleton,
+			StaticRegisterNativesUWarriorHeroGameplayAbility,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UWarriorHeroGameplayAbility.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility_NoRegister()
 {
-	return UWarriorHeroGameplayAbility::StaticClass();
+	return UWarriorHeroGameplayAbility::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UWarriorHeroGameplayAbility_Statics
 {
@@ -356,12 +382,12 @@ struct Z_Construct_UClass_UWarriorHeroGameplayAbility_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag, "GetAbilityRemainingCooldownByTag" }, // 2289859021
-		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo, "GetHeroCharacterFromActorInfo" }, // 1724430518
-		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo, "GetHeroCombatComponentFromActorInfo" }, // 2767376351
-		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo, "GetHeroControllerFromActorInfo" }, // 640993003
-		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo, "GetHeroUIComponentFromActorInfo" }, // 2175227977
-		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle, "MakeHeroDamageEffectSpecHandle" }, // 1245273296
+		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetAbilityRemainingCooldownByTag, "GetAbilityRemainingCooldownByTag" }, // 2202643795
+		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCharacterFromActorInfo, "GetHeroCharacterFromActorInfo" }, // 4229208790
+		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroCombatComponentFromActorInfo, "GetHeroCombatComponentFromActorInfo" }, // 3314721394
+		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroControllerFromActorInfo, "GetHeroControllerFromActorInfo" }, // 3054989180
+		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_GetHeroUIComponentFromActorInfo, "GetHeroUIComponentFromActorInfo" }, // 3378911826
+		{ &Z_Construct_UFunction_UWarriorHeroGameplayAbility_MakeHeroDamageEffectSpecHandle, "MakeHeroDamageEffectSpecHandle" }, // 871135616
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -397,25 +423,22 @@ UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility()
 	}
 	return Z_Registration_Info_UClass_UWarriorHeroGameplayAbility.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UWarriorHeroGameplayAbility>()
-{
-	return UWarriorHeroGameplayAbility::StaticClass();
-}
 UWarriorHeroGameplayAbility::UWarriorHeroGameplayAbility(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UWarriorHeroGameplayAbility);
 UWarriorHeroGameplayAbility::~UWarriorHeroGameplayAbility() {}
-// End Class UWarriorHeroGameplayAbility
+// ********** End Class UWarriorHeroGameplayAbility ************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorHeroGameplayAbility, UWarriorHeroGameplayAbility::StaticClass, TEXT("UWarriorHeroGameplayAbility"), &Z_Registration_Info_UClass_UWarriorHeroGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorHeroGameplayAbility), 99163600U) },
+		{ Z_Construct_UClass_UWarriorHeroGameplayAbility, UWarriorHeroGameplayAbility::StaticClass, TEXT("UWarriorHeroGameplayAbility"), &Z_Registration_Info_UClass_UWarriorHeroGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorHeroGameplayAbility), 1174535427U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_166521223(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h__Script_Warrior_1238020751(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

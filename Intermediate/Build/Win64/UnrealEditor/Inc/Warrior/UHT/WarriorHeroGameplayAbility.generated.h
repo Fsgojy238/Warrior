@@ -5,10 +5,17 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "AbilitySystem/Abilities/WarriorHeroGameplayAbility.h"
+
+#ifdef WARRIOR_WarriorHeroGameplayAbility_generated_h
+#error "WarriorHeroGameplayAbility.generated.h already included, missing '#pragma once' in WarriorHeroGameplayAbility.h"
+#endif
+#define WARRIOR_WarriorHeroGameplayAbility_generated_h
+
 #include "UObject/ObjectMacros.h"
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 class AWarriorHeroCharacter;
 class AWarriorHeroController;
 class UGameplayEffect;
@@ -16,11 +23,8 @@ class UHeroCombatComponent;
 class UHeroUIComponent;
 struct FGameplayEffectSpecHandle;
 struct FGameplayTag;
-#ifdef WARRIOR_WarriorHeroGameplayAbility_generated_h
-#error "WarriorHeroGameplayAbility.generated.h already included, missing '#pragma once' in WarriorHeroGameplayAbility.h"
-#endif
-#define WARRIOR_WarriorHeroGameplayAbility_generated_h
 
+// ********** Begin Class UWarriorHeroGameplayAbility **********************************************
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetHeroUIComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetAbilityRemainingCooldownByTag); \
@@ -30,23 +34,25 @@ struct FGameplayTag;
 	DECLARE_FUNCTION(execGetHeroCharacterFromActorInfo);
 
 
+WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility_NoRegister();
+
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorHeroGameplayAbility(); \
 	friend struct Z_Construct_UClass_UWarriorHeroGameplayAbility_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility_NoRegister(); \
 public: \
-	DECLARE_CLASS(UWarriorHeroGameplayAbility, UWarriorGameplayAbility, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Warrior"), NO_API) \
+	DECLARE_CLASS2(UWarriorHeroGameplayAbility, UWarriorGameplayAbility, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Warrior"), Z_Construct_UClass_UWarriorHeroGameplayAbility_NoRegister) \
 	DECLARE_SERIALIZER(UWarriorHeroGameplayAbility)
 
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h_19_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWarriorHeroGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-private: \
-	/** Private move- and copy-constructors, should never be used */ \
-	UWarriorHeroGameplayAbility(UWarriorHeroGameplayAbility&&); \
-	UWarriorHeroGameplayAbility(const UWarriorHeroGameplayAbility&); \
-public: \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UWarriorHeroGameplayAbility(UWarriorHeroGameplayAbility&&) = delete; \
+	UWarriorHeroGameplayAbility(const UWarriorHeroGameplayAbility&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UWarriorHeroGameplayAbility); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UWarriorHeroGameplayAbility); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UWarriorHeroGameplayAbility) \
@@ -64,10 +70,11 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> WARRIOR_API UClass* StaticClass<class UWarriorHeroGameplayAbility>();
+class UWarriorHeroGameplayAbility;
+
+// ********** End Class UWarriorHeroGameplayAbility ************************************************
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorHeroGameplayAbility_h
-
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

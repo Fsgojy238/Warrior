@@ -5,25 +5,51 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AbilitySystem/GEExecCalc/GEExecCalc_DamageTaken.h"
+#include "AbilitySystem/GEExecCalc/GEExecCalc_DamageTaken.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeGEExecCalc_DamageTaken() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffectExecutionCalculation();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UGEExecCalc_DamageTaken();
 WARRIOR_API UClass* Z_Construct_UClass_UGEExecCalc_DamageTaken_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UGEExecCalc_DamageTaken
+// ********** Begin Class UGEExecCalc_DamageTaken **************************************************
 void UGEExecCalc_DamageTaken::StaticRegisterNativesUGEExecCalc_DamageTaken()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UGEExecCalc_DamageTaken);
+FClassRegistrationInfo Z_Registration_Info_UClass_UGEExecCalc_DamageTaken;
+UClass* UGEExecCalc_DamageTaken::GetPrivateStaticClass()
+{
+	using TClass = UGEExecCalc_DamageTaken;
+	if (!Z_Registration_Info_UClass_UGEExecCalc_DamageTaken.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("GEExecCalc_DamageTaken"),
+			Z_Registration_Info_UClass_UGEExecCalc_DamageTaken.InnerSingleton,
+			StaticRegisterNativesUGEExecCalc_DamageTaken,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UGEExecCalc_DamageTaken.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UGEExecCalc_DamageTaken_NoRegister()
 {
-	return UGEExecCalc_DamageTaken::StaticClass();
+	return UGEExecCalc_DamageTaken::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UGEExecCalc_DamageTaken_Statics
 {
@@ -70,24 +96,21 @@ UClass* Z_Construct_UClass_UGEExecCalc_DamageTaken()
 	}
 	return Z_Registration_Info_UClass_UGEExecCalc_DamageTaken.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UGEExecCalc_DamageTaken>()
-{
-	return UGEExecCalc_DamageTaken::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UGEExecCalc_DamageTaken);
 UGEExecCalc_DamageTaken::~UGEExecCalc_DamageTaken() {}
-// End Class UGEExecCalc_DamageTaken
+// ********** End Class UGEExecCalc_DamageTaken ****************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UGEExecCalc_DamageTaken, UGEExecCalc_DamageTaken::StaticClass, TEXT("UGEExecCalc_DamageTaken"), &Z_Registration_Info_UClass_UGEExecCalc_DamageTaken, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGEExecCalc_DamageTaken), 3966117957U) },
+		{ Z_Construct_UClass_UGEExecCalc_DamageTaken, UGEExecCalc_DamageTaken::StaticClass, TEXT("UGEExecCalc_DamageTaken"), &Z_Registration_Info_UClass_UGEExecCalc_DamageTaken, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGEExecCalc_DamageTaken), 2960507303U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h_3840659401(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h__Script_Warrior_3220046334(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_GEExecCalc_GEExecCalc_DamageTaken_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

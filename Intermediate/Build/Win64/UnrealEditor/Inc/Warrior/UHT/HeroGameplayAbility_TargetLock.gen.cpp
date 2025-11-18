@@ -5,11 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h"
+#include "AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeHeroGameplayAbility_TargetLock() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
@@ -20,9 +22,9 @@ WARRIOR_API UClass* Z_Construct_UClass_UHeroGameplayAbility_TargetLock();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroGameplayAbility_TargetLock_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorWidgetBase_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UHeroGameplayAbility_TargetLock Function OnTargetLockTick
+// ********** Begin Class UHeroGameplayAbility_TargetLock Function OnTargetLockTick ****************
 struct Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics
 {
 	struct HeroGameplayAbility_TargetLock_eventOnTargetLockTick_Parms
@@ -49,7 +51,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHeroG
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::NewProp_DeltaTime,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_TargetLock, nullptr, "OnTargetLockTick", nullptr, nullptr, Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::HeroGameplayAbility_TargetLock_eventOnTargetLockTick_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_TargetLock, nullptr, "OnTargetLockTick", Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::HeroGameplayAbility_TargetLock_eventOnTargetLockTick_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick_Statics::HeroGameplayAbility_TargetLock_eventOnTargetLockTick_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick()
 {
@@ -68,9 +70,9 @@ DEFINE_FUNCTION(UHeroGameplayAbility_TargetLock::execOnTargetLockTick)
 	P_THIS->OnTargetLockTick(Z_Param_DeltaTime);
 	P_NATIVE_END;
 }
-// End Class UHeroGameplayAbility_TargetLock Function OnTargetLockTick
+// ********** End Class UHeroGameplayAbility_TargetLock Function OnTargetLockTick ******************
 
-// Begin Class UHeroGameplayAbility_TargetLock
+// ********** Begin Class UHeroGameplayAbility_TargetLock ******************************************
 void UHeroGameplayAbility_TargetLock::StaticRegisterNativesUHeroGameplayAbility_TargetLock()
 {
 	UClass* Class = UHeroGameplayAbility_TargetLock::StaticClass();
@@ -79,10 +81,34 @@ void UHeroGameplayAbility_TargetLock::StaticRegisterNativesUHeroGameplayAbility_
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UHeroGameplayAbility_TargetLock);
+FClassRegistrationInfo Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock;
+UClass* UHeroGameplayAbility_TargetLock::GetPrivateStaticClass()
+{
+	using TClass = UHeroGameplayAbility_TargetLock;
+	if (!Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("HeroGameplayAbility_TargetLock"),
+			Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock.InnerSingleton,
+			StaticRegisterNativesUHeroGameplayAbility_TargetLock,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UHeroGameplayAbility_TargetLock_NoRegister()
 {
-	return UHeroGameplayAbility_TargetLock::StaticClass();
+	return UHeroGameplayAbility_TargetLock::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics
 {
@@ -175,7 +201,7 @@ struct Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick, "OnTargetLockTick" }, // 3252252896
+		{ &Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick, "OnTargetLockTick" }, // 2329089022
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -246,25 +272,22 @@ UClass* Z_Construct_UClass_UHeroGameplayAbility_TargetLock()
 	}
 	return Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UHeroGameplayAbility_TargetLock>()
-{
-	return UHeroGameplayAbility_TargetLock::StaticClass();
-}
 UHeroGameplayAbility_TargetLock::UHeroGameplayAbility_TargetLock(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UHeroGameplayAbility_TargetLock);
 UHeroGameplayAbility_TargetLock::~UHeroGameplayAbility_TargetLock() {}
-// End Class UHeroGameplayAbility_TargetLock
+// ********** End Class UHeroGameplayAbility_TargetLock ********************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHeroGameplayAbility_TargetLock, UHeroGameplayAbility_TargetLock::StaticClass, TEXT("UHeroGameplayAbility_TargetLock"), &Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroGameplayAbility_TargetLock), 4097525860U) },
+		{ Z_Construct_UClass_UHeroGameplayAbility_TargetLock, UHeroGameplayAbility_TargetLock::StaticClass, TEXT("UHeroGameplayAbility_TargetLock"), &Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroGameplayAbility_TargetLock), 2807371765U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_4129306970(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h__Script_Warrior_4173023214(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

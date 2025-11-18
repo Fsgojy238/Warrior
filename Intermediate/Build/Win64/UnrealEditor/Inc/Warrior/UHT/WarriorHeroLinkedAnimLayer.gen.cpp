@@ -5,20 +5,22 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AnimInstances/Hero/WarriorHeroLinkedAnimLayer.h"
-#include "Runtime/Engine/Classes/Components/SkeletalMeshComponent.h"
+#include "AnimInstances/Hero/WarriorHeroLinkedAnimLayer.h"
+#include "Components/SkeletalMeshComponent.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorHeroLinkedAnimLayer() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorBaseAnimInstance();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroAnimInstance_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroLinkedAnimLayer();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroLinkedAnimLayer_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UWarriorHeroLinkedAnimLayer Function GetHeroAnimInstance
+// ********** Begin Class UWarriorHeroLinkedAnimLayer Function GetHeroAnimInstance *****************
 struct Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics
 {
 	struct WarriorHeroLinkedAnimLayer_eventGetHeroAnimInstance_Parms
@@ -40,7 +42,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorHeroLinkedAnimLayer, nullptr, "GetHeroAnimInstance", nullptr, nullptr, Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::WarriorHeroLinkedAnimLayer_eventGetHeroAnimInstance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorHeroLinkedAnimLayer, nullptr, "GetHeroAnimInstance", Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::WarriorHeroLinkedAnimLayer_eventGetHeroAnimInstance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance_Statics::WarriorHeroLinkedAnimLayer_eventGetHeroAnimInstance_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance()
 {
@@ -58,9 +60,9 @@ DEFINE_FUNCTION(UWarriorHeroLinkedAnimLayer::execGetHeroAnimInstance)
 	*(UWarriorHeroAnimInstance**)Z_Param__Result=P_THIS->GetHeroAnimInstance();
 	P_NATIVE_END;
 }
-// End Class UWarriorHeroLinkedAnimLayer Function GetHeroAnimInstance
+// ********** End Class UWarriorHeroLinkedAnimLayer Function GetHeroAnimInstance *******************
 
-// Begin Class UWarriorHeroLinkedAnimLayer
+// ********** Begin Class UWarriorHeroLinkedAnimLayer **********************************************
 void UWarriorHeroLinkedAnimLayer::StaticRegisterNativesUWarriorHeroLinkedAnimLayer()
 {
 	UClass* Class = UWarriorHeroLinkedAnimLayer::StaticClass();
@@ -69,10 +71,34 @@ void UWarriorHeroLinkedAnimLayer::StaticRegisterNativesUWarriorHeroLinkedAnimLay
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UWarriorHeroLinkedAnimLayer);
+FClassRegistrationInfo Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer;
+UClass* UWarriorHeroLinkedAnimLayer::GetPrivateStaticClass()
+{
+	using TClass = UWarriorHeroLinkedAnimLayer;
+	if (!Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorHeroLinkedAnimLayer"),
+			Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer.InnerSingleton,
+			StaticRegisterNativesUWarriorHeroLinkedAnimLayer,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UWarriorHeroLinkedAnimLayer_NoRegister()
 {
-	return UWarriorHeroLinkedAnimLayer::StaticClass();
+	return UWarriorHeroLinkedAnimLayer::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UWarriorHeroLinkedAnimLayer_Statics
 {
@@ -88,7 +114,7 @@ struct Z_Construct_UClass_UWarriorHeroLinkedAnimLayer_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance, "GetHeroAnimInstance" }, // 2678344261
+		{ &Z_Construct_UFunction_UWarriorHeroLinkedAnimLayer_GetHeroAnimInstance, "GetHeroAnimInstance" }, // 1948831512
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -124,25 +150,22 @@ UClass* Z_Construct_UClass_UWarriorHeroLinkedAnimLayer()
 	}
 	return Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UWarriorHeroLinkedAnimLayer>()
-{
-	return UWarriorHeroLinkedAnimLayer::StaticClass();
-}
 UWarriorHeroLinkedAnimLayer::UWarriorHeroLinkedAnimLayer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UWarriorHeroLinkedAnimLayer);
 UWarriorHeroLinkedAnimLayer::~UWarriorHeroLinkedAnimLayer() {}
-// End Class UWarriorHeroLinkedAnimLayer
+// ********** End Class UWarriorHeroLinkedAnimLayer ************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorHeroLinkedAnimLayer, UWarriorHeroLinkedAnimLayer::StaticClass, TEXT("UWarriorHeroLinkedAnimLayer"), &Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorHeroLinkedAnimLayer), 2220729801U) },
+		{ Z_Construct_UClass_UWarriorHeroLinkedAnimLayer, UWarriorHeroLinkedAnimLayer::StaticClass, TEXT("UWarriorHeroLinkedAnimLayer"), &Z_Registration_Info_UClass_UWarriorHeroLinkedAnimLayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorHeroLinkedAnimLayer), 1281573998U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_1061855577(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h__Script_Warrior_762166484(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

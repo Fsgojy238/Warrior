@@ -5,25 +5,51 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Interface/PawnCombatInterface.h"
+#include "Interface/PawnCombatInterface.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodePawnCombatInterface() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UInterface();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatInterface();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatInterface_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Interface UPawnCombatInterface
+// ********** Begin Interface UPawnCombatInterface *************************************************
 void UPawnCombatInterface::StaticRegisterNativesUPawnCombatInterface()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPawnCombatInterface);
+FClassRegistrationInfo Z_Registration_Info_UClass_UPawnCombatInterface;
+UClass* UPawnCombatInterface::GetPrivateStaticClass()
+{
+	using TClass = UPawnCombatInterface;
+	if (!Z_Registration_Info_UClass_UPawnCombatInterface.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("PawnCombatInterface"),
+			Z_Registration_Info_UClass_UPawnCombatInterface.InnerSingleton,
+			StaticRegisterNativesUPawnCombatInterface,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UPawnCombatInterface.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UPawnCombatInterface_NoRegister()
 {
-	return UPawnCombatInterface::StaticClass();
+	return UPawnCombatInterface::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UPawnCombatInterface_Statics
 {
@@ -66,25 +92,21 @@ UClass* Z_Construct_UClass_UPawnCombatInterface()
 	}
 	return Z_Registration_Info_UClass_UPawnCombatInterface.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UPawnCombatInterface>()
-{
-	return UPawnCombatInterface::StaticClass();
-}
 UPawnCombatInterface::UPawnCombatInterface(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UPawnCombatInterface);
-UPawnCombatInterface::~UPawnCombatInterface() {}
-// End Interface UPawnCombatInterface
+// ********** End Interface UPawnCombatInterface ***************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPawnCombatInterface, UPawnCombatInterface::StaticClass, TEXT("UPawnCombatInterface"), &Z_Registration_Info_UClass_UPawnCombatInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPawnCombatInterface), 2103598655U) },
+		{ Z_Construct_UClass_UPawnCombatInterface, UPawnCombatInterface::StaticClass, TEXT("UPawnCombatInterface"), &Z_Registration_Info_UClass_UPawnCombatInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPawnCombatInterface), 90420462U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h_3187821294(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h__Script_Warrior_1186217225(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnCombatInterface_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

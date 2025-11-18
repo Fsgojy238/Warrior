@@ -42,12 +42,14 @@ void AWarriorBaseCharacter::PossessedBy(AController* NewController)
 
 	if (WarriorAbilitySystemComponent)
 	{
-		// 初始化能力系统：告诉GAS，这个角色的能力由它自己控制和表现
+		/*
+		1. 第一个this表示技能的所有权属于这个英雄
+		2. 第二个this表示技能的所有效果（动画、特效、碰撞伤害）都作用在这个英雄身上
+		*/ 
 		WarriorAbilitySystemComponent->InitAbilityActorInfo(this, this);
 
 		ensureMsgf(!CharacterStartUpData.IsNull(), TEXT("Forgot to assign start up data to %s"), *GetName());
 	}
-
 }
 
 

@@ -5,21 +5,23 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Components/Combat/HeroCombatComponent.h"
-#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
+#include "Components/Combat/HeroCombatComponent.h"
+#include "GameplayTagContainer.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeHeroCombatComponent() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorHeroWeapon_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroCombatComponent();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroCombatComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatComponent();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UHeroCombatComponent Function GetHeroCarriedWeaponByTag
+// ********** Begin Class UHeroCombatComponent Function GetHeroCarriedWeaponByTag ******************
 struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics
 {
 	struct HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms
@@ -30,7 +32,13 @@ struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Warrior|Combat" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xcd\xa8\xef\xbf\xbd\xef\xbf\xbdGameplayTag\xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xd3\xa2\xef\xbf\xbd\xef\xbf\xbd\xd0\xaf\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/Combat/HeroCombatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xcd\xa8\xef\xbf\xbd\xef\xbf\xbdGameplayTag\xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xd3\xa2\xef\xbf\xbd\xef\xbf\xbd\xd0\xaf\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InWeaponTag;
@@ -38,14 +46,14 @@ struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Stat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::NewProp_InWeaponTag = { "InWeaponTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms, InWeaponTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::NewProp_InWeaponTag = { "InWeaponTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms, InWeaponTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 133831994
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms, ReturnValue), Z_Construct_UClass_AWarriorHeroWeapon_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::NewProp_InWeaponTag,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroCombatComponent, nullptr, "GetHeroCarriedWeaponByTag", nullptr, nullptr, Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UHeroCombatComponent, nullptr, "GetHeroCarriedWeaponByTag", Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag_Statics::HeroCombatComponent_eventGetHeroCarriedWeaponByTag_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag()
 {
@@ -64,9 +72,9 @@ DEFINE_FUNCTION(UHeroCombatComponent::execGetHeroCarriedWeaponByTag)
 	*(AWarriorHeroWeapon**)Z_Param__Result=P_THIS->GetHeroCarriedWeaponByTag(Z_Param_InWeaponTag);
 	P_NATIVE_END;
 }
-// End Class UHeroCombatComponent Function GetHeroCarriedWeaponByTag
+// ********** End Class UHeroCombatComponent Function GetHeroCarriedWeaponByTag ********************
 
-// Begin Class UHeroCombatComponent Function GetHeroCurrentEquippedWeapon
+// ********** Begin Class UHeroCombatComponent Function GetHeroCurrentEquippedWeapon ***************
 struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics
 {
 	struct HeroCombatComponent_eventGetHeroCurrentEquippedWeapon_Parms
@@ -76,7 +84,13 @@ struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Warrior|Combat" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xd3\xa2\xef\xbf\xbd\xdb\xb5\xef\xbf\xbd\xc7\xb0\xd7\xb0\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/Combat/HeroCombatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xd3\xa2\xef\xbf\xbd\xdb\xb5\xef\xbf\xbd\xc7\xb0\xd7\xb0\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
@@ -88,7 +102,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHeroC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroCombatComponent, nullptr, "GetHeroCurrentEquippedWeapon", nullptr, nullptr, Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::HeroCombatComponent_eventGetHeroCurrentEquippedWeapon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UHeroCombatComponent, nullptr, "GetHeroCurrentEquippedWeapon", Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::HeroCombatComponent_eventGetHeroCurrentEquippedWeapon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon_Statics::HeroCombatComponent_eventGetHeroCurrentEquippedWeapon_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon()
 {
@@ -106,9 +120,9 @@ DEFINE_FUNCTION(UHeroCombatComponent::execGetHeroCurrentEquippedWeapon)
 	*(AWarriorHeroWeapon**)Z_Param__Result=P_THIS->GetHeroCurrentEquippedWeapon();
 	P_NATIVE_END;
 }
-// End Class UHeroCombatComponent Function GetHeroCurrentEquippedWeapon
+// ********** End Class UHeroCombatComponent Function GetHeroCurrentEquippedWeapon *****************
 
-// Begin Class UHeroCombatComponent Function GetHeroCurrentEquippedWeaponDamageAtLevel
+// ********** Begin Class UHeroCombatComponent Function GetHeroCurrentEquippedWeaponDamageAtLevel **
 struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics
 {
 	struct HeroCombatComponent_eventGetHeroCurrentEquippedWeaponDamageAtLevel_Parms
@@ -119,7 +133,13 @@ struct Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDa
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Warrior|Combat" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xd3\xa2\xef\xbf\xbd\xdb\xb5\xef\xbf\xbd\xc7\xb0\xd7\xb0\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xd6\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc8\xbc\xef\xbf\xbd \xef\xbf\xbd\xc2\xb5\xef\xbf\xbd\xef\xbf\xbd\xcb\xba\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/Combat/HeroCombatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xc8\xa1\xd3\xa2\xef\xbf\xbd\xdb\xb5\xef\xbf\xbd\xc7\xb0\xd7\xb0\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xd6\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc8\xbc\xef\xbf\xbd \xef\xbf\xbd\xc2\xb5\xef\xbf\xbd\xef\xbf\xbd\xcb\xba\xef\xbf\xbd" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_InLevel;
@@ -134,7 +154,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHeroC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroCombatComponent, nullptr, "GetHeroCurrentEquippedWeaponDamageAtLevel", nullptr, nullptr, Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::HeroCombatComponent_eventGetHeroCurrentEquippedWeaponDamageAtLevel_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UHeroCombatComponent, nullptr, "GetHeroCurrentEquippedWeaponDamageAtLevel", Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::HeroCombatComponent_eventGetHeroCurrentEquippedWeaponDamageAtLevel_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel_Statics::HeroCombatComponent_eventGetHeroCurrentEquippedWeaponDamageAtLevel_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel()
 {
@@ -153,9 +173,9 @@ DEFINE_FUNCTION(UHeroCombatComponent::execGetHeroCurrentEquippedWeaponDamageAtLe
 	*(float*)Z_Param__Result=P_THIS->GetHeroCurrentEquippedWeaponDamageAtLevel(Z_Param_InLevel);
 	P_NATIVE_END;
 }
-// End Class UHeroCombatComponent Function GetHeroCurrentEquippedWeaponDamageAtLevel
+// ********** End Class UHeroCombatComponent Function GetHeroCurrentEquippedWeaponDamageAtLevel ****
 
-// Begin Class UHeroCombatComponent
+// ********** Begin Class UHeroCombatComponent *****************************************************
 void UHeroCombatComponent::StaticRegisterNativesUHeroCombatComponent()
 {
 	UClass* Class = UHeroCombatComponent::StaticClass();
@@ -166,27 +186,54 @@ void UHeroCombatComponent::StaticRegisterNativesUHeroCombatComponent()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UHeroCombatComponent);
+FClassRegistrationInfo Z_Registration_Info_UClass_UHeroCombatComponent;
+UClass* UHeroCombatComponent::GetPrivateStaticClass()
+{
+	using TClass = UHeroCombatComponent;
+	if (!Z_Registration_Info_UClass_UHeroCombatComponent.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("HeroCombatComponent"),
+			Z_Registration_Info_UClass_UHeroCombatComponent.InnerSingleton,
+			StaticRegisterNativesUHeroCombatComponent,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UHeroCombatComponent.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UHeroCombatComponent_NoRegister()
 {
-	return UHeroCombatComponent::StaticClass();
+	return UHeroCombatComponent::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UHeroCombatComponent_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * \xd3\xa2\xef\xbf\xbd\xdb\xbd\xef\xbf\xbd\xc9\xab\xd7\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcc\xb3\xef\xbf\xbd\xef\xbf\xbd\xd4\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbdPawn\xd5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n * \xef\xbf\xbd\xef\xbf\xbd\xd5\xb9\xef\xbf\xbd\xef\xbf\xbd\xd3\xa2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc4\xbb\xef\xbf\xbd\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcb\xba\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n */" },
 #endif
 		{ "IncludePath", "Components/Combat/HeroCombatComponent.h" },
 		{ "ModuleRelativePath", "Public/Components/Combat/HeroCombatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xd3\xa2\xef\xbf\xbd\xdb\xbd\xef\xbf\xbd\xc9\xab\xd7\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcc\xb3\xef\xbf\xbd\xef\xbf\xbd\xd4\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbdPawn\xd5\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n\xef\xbf\xbd\xef\xbf\xbd\xd5\xb9\xef\xbf\xbd\xef\xbf\xbd\xd3\xa2\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc4\xbb\xef\xbf\xbd\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcb\xba\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd7\xa8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag, "GetHeroCarriedWeaponByTag" }, // 1312690686
-		{ &Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon, "GetHeroCurrentEquippedWeapon" }, // 3761104595
-		{ &Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel, "GetHeroCurrentEquippedWeaponDamageAtLevel" }, // 3810023287
+		{ &Z_Construct_UFunction_UHeroCombatComponent_GetHeroCarriedWeaponByTag, "GetHeroCarriedWeaponByTag" }, // 606561786
+		{ &Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeapon, "GetHeroCurrentEquippedWeapon" }, // 4226520122
+		{ &Z_Construct_UFunction_UHeroCombatComponent_GetHeroCurrentEquippedWeaponDamageAtLevel, "GetHeroCurrentEquippedWeaponDamageAtLevel" }, // 2201658708
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -222,25 +269,22 @@ UClass* Z_Construct_UClass_UHeroCombatComponent()
 	}
 	return Z_Registration_Info_UClass_UHeroCombatComponent.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UHeroCombatComponent>()
-{
-	return UHeroCombatComponent::StaticClass();
-}
 UHeroCombatComponent::UHeroCombatComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UHeroCombatComponent);
 UHeroCombatComponent::~UHeroCombatComponent() {}
-// End Class UHeroCombatComponent
+// ********** End Class UHeroCombatComponent *******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHeroCombatComponent, UHeroCombatComponent::StaticClass, TEXT("UHeroCombatComponent"), &Z_Registration_Info_UClass_UHeroCombatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroCombatComponent), 3164263132U) },
+		{ Z_Construct_UClass_UHeroCombatComponent, UHeroCombatComponent::StaticClass, TEXT("UHeroCombatComponent"), &Z_Registration_Info_UClass_UHeroCombatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroCombatComponent), 692780535U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h_439452670(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h__Script_Warrior_455366143(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_Combat_HeroCombatComponent_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

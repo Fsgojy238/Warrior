@@ -5,27 +5,53 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AI/BTTask_RotateToFaceTarget.h"
-#include "Runtime/AIModule/Classes/BehaviorTree/BehaviorTreeTypes.h"
+#include "AI/BTTask_RotateToFaceTarget.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeBTTask_RotateToFaceTarget() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 AIMODULE_API UClass* Z_Construct_UClass_UBTTaskNode();
 AIMODULE_API UScriptStruct* Z_Construct_UScriptStruct_FBlackboardKeySelector();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UBTTask_RotateToFaceTarget();
 WARRIOR_API UClass* Z_Construct_UClass_UBTTask_RotateToFaceTarget_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UBTTask_RotateToFaceTarget
+// ********** Begin Class UBTTask_RotateToFaceTarget ***********************************************
 void UBTTask_RotateToFaceTarget::StaticRegisterNativesUBTTask_RotateToFaceTarget()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UBTTask_RotateToFaceTarget);
+FClassRegistrationInfo Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget;
+UClass* UBTTask_RotateToFaceTarget::GetPrivateStaticClass()
+{
+	using TClass = UBTTask_RotateToFaceTarget;
+	if (!Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("BTTask_RotateToFaceTarget"),
+			Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget.InnerSingleton,
+			StaticRegisterNativesUBTTask_RotateToFaceTarget,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UBTTask_RotateToFaceTarget_NoRegister()
 {
-	return UBTTask_RotateToFaceTarget::StaticClass();
+	return UBTTask_RotateToFaceTarget::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics
 {
@@ -62,7 +88,7 @@ struct Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::NewProp_AnglePrecision = { "AnglePrecision", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBTTask_RotateToFaceTarget, AnglePrecision), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnglePrecision_MetaData), NewProp_AnglePrecision_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::NewProp_RotationInterpSpeed = { "RotationInterpSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBTTask_RotateToFaceTarget, RotationInterpSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotationInterpSpeed_MetaData), NewProp_RotationInterpSpeed_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::NewProp_InTargetToFaceKey = { "InTargetToFaceKey", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBTTask_RotateToFaceTarget, InTargetToFaceKey), Z_Construct_UScriptStruct_FBlackboardKeySelector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InTargetToFaceKey_MetaData), NewProp_InTargetToFaceKey_MetaData) }; // 3940742986
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::NewProp_InTargetToFaceKey = { "InTargetToFaceKey", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBTTask_RotateToFaceTarget, InTargetToFaceKey), Z_Construct_UScriptStruct_FBlackboardKeySelector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InTargetToFaceKey_MetaData), NewProp_InTargetToFaceKey_MetaData) }; // 815030858
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::NewProp_AnglePrecision,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics::NewProp_RotationInterpSpeed,
@@ -97,24 +123,21 @@ UClass* Z_Construct_UClass_UBTTask_RotateToFaceTarget()
 	}
 	return Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UBTTask_RotateToFaceTarget>()
-{
-	return UBTTask_RotateToFaceTarget::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UBTTask_RotateToFaceTarget);
 UBTTask_RotateToFaceTarget::~UBTTask_RotateToFaceTarget() {}
-// End Class UBTTask_RotateToFaceTarget
+// ********** End Class UBTTask_RotateToFaceTarget *************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTTask_RotateToFaceTarget, UBTTask_RotateToFaceTarget::StaticClass, TEXT("UBTTask_RotateToFaceTarget"), &Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_RotateToFaceTarget), 1078705227U) },
+		{ Z_Construct_UClass_UBTTask_RotateToFaceTarget, UBTTask_RotateToFaceTarget::StaticClass, TEXT("UBTTask_RotateToFaceTarget"), &Z_Registration_Info_UClass_UBTTask_RotateToFaceTarget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_RotateToFaceTarget), 2286751615U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h_3696521396(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h__Script_Warrior_2623989052(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

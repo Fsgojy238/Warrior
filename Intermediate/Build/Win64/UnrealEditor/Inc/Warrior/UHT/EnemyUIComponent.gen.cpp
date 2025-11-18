@@ -5,19 +5,21 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Components/UI/EnemyUIComponent.h"
+#include "Components/UI/EnemyUIComponent.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeEnemyUIComponent() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UEnemyUIComponent();
 WARRIOR_API UClass* Z_Construct_UClass_UEnemyUIComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnUIComponent();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorWidgetBase_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UEnemyUIComponent Function RegisterEnemyDrawnWidget
+// ********** Begin Class UEnemyUIComponent Function RegisterEnemyDrawnWidget **********************
 struct Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics
 {
 	struct EnemyUIComponent_eventRegisterEnemyDrawnWidget_Parms
@@ -41,7 +43,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEnemy
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::NewProp_InWidgetToRegister,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnemyUIComponent, nullptr, "RegisterEnemyDrawnWidget", nullptr, nullptr, Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::EnemyUIComponent_eventRegisterEnemyDrawnWidget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UEnemyUIComponent, nullptr, "RegisterEnemyDrawnWidget", Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::EnemyUIComponent_eventRegisterEnemyDrawnWidget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget_Statics::EnemyUIComponent_eventRegisterEnemyDrawnWidget_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget()
 {
@@ -60,9 +62,9 @@ DEFINE_FUNCTION(UEnemyUIComponent::execRegisterEnemyDrawnWidget)
 	P_THIS->RegisterEnemyDrawnWidget(Z_Param_InWidgetToRegister);
 	P_NATIVE_END;
 }
-// End Class UEnemyUIComponent Function RegisterEnemyDrawnWidget
+// ********** End Class UEnemyUIComponent Function RegisterEnemyDrawnWidget ************************
 
-// Begin Class UEnemyUIComponent Function RemoveEnemyDrawnWidgetsIfAny
+// ********** Begin Class UEnemyUIComponent Function RemoveEnemyDrawnWidgetsIfAny ******************
 struct Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics
 {
 #if WITH_METADATA
@@ -72,7 +74,7 @@ struct Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Stat
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnemyUIComponent, nullptr, "RemoveEnemyDrawnWidgetsIfAny", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UEnemyUIComponent, nullptr, "RemoveEnemyDrawnWidgetsIfAny", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -89,9 +91,9 @@ DEFINE_FUNCTION(UEnemyUIComponent::execRemoveEnemyDrawnWidgetsIfAny)
 	P_THIS->RemoveEnemyDrawnWidgetsIfAny();
 	P_NATIVE_END;
 }
-// End Class UEnemyUIComponent Function RemoveEnemyDrawnWidgetsIfAny
+// ********** End Class UEnemyUIComponent Function RemoveEnemyDrawnWidgetsIfAny ********************
 
-// Begin Class UEnemyUIComponent
+// ********** Begin Class UEnemyUIComponent ********************************************************
 void UEnemyUIComponent::StaticRegisterNativesUEnemyUIComponent()
 {
 	UClass* Class = UEnemyUIComponent::StaticClass();
@@ -101,10 +103,34 @@ void UEnemyUIComponent::StaticRegisterNativesUEnemyUIComponent()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UEnemyUIComponent);
+FClassRegistrationInfo Z_Registration_Info_UClass_UEnemyUIComponent;
+UClass* UEnemyUIComponent::GetPrivateStaticClass()
+{
+	using TClass = UEnemyUIComponent;
+	if (!Z_Registration_Info_UClass_UEnemyUIComponent.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("EnemyUIComponent"),
+			Z_Registration_Info_UClass_UEnemyUIComponent.InnerSingleton,
+			StaticRegisterNativesUEnemyUIComponent,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UEnemyUIComponent.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UEnemyUIComponent_NoRegister()
 {
-	return UEnemyUIComponent::StaticClass();
+	return UEnemyUIComponent::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UEnemyUIComponent_Statics
 {
@@ -119,8 +145,8 @@ struct Z_Construct_UClass_UEnemyUIComponent_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget, "RegisterEnemyDrawnWidget" }, // 828541195
-		{ &Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny, "RemoveEnemyDrawnWidgetsIfAny" }, // 3772470147
+		{ &Z_Construct_UFunction_UEnemyUIComponent_RegisterEnemyDrawnWidget, "RegisterEnemyDrawnWidget" }, // 1247841956
+		{ &Z_Construct_UFunction_UEnemyUIComponent_RemoveEnemyDrawnWidgetsIfAny, "RemoveEnemyDrawnWidgetsIfAny" }, // 2512805780
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -156,25 +182,22 @@ UClass* Z_Construct_UClass_UEnemyUIComponent()
 	}
 	return Z_Registration_Info_UClass_UEnemyUIComponent.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UEnemyUIComponent>()
-{
-	return UEnemyUIComponent::StaticClass();
-}
 UEnemyUIComponent::UEnemyUIComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UEnemyUIComponent);
 UEnemyUIComponent::~UEnemyUIComponent() {}
-// End Class UEnemyUIComponent
+// ********** End Class UEnemyUIComponent **********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEnemyUIComponent, UEnemyUIComponent::StaticClass, TEXT("UEnemyUIComponent"), &Z_Registration_Info_UClass_UEnemyUIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemyUIComponent), 2609482459U) },
+		{ Z_Construct_UClass_UEnemyUIComponent, UEnemyUIComponent::StaticClass, TEXT("UEnemyUIComponent"), &Z_Registration_Info_UClass_UEnemyUIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemyUIComponent), 1101498044U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h_365225428(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h__Script_Warrior_3760229516(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_UI_EnemyUIComponent_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

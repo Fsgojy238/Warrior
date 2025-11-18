@@ -34,11 +34,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "StartUpData")
 	TArray< TSubclassOf < UGameplayEffect > > StartUpGameplayEffects;
 
-	/**
-	 * 内部辅助函数：将指定能力列表赋予目标能力系统组件
-	 * @param InAbilitiesToGive - 要赋予的能力类数组
-	 * @param InWarriorASCToGive - 目标能力系统组件
-	 * @param ApplyLevel - 能力等级
-	 */
+	
+	// 内部辅助函数：将指定能力列表赋予目标能力系统组件
 	void GrantAbilities(const TArray< TSubclassOf < UWarriorGameplayAbility > >& InAbilitiesToGive, UWarriorAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
 };

@@ -5,11 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Characters/WarriorBaseCharacter.h"
+#include "Characters/WarriorBaseCharacter.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorBaseCharacter() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 MOTIONWARPING_API UClass* Z_Construct_UClass_UMotionWarpingComponent_NoRegister();
@@ -21,16 +23,40 @@ WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatInterface_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnUIInterface_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorAbilitySystemComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorAttributeSet_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorBaseCharacter
+// ********** Begin Class AWarriorBaseCharacter ****************************************************
 void AWarriorBaseCharacter::StaticRegisterNativesAWarriorBaseCharacter()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorBaseCharacter);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorBaseCharacter;
+UClass* AWarriorBaseCharacter::GetPrivateStaticClass()
+{
+	using TClass = AWarriorBaseCharacter;
+	if (!Z_Registration_Info_UClass_AWarriorBaseCharacter.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorBaseCharacter"),
+			Z_Registration_Info_UClass_AWarriorBaseCharacter.InnerSingleton,
+			StaticRegisterNativesAWarriorBaseCharacter,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorBaseCharacter.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorBaseCharacter_NoRegister()
 {
-	return AWarriorBaseCharacter::StaticClass();
+	return AWarriorBaseCharacter::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorBaseCharacter_Statics
 {
@@ -92,9 +118,9 @@ UObject* (*const Z_Construct_UClass_AWarriorBaseCharacter_Statics::DependentSing
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorBaseCharacter_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AWarriorBaseCharacter_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorBaseCharacter, IAbilitySystemInterface), false },  // 2272790346
-	{ Z_Construct_UClass_UPawnCombatInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorBaseCharacter, IPawnCombatInterface), false },  // 2103598655
-	{ Z_Construct_UClass_UPawnUIInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorBaseCharacter, IPawnUIInterface), false },  // 2069802710
+	{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorBaseCharacter, IAbilitySystemInterface), false },  // 1199015870
+	{ Z_Construct_UClass_UPawnCombatInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorBaseCharacter, IPawnCombatInterface), false },  // 90420462
+	{ Z_Construct_UClass_UPawnUIInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorBaseCharacter, IPawnUIInterface), false },  // 981960794
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorBaseCharacter_Statics::ClassParams = {
 	&AWarriorBaseCharacter::StaticClass,
@@ -108,7 +134,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorBaseCharacter_S
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorBaseCharacter_Statics::PropPointers),
 	UE_ARRAY_COUNT(InterfaceParams),
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorBaseCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorBaseCharacter_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorBaseCharacter()
@@ -119,24 +145,21 @@ UClass* Z_Construct_UClass_AWarriorBaseCharacter()
 	}
 	return Z_Registration_Info_UClass_AWarriorBaseCharacter.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorBaseCharacter>()
-{
-	return AWarriorBaseCharacter::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorBaseCharacter);
 AWarriorBaseCharacter::~AWarriorBaseCharacter() {}
-// End Class AWarriorBaseCharacter
+// ********** End Class AWarriorBaseCharacter ******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorBaseCharacter, AWarriorBaseCharacter::StaticClass, TEXT("AWarriorBaseCharacter"), &Z_Registration_Info_UClass_AWarriorBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorBaseCharacter), 184689400U) },
+		{ Z_Construct_UClass_AWarriorBaseCharacter, AWarriorBaseCharacter::StaticClass, TEXT("AWarriorBaseCharacter"), &Z_Registration_Info_UClass_AWarriorBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorBaseCharacter), 2218811410U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_2614597573(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h__Script_Warrior_505480610(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorBaseCharacter_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

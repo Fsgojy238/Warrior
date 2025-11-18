@@ -5,30 +5,35 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "AI/BTTask_RotateToFaceTarget.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #ifdef WARRIOR_BTTask_RotateToFaceTarget_generated_h
 #error "BTTask_RotateToFaceTarget.generated.h already included, missing '#pragma once' in BTTask_RotateToFaceTarget.h"
 #endif
 #define WARRIOR_BTTask_RotateToFaceTarget_generated_h
 
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+// ********** Begin Class UBTTask_RotateToFaceTarget ***********************************************
+WARRIOR_API UClass* Z_Construct_UClass_UBTTask_RotateToFaceTarget_NoRegister();
+
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBTTask_RotateToFaceTarget(); \
 	friend struct Z_Construct_UClass_UBTTask_RotateToFaceTarget_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend WARRIOR_API UClass* Z_Construct_UClass_UBTTask_RotateToFaceTarget_NoRegister(); \
 public: \
-	DECLARE_CLASS(UBTTask_RotateToFaceTarget, UBTTaskNode, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Warrior"), NO_API) \
+	DECLARE_CLASS2(UBTTask_RotateToFaceTarget, UBTTaskNode, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Warrior"), Z_Construct_UClass_UBTTask_RotateToFaceTarget_NoRegister) \
 	DECLARE_SERIALIZER(UBTTask_RotateToFaceTarget)
 
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h_32_ENHANCED_CONSTRUCTORS \
-private: \
-	/** Private move- and copy-constructors, should never be used */ \
-	UBTTask_RotateToFaceTarget(UBTTask_RotateToFaceTarget&&); \
-	UBTTask_RotateToFaceTarget(const UBTTask_RotateToFaceTarget&); \
-public: \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UBTTask_RotateToFaceTarget(UBTTask_RotateToFaceTarget&&) = delete; \
+	UBTTask_RotateToFaceTarget(const UBTTask_RotateToFaceTarget&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UBTTask_RotateToFaceTarget); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBTTask_RotateToFaceTarget); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UBTTask_RotateToFaceTarget) \
@@ -45,10 +50,11 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> WARRIOR_API UClass* StaticClass<class UBTTask_RotateToFaceTarget>();
+class UBTTask_RotateToFaceTarget;
+
+// ********** End Class UBTTask_RotateToFaceTarget *************************************************
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_UEprojects_Warrior_Source_Warrior_Public_AI_BTTask_RotateToFaceTarget_h
-
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,35 +5,40 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "Interface/PawnUIInterface.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #ifdef WARRIOR_PawnUIInterface_generated_h
 #error "PawnUIInterface.generated.h already included, missing '#pragma once' in PawnUIInterface.h"
 #endif
 #define WARRIOR_PawnUIInterface_generated_h
 
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+// ********** Begin Interface UPawnUIInterface *****************************************************
+WARRIOR_API UClass* Z_Construct_UClass_UPawnUIInterface_NoRegister();
+
 #define FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnUIInterface_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	WARRIOR_API UPawnUIInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-private: \
-	/** Private move- and copy-constructors, should never be used */ \
-	UPawnUIInterface(UPawnUIInterface&&); \
-	UPawnUIInterface(const UPawnUIInterface&); \
-public: \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UPawnUIInterface(UPawnUIInterface&&) = delete; \
+	UPawnUIInterface(const UPawnUIInterface&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(WARRIOR_API, UPawnUIInterface); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPawnUIInterface); \
 	DEFINE_ABSTRACT_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPawnUIInterface) \
-	WARRIOR_API virtual ~UPawnUIInterface();
+	virtual ~UPawnUIInterface() = default;
 
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnUIInterface_h_17_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUPawnUIInterface(); \
 	friend struct Z_Construct_UClass_UPawnUIInterface_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend WARRIOR_API UClass* Z_Construct_UClass_UPawnUIInterface_NoRegister(); \
 public: \
-	DECLARE_CLASS(UPawnUIInterface, UInterface, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Interface), CASTCLASS_None, TEXT("/Script/Warrior"), WARRIOR_API) \
+	DECLARE_CLASS2(UPawnUIInterface, UInterface, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Interface), CASTCLASS_None, TEXT("/Script/Warrior"), Z_Construct_UClass_UPawnUIInterface_NoRegister) \
 	DECLARE_SERIALIZER(UPawnUIInterface)
 
 
@@ -63,10 +68,11 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> WARRIOR_API UClass* StaticClass<class UPawnUIInterface>();
+class UPawnUIInterface;
+
+// ********** End Interface UPawnUIInterface *******************************************************
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_UEprojects_Warrior_Source_Warrior_Public_Interface_PawnUIInterface_h
-
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

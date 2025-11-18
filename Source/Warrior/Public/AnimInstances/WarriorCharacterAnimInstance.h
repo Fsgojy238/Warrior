@@ -34,10 +34,11 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData|LocalmotionData")
 	float GroundSpeed;
 
-	// 是否有加速度。用于判断角色是否正在加速或减速。
+	// 是否有加速度。用于判断角色是否正在加速或减速，进而控制不同动画的切换
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData|LocalmotionData")
 	bool bHasAcceleration;
 
+	// 运动方向
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData|LocalmotionData")
 	float LocomotionDirection;
 

@@ -5,11 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AbilitySystem/Abilities/HeroGameplayAbility_PickUpStones.h"
+#include "AbilitySystem/Abilities/HeroGameplayAbility_PickUpStones.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeHeroGameplayAbility_PickUpStones() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 UPackage* Z_Construct_UPackage__Script_Warrior();
@@ -17,9 +19,9 @@ WARRIOR_API UClass* Z_Construct_UClass_AWarriorStoneBase_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroGameplayAbility_PickUpStones();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroGameplayAbility_PickUpStones_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroGameplayAbility();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UHeroGameplayAbility_PickUpStones Function CollectStones
+// ********** Begin Class UHeroGameplayAbility_PickUpStones Function CollectStones *****************
 struct Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics
 {
 #if WITH_METADATA
@@ -32,7 +34,7 @@ struct Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Sta
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_PickUpStones, nullptr, "CollectStones", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_PickUpStones, nullptr, "CollectStones", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -49,9 +51,9 @@ DEFINE_FUNCTION(UHeroGameplayAbility_PickUpStones::execCollectStones)
 	P_THIS->CollectStones();
 	P_NATIVE_END;
 }
-// End Class UHeroGameplayAbility_PickUpStones Function CollectStones
+// ********** End Class UHeroGameplayAbility_PickUpStones Function CollectStones *******************
 
-// Begin Class UHeroGameplayAbility_PickUpStones Function ConsumeStones
+// ********** Begin Class UHeroGameplayAbility_PickUpStones Function ConsumeStones *****************
 struct Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics
 {
 #if WITH_METADATA
@@ -61,7 +63,7 @@ struct Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Sta
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_PickUpStones, nullptr, "ConsumeStones", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_PickUpStones, nullptr, "ConsumeStones", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -78,9 +80,9 @@ DEFINE_FUNCTION(UHeroGameplayAbility_PickUpStones::execConsumeStones)
 	P_THIS->ConsumeStones();
 	P_NATIVE_END;
 }
-// End Class UHeroGameplayAbility_PickUpStones Function ConsumeStones
+// ********** End Class UHeroGameplayAbility_PickUpStones Function ConsumeStones *******************
 
-// Begin Class UHeroGameplayAbility_PickUpStones
+// ********** Begin Class UHeroGameplayAbility_PickUpStones ****************************************
 void UHeroGameplayAbility_PickUpStones::StaticRegisterNativesUHeroGameplayAbility_PickUpStones()
 {
 	UClass* Class = UHeroGameplayAbility_PickUpStones::StaticClass();
@@ -90,10 +92,34 @@ void UHeroGameplayAbility_PickUpStones::StaticRegisterNativesUHeroGameplayAbilit
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UHeroGameplayAbility_PickUpStones);
+FClassRegistrationInfo Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones;
+UClass* UHeroGameplayAbility_PickUpStones::GetPrivateStaticClass()
+{
+	using TClass = UHeroGameplayAbility_PickUpStones;
+	if (!Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("HeroGameplayAbility_PickUpStones"),
+			Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones.InnerSingleton,
+			StaticRegisterNativesUHeroGameplayAbility_PickUpStones,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UHeroGameplayAbility_PickUpStones_NoRegister()
 {
-	return UHeroGameplayAbility_PickUpStones::StaticClass();
+	return UHeroGameplayAbility_PickUpStones::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UHeroGameplayAbility_PickUpStones_Statics
 {
@@ -136,8 +162,8 @@ struct Z_Construct_UClass_UHeroGameplayAbility_PickUpStones_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones, "CollectStones" }, // 3230618370
-		{ &Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones, "ConsumeStones" }, // 48039712
+		{ &Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_CollectStones, "CollectStones" }, // 3696344443
+		{ &Z_Construct_UFunction_UHeroGameplayAbility_PickUpStones_ConsumeStones, "ConsumeStones" }, // 20635951
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -194,25 +220,22 @@ UClass* Z_Construct_UClass_UHeroGameplayAbility_PickUpStones()
 	}
 	return Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UHeroGameplayAbility_PickUpStones>()
-{
-	return UHeroGameplayAbility_PickUpStones::StaticClass();
-}
 UHeroGameplayAbility_PickUpStones::UHeroGameplayAbility_PickUpStones(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UHeroGameplayAbility_PickUpStones);
 UHeroGameplayAbility_PickUpStones::~UHeroGameplayAbility_PickUpStones() {}
-// End Class UHeroGameplayAbility_PickUpStones
+// ********** End Class UHeroGameplayAbility_PickUpStones ******************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHeroGameplayAbility_PickUpStones, UHeroGameplayAbility_PickUpStones::StaticClass, TEXT("UHeroGameplayAbility_PickUpStones"), &Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroGameplayAbility_PickUpStones), 3440635528U) },
+		{ Z_Construct_UClass_UHeroGameplayAbility_PickUpStones, UHeroGameplayAbility_PickUpStones::StaticClass, TEXT("UHeroGameplayAbility_PickUpStones"), &Z_Registration_Info_UClass_UHeroGameplayAbility_PickUpStones, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroGameplayAbility_PickUpStones), 2479390695U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h_2943129711(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h__Script_Warrior_646761714(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_PickUpStones_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

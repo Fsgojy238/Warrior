@@ -5,26 +5,52 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/GameModes/WarriorBaseGameMode.h"
+#include "GameModes/WarriorBaseGameMode.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorBaseGameMode() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorBaseGameMode();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorBaseGameMode_NoRegister();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorBaseGameMode
+// ********** Begin Class AWarriorBaseGameMode *****************************************************
 void AWarriorBaseGameMode::StaticRegisterNativesAWarriorBaseGameMode()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorBaseGameMode);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorBaseGameMode;
+UClass* AWarriorBaseGameMode::GetPrivateStaticClass()
+{
+	using TClass = AWarriorBaseGameMode;
+	if (!Z_Registration_Info_UClass_AWarriorBaseGameMode.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorBaseGameMode"),
+			Z_Registration_Info_UClass_AWarriorBaseGameMode.InnerSingleton,
+			StaticRegisterNativesAWarriorBaseGameMode,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorBaseGameMode.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorBaseGameMode_NoRegister()
 {
-	return AWarriorBaseGameMode::StaticClass();
+	return AWarriorBaseGameMode::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorBaseGameMode_Statics
 {
@@ -76,7 +102,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorBaseGameMode_St
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorBaseGameMode_Statics::PropPointers),
 	0,
-	0x009002ACu,
+	0x009003ACu,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorBaseGameMode_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorBaseGameMode_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorBaseGameMode()
@@ -87,24 +113,21 @@ UClass* Z_Construct_UClass_AWarriorBaseGameMode()
 	}
 	return Z_Registration_Info_UClass_AWarriorBaseGameMode.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorBaseGameMode>()
-{
-	return AWarriorBaseGameMode::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorBaseGameMode);
 AWarriorBaseGameMode::~AWarriorBaseGameMode() {}
-// End Class AWarriorBaseGameMode
+// ********** End Class AWarriorBaseGameMode *******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorBaseGameMode, AWarriorBaseGameMode::StaticClass, TEXT("AWarriorBaseGameMode"), &Z_Registration_Info_UClass_AWarriorBaseGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorBaseGameMode), 3226020266U) },
+		{ Z_Construct_UClass_AWarriorBaseGameMode, AWarriorBaseGameMode::StaticClass, TEXT("AWarriorBaseGameMode"), &Z_Registration_Info_UClass_AWarriorBaseGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorBaseGameMode), 1735534624U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h_1015447717(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h__Script_Warrior_287351411(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_GameModes_WarriorBaseGameMode_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

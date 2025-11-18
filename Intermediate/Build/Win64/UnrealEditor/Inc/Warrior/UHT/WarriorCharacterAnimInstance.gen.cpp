@@ -5,28 +5,54 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AnimInstances/WarriorCharacterAnimInstance.h"
-#include "Runtime/Engine/Classes/Components/SkeletalMeshComponent.h"
+#include "AnimInstances/WarriorCharacterAnimInstance.h"
+#include "Components/SkeletalMeshComponent.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorCharacterAnimInstance() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UCharacterMovementComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorBaseCharacter_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorBaseAnimInstance();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorCharacterAnimInstance();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorCharacterAnimInstance_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UWarriorCharacterAnimInstance
+// ********** Begin Class UWarriorCharacterAnimInstance ********************************************
 void UWarriorCharacterAnimInstance::StaticRegisterNativesUWarriorCharacterAnimInstance()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UWarriorCharacterAnimInstance);
+FClassRegistrationInfo Z_Registration_Info_UClass_UWarriorCharacterAnimInstance;
+UClass* UWarriorCharacterAnimInstance::GetPrivateStaticClass()
+{
+	using TClass = UWarriorCharacterAnimInstance;
+	if (!Z_Registration_Info_UClass_UWarriorCharacterAnimInstance.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorCharacterAnimInstance"),
+			Z_Registration_Info_UClass_UWarriorCharacterAnimInstance.InnerSingleton,
+			StaticRegisterNativesUWarriorCharacterAnimInstance,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UWarriorCharacterAnimInstance.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UWarriorCharacterAnimInstance_NoRegister()
 {
-	return UWarriorCharacterAnimInstance::StaticClass();
+	return UWarriorCharacterAnimInstance::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics
 {
@@ -71,16 +97,22 @@ struct Z_Construct_UClass_UWarriorCharacterAnimInstance_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bHasAcceleration_MetaData[] = {
 		{ "Category", "AnimData|LocalmotionData" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xd0\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xb6\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xcf\xbd\xef\xbf\xbd\xc9\xab\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd9\xa1\xef\xbf\xbd\n" },
+		{ "Comment", "// \xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xd0\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xb6\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xcf\xbd\xef\xbf\xbd\xc9\xab\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd9\xa3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xb2\xef\xbf\xbd\xcd\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xbb\xef\xbf\xbd\n" },
 #endif
 		{ "ModuleRelativePath", "Public/AnimInstances/WarriorCharacterAnimInstance.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xd0\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xb6\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xcf\xbd\xef\xbf\xbd\xc9\xab\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd9\xa1\xef\xbf\xbd" },
+		{ "ToolTip", "\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xd0\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xb6\xc8\xa1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xcf\xbd\xef\xbf\xbd\xc9\xab\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xda\xbc\xef\xbf\xbd\xef\xbf\xbd\xd9\xbb\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd9\xa3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xb2\xef\xbf\xbd\xcd\xac\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xbb\xef\xbf\xbd" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LocomotionDirection_MetaData[] = {
 		{ "Category", "AnimData|LocalmotionData" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xcb\xb6\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Public/AnimInstances/WarriorCharacterAnimInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xcb\xb6\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OwningCharacter;
@@ -141,25 +173,22 @@ UClass* Z_Construct_UClass_UWarriorCharacterAnimInstance()
 	}
 	return Z_Registration_Info_UClass_UWarriorCharacterAnimInstance.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UWarriorCharacterAnimInstance>()
-{
-	return UWarriorCharacterAnimInstance::StaticClass();
-}
 UWarriorCharacterAnimInstance::UWarriorCharacterAnimInstance(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UWarriorCharacterAnimInstance);
 UWarriorCharacterAnimInstance::~UWarriorCharacterAnimInstance() {}
-// End Class UWarriorCharacterAnimInstance
+// ********** End Class UWarriorCharacterAnimInstance **********************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorCharacterAnimInstance, UWarriorCharacterAnimInstance::StaticClass, TEXT("UWarriorCharacterAnimInstance"), &Z_Registration_Info_UClass_UWarriorCharacterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorCharacterAnimInstance), 887636685U) },
+		{ Z_Construct_UClass_UWarriorCharacterAnimInstance, UWarriorCharacterAnimInstance::StaticClass, TEXT("UWarriorCharacterAnimInstance"), &Z_Registration_Info_UClass_UWarriorCharacterAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorCharacterAnimInstance), 2651095167U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_378916323(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h__Script_Warrior_2749060897(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorCharacterAnimInstance_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

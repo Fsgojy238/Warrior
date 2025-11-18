@@ -5,21 +5,23 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/AnimInstances/WarriorBaseAnimInstance.h"
-#include "Runtime/Engine/Classes/Components/SkeletalMeshComponent.h"
-#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
+#include "AnimInstances/WarriorBaseAnimInstance.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "GameplayTagContainer.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorBaseAnimInstance() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UAnimInstance();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorBaseAnimInstance();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorBaseAnimInstance_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UWarriorBaseAnimInstance Function DoesOwnerHaveTag
+// ********** Begin Class UWarriorBaseAnimInstance Function DoesOwnerHaveTag ***********************
 struct Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics
 {
 	struct WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms
@@ -30,7 +32,13 @@ struct Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintThreadSafe", "" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xdf\xba\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xef\xbf\xbdOwningPawn\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc4\xb3\xef\xbf\xbd\xef\xbf\xbdtag\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbdHero\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xa6\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd(Layer)\n" },
+#endif
 		{ "ModuleRelativePath", "Public/AnimInstances/WarriorBaseAnimInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xdf\xba\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd0\xb6\xef\xbf\xbdOwningPawn\xef\xbf\xbd\xc7\xb7\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc4\xb3\xef\xbf\xbd\xef\xbf\xbdtag\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbdHero\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xa6\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd(Layer)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_TagToCheck;
@@ -39,7 +47,7 @@ struct Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::NewProp_TagToCheck = { "TagToCheck", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms, TagToCheck), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::NewProp_TagToCheck = { "TagToCheck", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms, TagToCheck), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 133831994
 void Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms*)Obj)->ReturnValue = 1;
@@ -50,7 +58,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarriorBaseAnimInstance, nullptr, "DoesOwnerHaveTag", nullptr, nullptr, Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWarriorBaseAnimInstance, nullptr, "DoesOwnerHaveTag", Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag_Statics::WarriorBaseAnimInstance_eventDoesOwnerHaveTag_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag()
 {
@@ -69,9 +77,9 @@ DEFINE_FUNCTION(UWarriorBaseAnimInstance::execDoesOwnerHaveTag)
 	*(bool*)Z_Param__Result=P_THIS->DoesOwnerHaveTag(Z_Param_TagToCheck);
 	P_NATIVE_END;
 }
-// End Class UWarriorBaseAnimInstance Function DoesOwnerHaveTag
+// ********** End Class UWarriorBaseAnimInstance Function DoesOwnerHaveTag *************************
 
-// Begin Class UWarriorBaseAnimInstance
+// ********** Begin Class UWarriorBaseAnimInstance *************************************************
 void UWarriorBaseAnimInstance::StaticRegisterNativesUWarriorBaseAnimInstance()
 {
 	UClass* Class = UWarriorBaseAnimInstance::StaticClass();
@@ -80,10 +88,34 @@ void UWarriorBaseAnimInstance::StaticRegisterNativesUWarriorBaseAnimInstance()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UWarriorBaseAnimInstance);
+FClassRegistrationInfo Z_Registration_Info_UClass_UWarriorBaseAnimInstance;
+UClass* UWarriorBaseAnimInstance::GetPrivateStaticClass()
+{
+	using TClass = UWarriorBaseAnimInstance;
+	if (!Z_Registration_Info_UClass_UWarriorBaseAnimInstance.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorBaseAnimInstance"),
+			Z_Registration_Info_UClass_UWarriorBaseAnimInstance.InnerSingleton,
+			StaticRegisterNativesUWarriorBaseAnimInstance,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UWarriorBaseAnimInstance.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UWarriorBaseAnimInstance_NoRegister()
 {
-	return UWarriorBaseAnimInstance::StaticClass();
+	return UWarriorBaseAnimInstance::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UWarriorBaseAnimInstance_Statics
 {
@@ -99,7 +131,7 @@ struct Z_Construct_UClass_UWarriorBaseAnimInstance_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag, "DoesOwnerHaveTag" }, // 3975482806
+		{ &Z_Construct_UFunction_UWarriorBaseAnimInstance_DoesOwnerHaveTag, "DoesOwnerHaveTag" }, // 2051577214
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -135,25 +167,22 @@ UClass* Z_Construct_UClass_UWarriorBaseAnimInstance()
 	}
 	return Z_Registration_Info_UClass_UWarriorBaseAnimInstance.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UWarriorBaseAnimInstance>()
-{
-	return UWarriorBaseAnimInstance::StaticClass();
-}
 UWarriorBaseAnimInstance::UWarriorBaseAnimInstance(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UWarriorBaseAnimInstance);
 UWarriorBaseAnimInstance::~UWarriorBaseAnimInstance() {}
-// End Class UWarriorBaseAnimInstance
+// ********** End Class UWarriorBaseAnimInstance ***************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorBaseAnimInstance, UWarriorBaseAnimInstance::StaticClass, TEXT("UWarriorBaseAnimInstance"), &Z_Registration_Info_UClass_UWarriorBaseAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorBaseAnimInstance), 1895251065U) },
+		{ Z_Construct_UClass_UWarriorBaseAnimInstance, UWarriorBaseAnimInstance::StaticClass, TEXT("UWarriorBaseAnimInstance"), &Z_Registration_Info_UClass_UWarriorBaseAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorBaseAnimInstance), 3509917986U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h_2337555992(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h__Script_Warrior_3294365063(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_WarriorBaseAnimInstance_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

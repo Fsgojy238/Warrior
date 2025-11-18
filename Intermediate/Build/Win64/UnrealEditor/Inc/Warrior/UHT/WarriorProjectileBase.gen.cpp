@@ -5,13 +5,15 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Items/WarriorProjectileBase.h"
-#include "GameplayAbilities/Public/GameplayEffectTypes.h"
-#include "Runtime/Engine/Classes/Engine/HitResult.h"
+#include "Items/WarriorProjectileBase.h"
+#include "Engine/HitResult.h"
+#include "GameplayEffectTypes.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorProjectileBase() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
@@ -25,9 +27,9 @@ UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorProjectileBase();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorProjectileBase_NoRegister();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EProjectileDamagePolicy();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Enum EProjectileDamagePolicy
+// ********** Begin Enum EProjectileDamagePolicy ***************************************************
 static FEnumRegistrationInfo Z_Registration_Info_UEnum_EProjectileDamagePolicy;
 static UEnum* EProjectileDamagePolicy_StaticEnum()
 {
@@ -77,14 +79,14 @@ UEnum* Z_Construct_UEnum_Warrior_EProjectileDamagePolicy()
 	}
 	return Z_Registration_Info_UEnum_EProjectileDamagePolicy.InnerSingleton;
 }
-// End Enum EProjectileDamagePolicy
+// ********** End Enum EProjectileDamagePolicy *****************************************************
 
-// Begin Class AWarriorProjectileBase Function BP_OnSpawnProjectileHitFX
+// ********** Begin Class AWarriorProjectileBase Function BP_OnSpawnProjectileHitFX ****************
 struct WarriorProjectileBase_eventBP_OnSpawnProjectileHitFX_Parms
 {
 	FVector HitLocation;
 };
-static const FName NAME_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX = FName(TEXT("BP_OnSpawnProjectileHitFX"));
+static FName NAME_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX = FName(TEXT("BP_OnSpawnProjectileHitFX"));
 void AWarriorProjectileBase::BP_OnSpawnProjectileHitFX(FVector const& HitLocation)
 {
 	WarriorProjectileBase_eventBP_OnSpawnProjectileHitFX_Parms Parms;
@@ -112,7 +114,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::NewProp_HitLocation,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorProjectileBase, nullptr, "BP_OnSpawnProjectileHitFX", nullptr, nullptr, Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::PropPointers), sizeof(WarriorProjectileBase_eventBP_OnSpawnProjectileHitFX_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08C80800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorProjectileBase, nullptr, "BP_OnSpawnProjectileHitFX", Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::PropPointers), sizeof(WarriorProjectileBase_eventBP_OnSpawnProjectileHitFX_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08C80800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(WarriorProjectileBase_eventBP_OnSpawnProjectileHitFX_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX()
 {
@@ -123,9 +125,9 @@ UFunction* Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitF
 	}
 	return ReturnFunction;
 }
-// End Class AWarriorProjectileBase Function BP_OnSpawnProjectileHitFX
+// ********** End Class AWarriorProjectileBase Function BP_OnSpawnProjectileHitFX ******************
 
-// Begin Class AWarriorProjectileBase Function OnProjectileBeginOverlap
+// ********** Begin Class AWarriorProjectileBase Function OnProjectileBeginOverlap *****************
 struct Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics
 {
 	struct WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms
@@ -170,7 +172,7 @@ void Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Stati
 	((WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms*)Obj)->bFromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms), &Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 4100991306
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 267591329
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_OverlappedComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_OtherActor,
@@ -180,7 +182,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorProjectileBase, nullptr, "OnProjectileBeginOverlap", nullptr, nullptr, Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorProjectileBase, nullptr, "OnProjectileBeginOverlap", Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap_Statics::WarriorProjectileBase_eventOnProjectileBeginOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap()
 {
@@ -204,9 +206,9 @@ DEFINE_FUNCTION(AWarriorProjectileBase::execOnProjectileBeginOverlap)
 	P_THIS->OnProjectileBeginOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 	P_NATIVE_END;
 }
-// End Class AWarriorProjectileBase Function OnProjectileBeginOverlap
+// ********** End Class AWarriorProjectileBase Function OnProjectileBeginOverlap *******************
 
-// Begin Class AWarriorProjectileBase Function OnProjectileHit
+// ********** Begin Class AWarriorProjectileBase Function OnProjectileHit **************************
 struct Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics
 {
 	struct WarriorProjectileBase_eventOnProjectileHit_Parms
@@ -243,7 +245,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWarriorPro
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileHit_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileHit_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherComp_MetaData), NewProp_OtherComp_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_NormalImpulse = { "NormalImpulse", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileHit_Parms, NormalImpulse), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_Hit = { "Hit", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileHit_Parms, Hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Hit_MetaData), NewProp_Hit_MetaData) }; // 4100991306
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_Hit = { "Hit", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorProjectileBase_eventOnProjectileHit_Parms, Hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Hit_MetaData), NewProp_Hit_MetaData) }; // 267591329
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_HitComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_OtherActor,
@@ -252,7 +254,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::NewProp_Hit,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorProjectileBase, nullptr, "OnProjectileHit", nullptr, nullptr, Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::WarriorProjectileBase_eventOnProjectileHit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorProjectileBase, nullptr, "OnProjectileHit", Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::WarriorProjectileBase_eventOnProjectileHit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit_Statics::WarriorProjectileBase_eventOnProjectileHit_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit()
 {
@@ -275,9 +277,9 @@ DEFINE_FUNCTION(AWarriorProjectileBase::execOnProjectileHit)
 	P_THIS->OnProjectileHit(Z_Param_HitComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_NormalImpulse,Z_Param_Out_Hit);
 	P_NATIVE_END;
 }
-// End Class AWarriorProjectileBase Function OnProjectileHit
+// ********** End Class AWarriorProjectileBase Function OnProjectileHit ****************************
 
-// Begin Class AWarriorProjectileBase
+// ********** Begin Class AWarriorProjectileBase ***************************************************
 void AWarriorProjectileBase::StaticRegisterNativesAWarriorProjectileBase()
 {
 	UClass* Class = AWarriorProjectileBase::StaticClass();
@@ -287,10 +289,34 @@ void AWarriorProjectileBase::StaticRegisterNativesAWarriorProjectileBase()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorProjectileBase);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorProjectileBase;
+UClass* AWarriorProjectileBase::GetPrivateStaticClass()
+{
+	using TClass = AWarriorProjectileBase;
+	if (!Z_Registration_Info_UClass_AWarriorProjectileBase.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorProjectileBase"),
+			Z_Registration_Info_UClass_AWarriorProjectileBase.InnerSingleton,
+			StaticRegisterNativesAWarriorProjectileBase,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorProjectileBase.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorProjectileBase_NoRegister()
 {
-	return AWarriorProjectileBase::StaticClass();
+	return AWarriorProjectileBase::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorProjectileBase_Statics
 {
@@ -333,9 +359,9 @@ struct Z_Construct_UClass_AWarriorProjectileBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX, "BP_OnSpawnProjectileHitFX" }, // 44854665
-		{ &Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap, "OnProjectileBeginOverlap" }, // 1140244233
-		{ &Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit, "OnProjectileHit" }, // 1123237170
+		{ &Z_Construct_UFunction_AWarriorProjectileBase_BP_OnSpawnProjectileHitFX, "BP_OnSpawnProjectileHitFX" }, // 3899506609
+		{ &Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileBeginOverlap, "OnProjectileBeginOverlap" }, // 4028279037
+		{ &Z_Construct_UFunction_AWarriorProjectileBase_OnProjectileHit, "OnProjectileHit" }, // 3741265617
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -348,7 +374,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWarriorProjec
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileMovementComp = { "ProjectileMovementComp", nullptr, (EPropertyFlags)0x00200800000b001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorProjectileBase, ProjectileMovementComp), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMovementComp_MetaData), NewProp_ProjectileMovementComp_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileDamagePolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileDamagePolicy = { "ProjectileDamagePolicy", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorProjectileBase, ProjectileDamagePolicy), Z_Construct_UEnum_Warrior_EProjectileDamagePolicy, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileDamagePolicy_MetaData), NewProp_ProjectileDamagePolicy_MetaData) }; // 2847725561
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileDamageEffectSpecHandle = { "ProjectileDamageEffectSpecHandle", nullptr, (EPropertyFlags)0x0021080000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorProjectileBase, ProjectileDamageEffectSpecHandle), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileDamageEffectSpecHandle_MetaData), NewProp_ProjectileDamageEffectSpecHandle_MetaData) }; // 3383902265
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileDamageEffectSpecHandle = { "ProjectileDamageEffectSpecHandle", nullptr, (EPropertyFlags)0x0021080000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWarriorProjectileBase, ProjectileDamageEffectSpecHandle), Z_Construct_UScriptStruct_FGameplayEffectSpecHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileDamageEffectSpecHandle_MetaData), NewProp_ProjectileDamageEffectSpecHandle_MetaData) }; // 4275563785
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWarriorProjectileBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileCollisionBox,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWarriorProjectileBase_Statics::NewProp_ProjectileNiagaraComponent,
@@ -375,7 +401,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorProjectileBase_
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorProjectileBase_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorProjectileBase_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorProjectileBase_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorProjectileBase()
@@ -386,27 +412,24 @@ UClass* Z_Construct_UClass_AWarriorProjectileBase()
 	}
 	return Z_Registration_Info_UClass_AWarriorProjectileBase.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorProjectileBase>()
-{
-	return AWarriorProjectileBase::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorProjectileBase);
 AWarriorProjectileBase::~AWarriorProjectileBase() {}
-// End Class AWarriorProjectileBase
+// ********** End Class AWarriorProjectileBase *****************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h__Script_Warrior_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EProjectileDamagePolicy_StaticEnum, TEXT("EProjectileDamagePolicy"), &Z_Registration_Info_UEnum_EProjectileDamagePolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2847725561U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorProjectileBase, AWarriorProjectileBase::StaticClass, TEXT("AWarriorProjectileBase"), &Z_Registration_Info_UClass_AWarriorProjectileBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorProjectileBase), 364082334U) },
+		{ Z_Construct_UClass_AWarriorProjectileBase, AWarriorProjectileBase::StaticClass, TEXT("AWarriorProjectileBase"), &Z_Registration_Info_UClass_AWarriorProjectileBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorProjectileBase), 2395225568U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h_1185000018(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h__Script_Warrior_4214666344(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h_Statics::EnumInfo));
-// End Registration
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h__Script_Warrior_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_WarriorProjectileBase_h__Script_Warrior_Statics::EnumInfo));
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

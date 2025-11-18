@@ -5,11 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Characters/WarriorHeroCharacter.h"
+#include "Characters/WarriorHeroCharacter.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorHeroCharacter() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Warrior();
@@ -19,16 +21,40 @@ WARRIOR_API UClass* Z_Construct_UClass_AWarriorHeroCharacter_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UDataAsset_InputConfig_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroCombatComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroUIComponent_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorHeroCharacter
+// ********** Begin Class AWarriorHeroCharacter ****************************************************
 void AWarriorHeroCharacter::StaticRegisterNativesAWarriorHeroCharacter()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorHeroCharacter);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorHeroCharacter;
+UClass* AWarriorHeroCharacter::GetPrivateStaticClass()
+{
+	using TClass = AWarriorHeroCharacter;
+	if (!Z_Registration_Info_UClass_AWarriorHeroCharacter.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorHeroCharacter"),
+			Z_Registration_Info_UClass_AWarriorHeroCharacter.InnerSingleton,
+			StaticRegisterNativesAWarriorHeroCharacter,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorHeroCharacter.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorHeroCharacter_NoRegister()
 {
-	return AWarriorHeroCharacter::StaticClass();
+	return AWarriorHeroCharacter::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorHeroCharacter_Statics
 {
@@ -110,7 +136,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorHeroCharacter_S
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorHeroCharacter_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorHeroCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorHeroCharacter_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorHeroCharacter()
@@ -121,24 +147,21 @@ UClass* Z_Construct_UClass_AWarriorHeroCharacter()
 	}
 	return Z_Registration_Info_UClass_AWarriorHeroCharacter.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorHeroCharacter>()
-{
-	return AWarriorHeroCharacter::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorHeroCharacter);
 AWarriorHeroCharacter::~AWarriorHeroCharacter() {}
-// End Class AWarriorHeroCharacter
+// ********** End Class AWarriorHeroCharacter ******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorHeroCharacter, AWarriorHeroCharacter::StaticClass, TEXT("AWarriorHeroCharacter"), &Z_Registration_Info_UClass_AWarriorHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroCharacter), 1847095303U) },
+		{ Z_Construct_UClass_AWarriorHeroCharacter, AWarriorHeroCharacter::StaticClass, TEXT("AWarriorHeroCharacter"), &Z_Registration_Info_UClass_AWarriorHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroCharacter), 2386651712U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h_3215833786(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h__Script_Warrior_203940945(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacter_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

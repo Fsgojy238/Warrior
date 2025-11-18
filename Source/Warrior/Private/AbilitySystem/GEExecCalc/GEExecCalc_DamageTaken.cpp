@@ -7,30 +7,39 @@
 
 #include "WarriorDebugHelper.h"
 
+// 用于定义伤害计算时需捕获的属性（如攻击力、防御力、承受伤害）的结构体
 struct FWarriorDamageCapture
 {
+	// 声明“攻击力”的属性捕获定义（后续通过宏完成具体定义）
 	DECLARE_ATTRIBUTE_CAPTUREDEF(AttackPower)
+	// 声明“防御力”的属性捕获定义
 	DECLARE_ATTRIBUTE_CAPTUREDEF(DeffensePower)
+	// 声明“承受伤害”的属性捕获定义
 	DECLARE_ATTRIBUTE_CAPTUREDEF(DamageTaken)
 
 	FWarriorDamageCapture()
 	{
+		// 定义“攻击力”的捕获规则：从「攻击者（Source）」的UWarriorAttributeSet中获取AttackPower属性，不使用快照（实时获取最新值）
 		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, AttackPower, Source, false);
+		// 定义“防御力”的捕获规则：从「目标（Target）」的UWarriorAttributeSet中获取DeffensePower属性，不使用快照
 		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, DeffensePower, Target, false);
+		// 定义“承受伤害”的捕获规则：从「目标（Target）」的UWarriorAttributeSet中获取DamageTaken属性，不使用快照
 		DEFINE_ATTRIBUTE_CAPTUREDEF(UWarriorAttributeSet, DamageTaken, Target, false);
 	}
 };
 
+// 提供单例的FWarriorDamageCapture实例（避免重复构造，提升性能）
 static const FWarriorDamageCapture& GetFWarriorDamageCapture()
 {
 	static FWarriorDamageCapture WarriorDamageCapture;
 	return WarriorDamageCapture;
 }
 
+// 「伤害承受」执行计算类的构造函数（用于自定义游戏性效果的伤害计算逻辑）
 UGEExecCalc_DamageTaken::UGEExecCalc_DamageTaken()
 {
-	/* Slow way of doing capture */
-	/*FProperty* AttackPowerProperty = FindFieldChecked<FProperty>(
+	/* 以下是“手动查找属性字段”的旧版实现（已注释，效率较低）
+	FProperty* AttackPowerProperty = FindFieldChecked<FProperty>(
 		UWarriorAttributeSet::StaticClass(),
 		GET_MEMBER_NAME_CHECKED(UWarriorAttributeSet, AttackPower)
 	);
@@ -41,12 +50,14 @@ UGEExecCalc_DamageTaken::UGEExecCalc_DamageTaken()
 		false
 	);
 
-	RelevantAttributesToCapture.Add(AttackPowerCaptureDefinition);*/
+	RelevantAttributesToCapture.Add(AttackPowerCaptureDefinition);
+	*/
 
+	// 从单例中获取预定义的属性捕获定义，添加到“需要捕获的相关属性”列表
+	// 这样在游戏性效果执行时，会自动捕获「攻击者的攻击力」「目标的防御力」「目标的承受伤害」属性，供后续计算使用
 	RelevantAttributesToCapture.Add(GetFWarriorDamageCapture().AttackPowerDef);
 	RelevantAttributesToCapture.Add(GetFWarriorDamageCapture().DeffensePowerDef);
 	RelevantAttributesToCapture.Add(GetFWarriorDamageCapture().DamageTakenDef);
-
 }
 
 // 这个函数负责计算"一次攻击"对目标造成的实际伤害

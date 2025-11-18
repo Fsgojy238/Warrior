@@ -5,26 +5,52 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Controllers/WarriorHeroController.h"
+#include "Controllers/WarriorHeroController.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorHeroController() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 AIMODULE_API UClass* Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorHeroController();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorHeroController_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorHeroController
+// ********** Begin Class AWarriorHeroController ***************************************************
 void AWarriorHeroController::StaticRegisterNativesAWarriorHeroController()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorHeroController);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorHeroController;
+UClass* AWarriorHeroController::GetPrivateStaticClass()
+{
+	using TClass = AWarriorHeroController;
+	if (!Z_Registration_Info_UClass_AWarriorHeroController.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorHeroController"),
+			Z_Registration_Info_UClass_AWarriorHeroController.InnerSingleton,
+			StaticRegisterNativesAWarriorHeroController,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorHeroController.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorHeroController_NoRegister()
 {
-	return AWarriorHeroController::StaticClass();
+	return AWarriorHeroController::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorHeroController_Statics
 {
@@ -51,7 +77,7 @@ UObject* (*const Z_Construct_UClass_AWarriorHeroController_Statics::DependentSin
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorHeroController_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AWarriorHeroController_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorHeroController, IGenericTeamAgentInterface), false },  // 1380835789
+	{ Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister, (int32)VTABLE_OFFSET(AWarriorHeroController, IGenericTeamAgentInterface), false },  // 657866642
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorHeroController_Statics::ClassParams = {
 	&AWarriorHeroController::StaticClass,
@@ -65,7 +91,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorHeroController_
 	0,
 	0,
 	UE_ARRAY_COUNT(InterfaceParams),
-	0x009002A4u,
+	0x009003A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorHeroController_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorHeroController_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorHeroController()
@@ -76,24 +102,21 @@ UClass* Z_Construct_UClass_AWarriorHeroController()
 	}
 	return Z_Registration_Info_UClass_AWarriorHeroController.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorHeroController>()
-{
-	return AWarriorHeroController::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorHeroController);
 AWarriorHeroController::~AWarriorHeroController() {}
-// End Class AWarriorHeroController
+// ********** End Class AWarriorHeroController *****************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorHeroController, AWarriorHeroController::StaticClass, TEXT("AWarriorHeroController"), &Z_Registration_Info_UClass_AWarriorHeroController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroController), 3076931439U) },
+		{ Z_Construct_UClass_AWarriorHeroController, AWarriorHeroController::StaticClass, TEXT("AWarriorHeroController"), &Z_Registration_Info_UClass_AWarriorHeroController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroController), 882447778U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h_1437704227(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h__Script_Warrior_2590571537(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorHeroController_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

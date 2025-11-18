@@ -5,25 +5,51 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Components/PawnExtensionComponentBase.h"
+#include "Components/PawnExtensionComponentBase.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodePawnExtensionComponentBase() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnExtensionComponentBase();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnExtensionComponentBase_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UPawnExtensionComponentBase
+// ********** Begin Class UPawnExtensionComponentBase **********************************************
 void UPawnExtensionComponentBase::StaticRegisterNativesUPawnExtensionComponentBase()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPawnExtensionComponentBase);
+FClassRegistrationInfo Z_Registration_Info_UClass_UPawnExtensionComponentBase;
+UClass* UPawnExtensionComponentBase::GetPrivateStaticClass()
+{
+	using TClass = UPawnExtensionComponentBase;
+	if (!Z_Registration_Info_UClass_UPawnExtensionComponentBase.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("PawnExtensionComponentBase"),
+			Z_Registration_Info_UClass_UPawnExtensionComponentBase.InnerSingleton,
+			StaticRegisterNativesUPawnExtensionComponentBase,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UPawnExtensionComponentBase.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UPawnExtensionComponentBase_NoRegister()
 {
-	return UPawnExtensionComponentBase::StaticClass();
+	return UPawnExtensionComponentBase::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UPawnExtensionComponentBase_Statics
 {
@@ -69,25 +95,22 @@ UClass* Z_Construct_UClass_UPawnExtensionComponentBase()
 	}
 	return Z_Registration_Info_UClass_UPawnExtensionComponentBase.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UPawnExtensionComponentBase>()
-{
-	return UPawnExtensionComponentBase::StaticClass();
-}
 UPawnExtensionComponentBase::UPawnExtensionComponentBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UPawnExtensionComponentBase);
 UPawnExtensionComponentBase::~UPawnExtensionComponentBase() {}
-// End Class UPawnExtensionComponentBase
+// ********** End Class UPawnExtensionComponentBase ************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPawnExtensionComponentBase, UPawnExtensionComponentBase::StaticClass, TEXT("UPawnExtensionComponentBase"), &Z_Registration_Info_UClass_UPawnExtensionComponentBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPawnExtensionComponentBase), 3513910380U) },
+		{ Z_Construct_UClass_UPawnExtensionComponentBase, UPawnExtensionComponentBase::StaticClass, TEXT("UPawnExtensionComponentBase"), &Z_Registration_Info_UClass_UPawnExtensionComponentBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPawnExtensionComponentBase), 2397230615U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h_4239935913(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h__Script_Warrior_2662436629(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Components_PawnExtensionComponentBase_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

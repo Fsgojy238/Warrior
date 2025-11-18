@@ -5,12 +5,14 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Items/PickUps/WarriorPickUpBase.h"
-#include "Runtime/Engine/Classes/Engine/HitResult.h"
+#include "Items/PickUps/WarriorPickUpBase.h"
+#include "Engine/HitResult.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorPickUpBase() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
@@ -19,9 +21,9 @@ ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorPickUpBase();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorPickUpBase_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorPickUpBase Function OnPickUpCollisionSphereBeginOverlap
+// ********** Begin Class AWarriorPickUpBase Function OnPickUpCollisionSphereBeginOverlap **********
 struct Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics
 {
 	struct WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms
@@ -66,7 +68,7 @@ void Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverla
 	((WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms*)Obj)->bFromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms), &Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 4100991306
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 267591329
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_OverlappedComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_OtherActor,
@@ -76,7 +78,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorPickUpBase, nullptr, "OnPickUpCollisionSphereBeginOverlap", nullptr, nullptr, Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorPickUpBase, nullptr, "OnPickUpCollisionSphereBeginOverlap", Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap_Statics::WarriorPickUpBase_eventOnPickUpCollisionSphereBeginOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap()
 {
@@ -100,9 +102,9 @@ DEFINE_FUNCTION(AWarriorPickUpBase::execOnPickUpCollisionSphereBeginOverlap)
 	P_THIS->OnPickUpCollisionSphereBeginOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 	P_NATIVE_END;
 }
-// End Class AWarriorPickUpBase Function OnPickUpCollisionSphereBeginOverlap
+// ********** End Class AWarriorPickUpBase Function OnPickUpCollisionSphereBeginOverlap ************
 
-// Begin Class AWarriorPickUpBase
+// ********** Begin Class AWarriorPickUpBase *******************************************************
 void AWarriorPickUpBase::StaticRegisterNativesAWarriorPickUpBase()
 {
 	UClass* Class = AWarriorPickUpBase::StaticClass();
@@ -111,10 +113,34 @@ void AWarriorPickUpBase::StaticRegisterNativesAWarriorPickUpBase()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorPickUpBase);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorPickUpBase;
+UClass* AWarriorPickUpBase::GetPrivateStaticClass()
+{
+	using TClass = AWarriorPickUpBase;
+	if (!Z_Registration_Info_UClass_AWarriorPickUpBase.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorPickUpBase"),
+			Z_Registration_Info_UClass_AWarriorPickUpBase.InnerSingleton,
+			StaticRegisterNativesAWarriorPickUpBase,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorPickUpBase.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorPickUpBase_NoRegister()
 {
-	return AWarriorPickUpBase::StaticClass();
+	return AWarriorPickUpBase::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorPickUpBase_Statics
 {
@@ -133,7 +159,7 @@ struct Z_Construct_UClass_AWarriorPickUpBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap, "OnPickUpCollisionSphereBeginOverlap" }, // 3784659596
+		{ &Z_Construct_UFunction_AWarriorPickUpBase_OnPickUpCollisionSphereBeginOverlap, "OnPickUpCollisionSphereBeginOverlap" }, // 4195103729
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -163,7 +189,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorPickUpBase_Stat
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorPickUpBase_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorPickUpBase_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorPickUpBase_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorPickUpBase()
@@ -174,24 +200,21 @@ UClass* Z_Construct_UClass_AWarriorPickUpBase()
 	}
 	return Z_Registration_Info_UClass_AWarriorPickUpBase.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorPickUpBase>()
-{
-	return AWarriorPickUpBase::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorPickUpBase);
 AWarriorPickUpBase::~AWarriorPickUpBase() {}
-// End Class AWarriorPickUpBase
+// ********** End Class AWarriorPickUpBase *********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorPickUpBase, AWarriorPickUpBase::StaticClass, TEXT("AWarriorPickUpBase"), &Z_Registration_Info_UClass_AWarriorPickUpBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorPickUpBase), 4181855692U) },
+		{ Z_Construct_UClass_AWarriorPickUpBase, AWarriorPickUpBase::StaticClass, TEXT("AWarriorPickUpBase"), &Z_Registration_Info_UClass_AWarriorPickUpBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorPickUpBase), 188965711U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h_3718596338(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h__Script_Warrior_3682609075(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_PickUps_WarriorPickUpBase_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

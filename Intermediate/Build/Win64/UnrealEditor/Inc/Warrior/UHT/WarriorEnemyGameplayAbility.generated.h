@@ -5,43 +5,49 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "AbilitySystem/Abilities/WarriorEnemyGameplayAbility.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AWarriorEnemyCharacter;
-class UEnemyCombatComponent;
-class UGameplayEffect;
-struct FGameplayEffectSpecHandle;
-struct FScalableFloat;
 #ifdef WARRIOR_WarriorEnemyGameplayAbility_generated_h
 #error "WarriorEnemyGameplayAbility.generated.h already included, missing '#pragma once' in WarriorEnemyGameplayAbility.h"
 #endif
 #define WARRIOR_WarriorEnemyGameplayAbility_generated_h
 
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+class AWarriorEnemyCharacter;
+class UEnemyCombatComponent;
+class UGameplayEffect;
+struct FGameplayEffectSpecHandle;
+struct FScalableFloat;
+
+// ********** Begin Class UWarriorEnemyGameplayAbility *********************************************
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorEnemyGameplayAbility_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execMakeEnemyDamageEffectSpecHandle); \
 	DECLARE_FUNCTION(execGetEnemyCombatComponentFromActorInfo); \
 	DECLARE_FUNCTION(execGetEnemyCharacterFromActorInfo);
 
 
+WARRIOR_API UClass* Z_Construct_UClass_UWarriorEnemyGameplayAbility_NoRegister();
+
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorEnemyGameplayAbility_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorEnemyGameplayAbility(); \
 	friend struct Z_Construct_UClass_UWarriorEnemyGameplayAbility_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend WARRIOR_API UClass* Z_Construct_UClass_UWarriorEnemyGameplayAbility_NoRegister(); \
 public: \
-	DECLARE_CLASS(UWarriorEnemyGameplayAbility, UWarriorGameplayAbility, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Warrior"), NO_API) \
+	DECLARE_CLASS2(UWarriorEnemyGameplayAbility, UWarriorGameplayAbility, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/Warrior"), Z_Construct_UClass_UWarriorEnemyGameplayAbility_NoRegister) \
 	DECLARE_SERIALIZER(UWarriorEnemyGameplayAbility)
 
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorEnemyGameplayAbility_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWarriorEnemyGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-private: \
-	/** Private move- and copy-constructors, should never be used */ \
-	UWarriorEnemyGameplayAbility(UWarriorEnemyGameplayAbility&&); \
-	UWarriorEnemyGameplayAbility(const UWarriorEnemyGameplayAbility&); \
-public: \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UWarriorEnemyGameplayAbility(UWarriorEnemyGameplayAbility&&) = delete; \
+	UWarriorEnemyGameplayAbility(const UWarriorEnemyGameplayAbility&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UWarriorEnemyGameplayAbility); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UWarriorEnemyGameplayAbility); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UWarriorEnemyGameplayAbility) \
@@ -59,10 +65,11 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> WARRIOR_API UClass* StaticClass<class UWarriorEnemyGameplayAbility>();
+class UWarriorEnemyGameplayAbility;
+
+// ********** End Class UWarriorEnemyGameplayAbility ***********************************************
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_UEprojects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_WarriorEnemyGameplayAbility_h
-
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

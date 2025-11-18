@@ -5,11 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h"
+#include "DataAssets/StartUpData/DataAsset_StartUpDataBase.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeDataAsset_StartUpDataBase() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
@@ -17,16 +19,40 @@ UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase();
 WARRIOR_API UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorGameplayAbility_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UDataAsset_StartUpDataBase
+// ********** Begin Class UDataAsset_StartUpDataBase ***********************************************
 void UDataAsset_StartUpDataBase::StaticRegisterNativesUDataAsset_StartUpDataBase()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UDataAsset_StartUpDataBase);
+FClassRegistrationInfo Z_Registration_Info_UClass_UDataAsset_StartUpDataBase;
+UClass* UDataAsset_StartUpDataBase::GetPrivateStaticClass()
+{
+	using TClass = UDataAsset_StartUpDataBase;
+	if (!Z_Registration_Info_UClass_UDataAsset_StartUpDataBase.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("DataAsset_StartUpDataBase"),
+			Z_Registration_Info_UClass_UDataAsset_StartUpDataBase.InnerSingleton,
+			StaticRegisterNativesUDataAsset_StartUpDataBase,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UDataAsset_StartUpDataBase.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase_NoRegister()
 {
-	return UDataAsset_StartUpDataBase::StaticClass();
+	return UDataAsset_StartUpDataBase::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UDataAsset_StartUpDataBase_Statics
 {
@@ -119,25 +145,22 @@ UClass* Z_Construct_UClass_UDataAsset_StartUpDataBase()
 	}
 	return Z_Registration_Info_UClass_UDataAsset_StartUpDataBase.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UDataAsset_StartUpDataBase>()
-{
-	return UDataAsset_StartUpDataBase::StaticClass();
-}
 UDataAsset_StartUpDataBase::UDataAsset_StartUpDataBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UDataAsset_StartUpDataBase);
 UDataAsset_StartUpDataBase::~UDataAsset_StartUpDataBase() {}
-// End Class UDataAsset_StartUpDataBase
+// ********** End Class UDataAsset_StartUpDataBase *************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDataAsset_StartUpDataBase, UDataAsset_StartUpDataBase::StaticClass, TEXT("UDataAsset_StartUpDataBase"), &Z_Registration_Info_UClass_UDataAsset_StartUpDataBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDataAsset_StartUpDataBase), 1807690290U) },
+		{ Z_Construct_UClass_UDataAsset_StartUpDataBase, UDataAsset_StartUpDataBase::StaticClass, TEXT("UDataAsset_StartUpDataBase"), &Z_Registration_Info_UClass_UDataAsset_StartUpDataBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDataAsset_StartUpDataBase), 436695932U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_3513945585(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h__Script_Warrior_1310440544(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_DataAssets_StartUpData_DataAsset_StartUpDataBase_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

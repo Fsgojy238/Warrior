@@ -5,12 +5,14 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Items/Weapons/WarriorWeaponBase.h"
-#include "Runtime/Engine/Classes/Engine/HitResult.h"
+#include "Items/Weapons/WarriorWeaponBase.h"
+#include "Engine/HitResult.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorWeaponBase() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
@@ -20,9 +22,9 @@ ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorWeaponBase();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorWeaponBase_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorWeaponBase Function OnCollisionBoxBeginOverlap
+// ********** Begin Class AWarriorWeaponBase Function OnCollisionBoxBeginOverlap *******************
 struct Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics
 {
 	struct WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms
@@ -67,7 +69,7 @@ void Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics
 	((WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms*)Obj)->bFromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms), &Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 4100991306
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 267591329
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_OverlappedComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_OtherActor,
@@ -77,7 +79,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorWeaponBase, nullptr, "OnCollisionBoxBeginOverlap", nullptr, nullptr, Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorWeaponBase, nullptr, "OnCollisionBoxBeginOverlap", Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap_Statics::WarriorWeaponBase_eventOnCollisionBoxBeginOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap()
 {
@@ -101,9 +103,9 @@ DEFINE_FUNCTION(AWarriorWeaponBase::execOnCollisionBoxBeginOverlap)
 	P_THIS->OnCollisionBoxBeginOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 	P_NATIVE_END;
 }
-// End Class AWarriorWeaponBase Function OnCollisionBoxBeginOverlap
+// ********** End Class AWarriorWeaponBase Function OnCollisionBoxBeginOverlap *********************
 
-// Begin Class AWarriorWeaponBase Function OnCollisionBoxEndOverlap
+// ********** Begin Class AWarriorWeaponBase Function OnCollisionBoxEndOverlap *********************
 struct Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics
 {
 	struct WarriorWeaponBase_eventOnCollisionBoxEndOverlap_Parms
@@ -142,7 +144,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::NewProp_OtherBodyIndex,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorWeaponBase, nullptr, "OnCollisionBoxEndOverlap", nullptr, nullptr, Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::WarriorWeaponBase_eventOnCollisionBoxEndOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorWeaponBase, nullptr, "OnCollisionBoxEndOverlap", Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::WarriorWeaponBase_eventOnCollisionBoxEndOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap_Statics::WarriorWeaponBase_eventOnCollisionBoxEndOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap()
 {
@@ -164,9 +166,9 @@ DEFINE_FUNCTION(AWarriorWeaponBase::execOnCollisionBoxEndOverlap)
 	P_THIS->OnCollisionBoxEndOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex);
 	P_NATIVE_END;
 }
-// End Class AWarriorWeaponBase Function OnCollisionBoxEndOverlap
+// ********** End Class AWarriorWeaponBase Function OnCollisionBoxEndOverlap ***********************
 
-// Begin Class AWarriorWeaponBase
+// ********** Begin Class AWarriorWeaponBase *******************************************************
 void AWarriorWeaponBase::StaticRegisterNativesAWarriorWeaponBase()
 {
 	UClass* Class = AWarriorWeaponBase::StaticClass();
@@ -176,10 +178,34 @@ void AWarriorWeaponBase::StaticRegisterNativesAWarriorWeaponBase()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorWeaponBase);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorWeaponBase;
+UClass* AWarriorWeaponBase::GetPrivateStaticClass()
+{
+	using TClass = AWarriorWeaponBase;
+	if (!Z_Registration_Info_UClass_AWarriorWeaponBase.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorWeaponBase"),
+			Z_Registration_Info_UClass_AWarriorWeaponBase.InnerSingleton,
+			StaticRegisterNativesAWarriorWeaponBase,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorWeaponBase.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorWeaponBase_NoRegister()
 {
-	return AWarriorWeaponBase::StaticClass();
+	return AWarriorWeaponBase::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorWeaponBase_Statics
 {
@@ -204,8 +230,8 @@ struct Z_Construct_UClass_AWarriorWeaponBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap, "OnCollisionBoxBeginOverlap" }, // 2185031832
-		{ &Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap, "OnCollisionBoxEndOverlap" }, // 1612298655
+		{ &Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxBeginOverlap, "OnCollisionBoxBeginOverlap" }, // 968844019
+		{ &Z_Construct_UFunction_AWarriorWeaponBase_OnCollisionBoxEndOverlap, "OnCollisionBoxEndOverlap" }, // 4174425338
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -237,7 +263,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorWeaponBase_Stat
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorWeaponBase_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorWeaponBase_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorWeaponBase_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorWeaponBase()
@@ -248,24 +274,21 @@ UClass* Z_Construct_UClass_AWarriorWeaponBase()
 	}
 	return Z_Registration_Info_UClass_AWarriorWeaponBase.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorWeaponBase>()
-{
-	return AWarriorWeaponBase::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorWeaponBase);
 AWarriorWeaponBase::~AWarriorWeaponBase() {}
-// End Class AWarriorWeaponBase
+// ********** End Class AWarriorWeaponBase *********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorWeaponBase, AWarriorWeaponBase::StaticClass, TEXT("AWarriorWeaponBase"), &Z_Registration_Info_UClass_AWarriorWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorWeaponBase), 3934949779U) },
+		{ Z_Construct_UClass_AWarriorWeaponBase, AWarriorWeaponBase::StaticClass, TEXT("AWarriorWeaponBase"), &Z_Registration_Info_UClass_AWarriorWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorWeaponBase), 1507054101U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_362611577(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h__Script_Warrior_3249020979(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Items_Weapons_WarriorWeaponBase_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

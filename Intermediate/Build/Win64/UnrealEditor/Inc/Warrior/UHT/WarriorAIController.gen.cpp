@@ -5,12 +5,14 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Controllers/WarriorAIController.h"
-#include "Runtime/AIModule/Classes/Perception/AIPerceptionTypes.h"
+#include "Controllers/WarriorAIController.h"
+#include "Perception/AIPerceptionTypes.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorAIController() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 AIMODULE_API UClass* Z_Construct_UClass_AAIController();
 AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionComponent_NoRegister();
 AIMODULE_API UClass* Z_Construct_UClass_UAISenseConfig_Sight_NoRegister();
@@ -19,9 +21,9 @@ ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorAIController();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorAIController_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorAIController Function OnEnemyPerceptionUpdated
+// ********** Begin Class AWarriorAIController Function OnEnemyPerceptionUpdated *******************
 struct Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics
 {
 	struct WarriorAIController_eventOnEnemyPerceptionUpdated_Parms
@@ -40,13 +42,13 @@ struct Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Stati
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorAIController_eventOnEnemyPerceptionUpdated_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::NewProp_Stimulus = { "Stimulus", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorAIController_eventOnEnemyPerceptionUpdated_Parms, Stimulus), Z_Construct_UScriptStruct_FAIStimulus, METADATA_PARAMS(0, nullptr) }; // 177100813
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::NewProp_Stimulus = { "Stimulus", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorAIController_eventOnEnemyPerceptionUpdated_Parms, Stimulus), Z_Construct_UScriptStruct_FAIStimulus, METADATA_PARAMS(0, nullptr) }; // 1267494880
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::NewProp_Actor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::NewProp_Stimulus,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorAIController, nullptr, "OnEnemyPerceptionUpdated", nullptr, nullptr, Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::WarriorAIController_eventOnEnemyPerceptionUpdated_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorAIController, nullptr, "OnEnemyPerceptionUpdated", Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::WarriorAIController_eventOnEnemyPerceptionUpdated_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated_Statics::WarriorAIController_eventOnEnemyPerceptionUpdated_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated()
 {
@@ -66,9 +68,9 @@ DEFINE_FUNCTION(AWarriorAIController::execOnEnemyPerceptionUpdated)
 	P_THIS->OnEnemyPerceptionUpdated(Z_Param_Actor,Z_Param_Stimulus);
 	P_NATIVE_END;
 }
-// End Class AWarriorAIController Function OnEnemyPerceptionUpdated
+// ********** End Class AWarriorAIController Function OnEnemyPerceptionUpdated *********************
 
-// Begin Class AWarriorAIController
+// ********** Begin Class AWarriorAIController *****************************************************
 void AWarriorAIController::StaticRegisterNativesAWarriorAIController()
 {
 	UClass* Class = AWarriorAIController::StaticClass();
@@ -77,10 +79,34 @@ void AWarriorAIController::StaticRegisterNativesAWarriorAIController()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorAIController);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorAIController;
+UClass* AWarriorAIController::GetPrivateStaticClass()
+{
+	using TClass = AWarriorAIController;
+	if (!Z_Registration_Info_UClass_AWarriorAIController.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorAIController"),
+			Z_Registration_Info_UClass_AWarriorAIController.InnerSingleton,
+			StaticRegisterNativesAWarriorAIController,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorAIController.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorAIController_NoRegister()
 {
-	return AWarriorAIController::StaticClass();
+	return AWarriorAIController::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorAIController_Statics
 {
@@ -129,7 +155,7 @@ struct Z_Construct_UClass_AWarriorAIController_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated, "OnEnemyPerceptionUpdated" }, // 580034833
+		{ &Z_Construct_UFunction_AWarriorAIController_OnEnemyPerceptionUpdated, "OnEnemyPerceptionUpdated" }, // 4055874629
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -171,7 +197,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorAIController_St
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorAIController_Statics::PropPointers),
 	0,
-	0x009002A4u,
+	0x009003A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorAIController_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorAIController_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorAIController()
@@ -182,24 +208,21 @@ UClass* Z_Construct_UClass_AWarriorAIController()
 	}
 	return Z_Registration_Info_UClass_AWarriorAIController.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorAIController>()
-{
-	return AWarriorAIController::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorAIController);
 AWarriorAIController::~AWarriorAIController() {}
-// End Class AWarriorAIController
+// ********** End Class AWarriorAIController *******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorAIController, AWarriorAIController::StaticClass, TEXT("AWarriorAIController"), &Z_Registration_Info_UClass_AWarriorAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorAIController), 3397703705U) },
+		{ Z_Construct_UClass_AWarriorAIController, AWarriorAIController::StaticClass, TEXT("AWarriorAIController"), &Z_Registration_Info_UClass_AWarriorAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorAIController), 2215487648U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h_1033941447(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h__Script_Warrior_3680867919(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Controllers_WarriorAIController_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

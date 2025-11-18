@@ -8,7 +8,9 @@
 
 class UPawnCombatComponent;
 
-// This class does not need to be modified.
+/**
+ * 战斗接口的反射类（UE接口必须的包装类，用于引擎反射系统）
+ */
 UINTERFACE(MinimalAPI)
 class UPawnCombatInterface : public UInterface
 {
@@ -22,7 +24,6 @@ class WARRIOR_API IPawnCombatInterface
 {
 	GENERATED_BODY()
 
-	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual UPawnCombatComponent* GetPawnCombatComponent() const = 0;
 

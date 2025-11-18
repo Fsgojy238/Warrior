@@ -42,9 +42,9 @@
     <ClCompile Include="..\..\Source\Warrior\Warrior.cpp">
       <Filter>Source\Warrior</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Warrior.h">
+    <ClInclude Include="..\..\Source\Warrior\Warrior.h">
       <Filter>Source\Warrior</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Private">
       <UniqueIdentifier>{E6681345-5F17-340B-AEDF-C61B082F26C6}</UniqueIdentifier>
     </Filter>
@@ -273,233 +273,233 @@
     <Filter Include="Source\Warrior\Public">
       <UniqueIdentifier>{BCFCC6DC-7E76-37B0-98D2-C6FE729328D4}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\WarriorDebugHelper.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorDebugHelper.h">
       <Filter>Source\Warrior\Public</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\WarriorFunctionLibrary.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorFunctionLibrary.h">
       <Filter>Source\Warrior\Public</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\WarriorGameplayTags.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorGameplayTags.h">
       <Filter>Source\Warrior\Public</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AbilitySystem">
       <UniqueIdentifier>{1F66A89A-AEF5-325B-9F9F-9D0F84C3C061}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\WarriorAbilitySystemComponent.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\WarriorAbilitySystemComponent.h">
       <Filter>Source\Warrior\Public\AbilitySystem</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\WarriorAttributeSet.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\WarriorAttributeSet.h">
       <Filter>Source\Warrior\Public\AbilitySystem</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AbilitySystem\Abilities">
       <UniqueIdentifier>{139FEC8F-6864-3A6A-9615-1F8783976B9A}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\HeroGameplayAbility_PickUpStones.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\HeroGameplayAbility_PickUpStones.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\HeroGameplayAbility_TargetLock.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\HeroGameplayAbility_TargetLock.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorEnemyGameplayAbility.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorEnemyGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorGameplayAbility.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AbilitySystem\AbilityTasks">
       <UniqueIdentifier>{93E20300-4005-38F4-BE97-5FA9E9D7CA76}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_ExecuteTaskOnTick.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_ExecuteTaskOnTick.h">
       <Filter>Source\Warrior\Public\AbilitySystem\AbilityTasks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_WaitSpawnEnemies.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTasks\AbilityTask_WaitSpawnEnemies.h">
       <Filter>Source\Warrior\Public\AbilitySystem\AbilityTasks</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AbilitySystem\GEExecCalc">
       <UniqueIdentifier>{E6F579C0-14C2-3A47-B197-9CA5BBEE1561}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AbilitySystem\GEExecCalc\GEExecCalc_DamageTaken.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\GEExecCalc\GEExecCalc_DamageTaken.h">
       <Filter>Source\Warrior\Public\AbilitySystem\GEExecCalc</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AI">
       <UniqueIdentifier>{F6BE9F9D-4B34-34C7-AC30-DF8A00729C0E}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AI\BTService_OrientToTargetActor.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AI\BTService_OrientToTargetActor.h">
       <Filter>Source\Warrior\Public\AI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AI\BTTask_RotateToFaceTarget.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AI\BTTask_RotateToFaceTarget.h">
       <Filter>Source\Warrior\Public\AI</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AnimInstances">
       <UniqueIdentifier>{1E769DC4-FF09-3BE9-AF67-CCCBBC5FF713}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AnimInstances\WarriorBaseAnimInstance.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AnimInstances\WarriorBaseAnimInstance.h">
       <Filter>Source\Warrior\Public\AnimInstances</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AnimInstances\WarriorCharacterAnimInstance.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AnimInstances\WarriorCharacterAnimInstance.h">
       <Filter>Source\Warrior\Public\AnimInstances</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AnimInstances\Hero">
       <UniqueIdentifier>{2A5FB8EC-B356-3E23-8B4E-C17CF2E90B3C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\AnimInstances\Hero\WarriorHeroAnimInstance.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\AnimInstances\Hero\WarriorHeroAnimInstance.h">
       <Filter>Source\Warrior\Public\AnimInstances\Hero</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\AnimInstances\Hero\WarriorHeroLinkedAnimLayer.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AnimInstances\Hero\WarriorHeroLinkedAnimLayer.h">
       <Filter>Source\Warrior\Public\AnimInstances\Hero</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Characters">
       <UniqueIdentifier>{13225C67-946F-348C-93B3-DE47AC8DA501}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Characters\WarriorBaseCharacter.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Characters\WarriorBaseCharacter.h">
       <Filter>Source\Warrior\Public\Characters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Characters\WarriorEnemyCharacter.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Characters\WarriorEnemyCharacter.h">
       <Filter>Source\Warrior\Public\Characters</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Characters\WarriorHeroCharacter.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Characters\WarriorHeroCharacter.h">
       <Filter>Source\Warrior\Public\Characters</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Components">
       <UniqueIdentifier>{F7335DF7-0CC5-3298-8D2F-6B78AE00574F}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\PawnExtensionComponentBase.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\PawnExtensionComponentBase.h">
       <Filter>Source\Warrior\Public\Components</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Components\Combat">
       <UniqueIdentifier>{DCACA185-D3CF-3A2F-92A0-5BB825872675}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\Combat\EnemyCombatComponent.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\Combat\EnemyCombatComponent.h">
       <Filter>Source\Warrior\Public\Components\Combat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\Combat\HeroCombatComponent.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\Combat\HeroCombatComponent.h">
       <Filter>Source\Warrior\Public\Components\Combat</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\Combat\PawnCombatComponent.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\Combat\PawnCombatComponent.h">
       <Filter>Source\Warrior\Public\Components\Combat</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Components\Input">
       <UniqueIdentifier>{2CBE6315-4205-38FD-BD0D-18D1CD4A2255}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\Input\WarriorInputComponent.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\Input\WarriorInputComponent.h">
       <Filter>Source\Warrior\Public\Components\Input</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Components\UI">
       <UniqueIdentifier>{36D6CE62-8FE2-36D4-9A34-A4ADC10CE9C8}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\UI\EnemyUIComponent.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\UI\EnemyUIComponent.h">
       <Filter>Source\Warrior\Public\Components\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\UI\HeroUIComponent.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\UI\HeroUIComponent.h">
       <Filter>Source\Warrior\Public\Components\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Components\UI\PawnUIComponent.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\UI\PawnUIComponent.h">
       <Filter>Source\Warrior\Public\Components\UI</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Controllers">
       <UniqueIdentifier>{465C914F-3C14-35C1-91F2-13B6441A3F6A}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Controllers\WarriorAIController.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Controllers\WarriorAIController.h">
       <Filter>Source\Warrior\Public\Controllers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Controllers\WarriorHeroController.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Controllers\WarriorHeroController.h">
       <Filter>Source\Warrior\Public\Controllers</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\DataAssets">
       <UniqueIdentifier>{B9C2672E-C3F8-336D-9D7E-B6C407E4A0FD}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Warrior\Public\DataAssets\Input">
       <UniqueIdentifier>{562BD814-197B-3DC7-B810-0E00762F3764}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\Input\DataAsset_InputConfig.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\DataAssets\Input\DataAsset_InputConfig.h">
       <Filter>Source\Warrior\Public\DataAssets\Input</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\DataAssets\StartUpData">
       <UniqueIdentifier>{0F9D9C86-820C-3055-AA0C-3B5D7C50C905}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_EnemyStartUpData.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_EnemyStartUpData.h">
       <Filter>Source\Warrior\Public\DataAssets\StartUpData</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_HeroStartUpData.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_HeroStartUpData.h">
       <Filter>Source\Warrior\Public\DataAssets\StartUpData</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_StartUpDataBase.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\DataAssets\StartUpData\DataAsset_StartUpDataBase.h">
       <Filter>Source\Warrior\Public\DataAssets\StartUpData</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\GameInstances">
       <UniqueIdentifier>{E9F0B5CF-21AD-3CA0-B62A-544FB64B428C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\GameInstances\WarriorGameInstance.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\GameInstances\WarriorGameInstance.h">
       <Filter>Source\Warrior\Public\GameInstances</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\GameModes">
       <UniqueIdentifier>{3B652AF5-C50C-31D0-A775-F1AFA9747A91}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\GameModes\WarriorBaseGameMode.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\GameModes\WarriorBaseGameMode.h">
       <Filter>Source\Warrior\Public\GameModes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\GameModes\WarriorSurvivalGameMode.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\GameModes\WarriorSurvivalGameMode.h">
       <Filter>Source\Warrior\Public\GameModes</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Interface">
       <UniqueIdentifier>{275C50E9-5B76-35AF-8AFB-0A457AF06D2D}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Interface\PawnCombatInterface.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Interface\PawnCombatInterface.h">
       <Filter>Source\Warrior\Public\Interface</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Interface\PawnUIInterface.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Interface\PawnUIInterface.h">
       <Filter>Source\Warrior\Public\Interface</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Items">
       <UniqueIdentifier>{6DD88F64-AD61-3FD2-A571-CBD6D8CCD7C8}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Items\WarriorProjectileBase.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Items\WarriorProjectileBase.h">
       <Filter>Source\Warrior\Public\Items</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Items\PickUps">
       <UniqueIdentifier>{5C67914B-AB7D-363A-8B7C-51092E561B53}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Items\PickUps\WarriorPickUpBase.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Items\PickUps\WarriorPickUpBase.h">
       <Filter>Source\Warrior\Public\Items\PickUps</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Items\PickUps\WarriorStoneBase.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Items\PickUps\WarriorStoneBase.h">
       <Filter>Source\Warrior\Public\Items\PickUps</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Items\Weapons">
       <UniqueIdentifier>{A6E3C4B5-91AA-3B68-990F-273A84903B7C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Items\Weapons\WarriorHeroWeapon.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Items\Weapons\WarriorHeroWeapon.h">
       <Filter>Source\Warrior\Public\Items\Weapons</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\Items\Weapons\WarriorWeaponBase.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Items\Weapons\WarriorWeaponBase.h">
       <Filter>Source\Warrior\Public\Items\Weapons</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\SaveGame">
       <UniqueIdentifier>{7648E699-28DE-3362-8250-6D0B902F417F}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\SaveGame\WarriorSaveGame.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\SaveGame\WarriorSaveGame.h">
       <Filter>Source\Warrior\Public\SaveGame</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\WarriorTypes">
       <UniqueIdentifier>{EE03F685-923F-38E8-8F8B-0062E0925ECC}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorCountDownAction.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorCountDownAction.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorEnumTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorEnumTypes.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorStructTypes.h">
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorStructTypes.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
-    </ClCompile>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Widegts">
       <UniqueIdentifier>{DC71D693-7DFD-3605-99D6-59C62DCD809E}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\Public\Widegts\WarriorWidgetBase.h">
+    <ClInclude Include="..\..\Source\Warrior\Public\Widegts\WarriorWidgetBase.h">
       <Filter>Source\Warrior\Public\Widegts</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>

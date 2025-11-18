@@ -5,32 +5,37 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "AnimInstances/Hero/WarriorHeroAnimInstance.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #ifdef WARRIOR_WarriorHeroAnimInstance_generated_h
 #error "WarriorHeroAnimInstance.generated.h already included, missing '#pragma once' in WarriorHeroAnimInstance.h"
 #endif
 #define WARRIOR_WarriorHeroAnimInstance_generated_h
 
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+// ********** Begin Class UWarriorHeroAnimInstance *************************************************
+WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroAnimInstance_NoRegister();
+
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroAnimInstance_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWarriorHeroAnimInstance(); \
 	friend struct Z_Construct_UClass_UWarriorHeroAnimInstance_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend WARRIOR_API UClass* Z_Construct_UClass_UWarriorHeroAnimInstance_NoRegister(); \
 public: \
-	DECLARE_CLASS(UWarriorHeroAnimInstance, UWarriorCharacterAnimInstance, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/Warrior"), NO_API) \
+	DECLARE_CLASS2(UWarriorHeroAnimInstance, UWarriorCharacterAnimInstance, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/Warrior"), Z_Construct_UClass_UWarriorHeroAnimInstance_NoRegister) \
 	DECLARE_SERIALIZER(UWarriorHeroAnimInstance)
 
 
 #define FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroAnimInstance_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWarriorHeroAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-private: \
-	/** Private move- and copy-constructors, should never be used */ \
-	UWarriorHeroAnimInstance(UWarriorHeroAnimInstance&&); \
-	UWarriorHeroAnimInstance(const UWarriorHeroAnimInstance&); \
-public: \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UWarriorHeroAnimInstance(UWarriorHeroAnimInstance&&) = delete; \
+	UWarriorHeroAnimInstance(const UWarriorHeroAnimInstance&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UWarriorHeroAnimInstance); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UWarriorHeroAnimInstance); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UWarriorHeroAnimInstance) \
@@ -47,10 +52,11 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> WARRIOR_API UClass* StaticClass<class UWarriorHeroAnimInstance>();
+class UWarriorHeroAnimInstance;
+
+// ********** End Class UWarriorHeroAnimInstance ***************************************************
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_UEprojects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroAnimInstance_h
-
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

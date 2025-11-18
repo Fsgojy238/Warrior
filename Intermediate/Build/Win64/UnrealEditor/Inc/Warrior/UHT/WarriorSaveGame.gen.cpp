@@ -5,26 +5,52 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/SaveGame/WarriorSaveGame.h"
+#include "SaveGame/WarriorSaveGame.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorSaveGame() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_USaveGame();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorSaveGame();
 WARRIOR_API UClass* Z_Construct_UClass_UWarriorSaveGame_NoRegister();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorGameDifficulty();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UWarriorSaveGame
+// ********** Begin Class UWarriorSaveGame *********************************************************
 void UWarriorSaveGame::StaticRegisterNativesUWarriorSaveGame()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UWarriorSaveGame);
+FClassRegistrationInfo Z_Registration_Info_UClass_UWarriorSaveGame;
+UClass* UWarriorSaveGame::GetPrivateStaticClass()
+{
+	using TClass = UWarriorSaveGame;
+	if (!Z_Registration_Info_UClass_UWarriorSaveGame.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorSaveGame"),
+			Z_Registration_Info_UClass_UWarriorSaveGame.InnerSingleton,
+			StaticRegisterNativesUWarriorSaveGame,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UWarriorSaveGame.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UWarriorSaveGame_NoRegister()
 {
-	return UWarriorSaveGame::StaticClass();
+	return UWarriorSaveGame::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UWarriorSaveGame_Statics
 {
@@ -85,25 +111,22 @@ UClass* Z_Construct_UClass_UWarriorSaveGame()
 	}
 	return Z_Registration_Info_UClass_UWarriorSaveGame.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<UWarriorSaveGame>()
-{
-	return UWarriorSaveGame::StaticClass();
-}
 UWarriorSaveGame::UWarriorSaveGame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UWarriorSaveGame);
 UWarriorSaveGame::~UWarriorSaveGame() {}
-// End Class UWarriorSaveGame
+// ********** End Class UWarriorSaveGame ***********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarriorSaveGame, UWarriorSaveGame::StaticClass, TEXT("UWarriorSaveGame"), &Z_Registration_Info_UClass_UWarriorSaveGame, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorSaveGame), 3395289370U) },
+		{ Z_Construct_UClass_UWarriorSaveGame, UWarriorSaveGame::StaticClass, TEXT("UWarriorSaveGame"), &Z_Registration_Info_UClass_UWarriorSaveGame, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarriorSaveGame), 2303848092U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h_3636673813(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h__Script_Warrior_3474611644(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_SaveGame_WarriorSaveGame_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

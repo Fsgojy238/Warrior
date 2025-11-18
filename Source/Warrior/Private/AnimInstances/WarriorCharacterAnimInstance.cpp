@@ -9,7 +9,6 @@
 // 初始化函数
 void UWarriorCharacterAnimInstance::NativeInitializeAnimation()
 {
-	// TryGetPawnOwner() 获取拥有此动画实例的pawn（游戏中的可控制角色）
 	// Cast<AWarriorBaseCharacter> 将pawn转换为自定义角色 AWarriorBaseCharacter
 	OwningCharacter = Cast<AWarriorBaseCharacter>(TryGetPawnOwner()); 
 	if (OwningCharacter)
@@ -30,7 +29,7 @@ void UWarriorCharacterAnimInstance::NativeThreadSafeUpdateAnimation(float DeltaS
 	GroundSpeed = OwningCharacter->GetVelocity().Size2D();
 	// 检测加速度。使用SizeSquared2D（）而非Size2D（）是为了避免开平方运算
 	bHasAcceleration = OwningMovementComponent->GetCurrentAcceleration().SizeSquared2D()>0.f;
-
+	// 计算运动方向
 	LocomotionDirection = UKismetAnimationLibrary::CalculateDirection(OwningCharacter->GetVelocity(), OwningCharacter->GetActorRotation());
 
 

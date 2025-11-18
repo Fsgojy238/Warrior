@@ -7,6 +7,11 @@
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 #include "WarriorAttributeSet.generated.h"
 
+
+/**
+ * 生成属性访问器的宏定义
+ * 用于自动生成属性的Getter、Setter、初始化等方法
+ */
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
 GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
 GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
@@ -16,7 +21,8 @@ GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 class IPawnUIInterface;
 
 /**
- * 
+ * 角色属性集类，管理角色的核心属性（生命、怒气、攻防等）
+ * 继承自UE的AttributeSet，用于与能力系统联动处理属性变化
  */
 UCLASS()
 class WARRIOR_API UWarriorAttributeSet : public UAttributeSet
@@ -26,6 +32,10 @@ class WARRIOR_API UWarriorAttributeSet : public UAttributeSet
 public:
 	UWarriorAttributeSet();
 
+	/**
+	 * 重写：游戏效果执行后处理属性变化
+	 * 用于处理伤害、治疗等效果对属性的最终影响（如扣血、涨怒气）
+	 */
 	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Health")

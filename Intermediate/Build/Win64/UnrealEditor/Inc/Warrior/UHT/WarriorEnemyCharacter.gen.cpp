@@ -5,12 +5,14 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/Public/Characters/WarriorEnemyCharacter.h"
-#include "Runtime/Engine/Classes/Engine/HitResult.h"
+#include "Characters/WarriorEnemyCharacter.h"
+#include "Engine/HitResult.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeWarriorEnemyCharacter() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
@@ -22,9 +24,9 @@ WARRIOR_API UClass* Z_Construct_UClass_AWarriorEnemyCharacter();
 WARRIOR_API UClass* Z_Construct_UClass_AWarriorEnemyCharacter_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UEnemyCombatComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UEnemyUIComponent_NoRegister();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class AWarriorEnemyCharacter Function OnBodyCollisionBoxBeginOverlap
+// ********** Begin Class AWarriorEnemyCharacter Function OnBodyCollisionBoxBeginOverlap ***********
 struct Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics
 {
 	struct WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms
@@ -69,7 +71,7 @@ void Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap
 	((WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms*)Obj)->bFromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms), &Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 4100991306
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 267591329
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_OverlappedComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_OtherActor,
@@ -79,7 +81,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWarri
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWarriorEnemyCharacter, nullptr, "OnBodyCollisionBoxBeginOverlap", nullptr, nullptr, Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AWarriorEnemyCharacter, nullptr, "OnBodyCollisionBoxBeginOverlap", Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap_Statics::WarriorEnemyCharacter_eventOnBodyCollisionBoxBeginOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap()
 {
@@ -103,9 +105,9 @@ DEFINE_FUNCTION(AWarriorEnemyCharacter::execOnBodyCollisionBoxBeginOverlap)
 	P_THIS->OnBodyCollisionBoxBeginOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 	P_NATIVE_END;
 }
-// End Class AWarriorEnemyCharacter Function OnBodyCollisionBoxBeginOverlap
+// ********** End Class AWarriorEnemyCharacter Function OnBodyCollisionBoxBeginOverlap *************
 
-// Begin Class AWarriorEnemyCharacter
+// ********** Begin Class AWarriorEnemyCharacter ***************************************************
 void AWarriorEnemyCharacter::StaticRegisterNativesAWarriorEnemyCharacter()
 {
 	UClass* Class = AWarriorEnemyCharacter::StaticClass();
@@ -114,10 +116,34 @@ void AWarriorEnemyCharacter::StaticRegisterNativesAWarriorEnemyCharacter()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AWarriorEnemyCharacter);
+FClassRegistrationInfo Z_Registration_Info_UClass_AWarriorEnemyCharacter;
+UClass* AWarriorEnemyCharacter::GetPrivateStaticClass()
+{
+	using TClass = AWarriorEnemyCharacter;
+	if (!Z_Registration_Info_UClass_AWarriorEnemyCharacter.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("WarriorEnemyCharacter"),
+			Z_Registration_Info_UClass_AWarriorEnemyCharacter.InnerSingleton,
+			StaticRegisterNativesAWarriorEnemyCharacter,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_AWarriorEnemyCharacter.InnerSingleton;
+}
 UClass* Z_Construct_UClass_AWarriorEnemyCharacter_NoRegister()
 {
-	return AWarriorEnemyCharacter::StaticClass();
+	return AWarriorEnemyCharacter::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_AWarriorEnemyCharacter_Statics
 {
@@ -174,7 +200,7 @@ struct Z_Construct_UClass_AWarriorEnemyCharacter_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap, "OnBodyCollisionBoxBeginOverlap" }, // 1910144334
+		{ &Z_Construct_UFunction_AWarriorEnemyCharacter_OnBodyCollisionBoxBeginOverlap, "OnBodyCollisionBoxBeginOverlap" }, // 1144689176
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -216,7 +242,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWarriorEnemyCharacter_
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorEnemyCharacter_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWarriorEnemyCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_AWarriorEnemyCharacter_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_AWarriorEnemyCharacter()
@@ -227,24 +253,21 @@ UClass* Z_Construct_UClass_AWarriorEnemyCharacter()
 	}
 	return Z_Registration_Info_UClass_AWarriorEnemyCharacter.OuterSingleton;
 }
-template<> WARRIOR_API UClass* StaticClass<AWarriorEnemyCharacter>()
-{
-	return AWarriorEnemyCharacter::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AWarriorEnemyCharacter);
 AWarriorEnemyCharacter::~AWarriorEnemyCharacter() {}
-// End Class AWarriorEnemyCharacter
+// ********** End Class AWarriorEnemyCharacter *****************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h__Script_Warrior_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorEnemyCharacter, AWarriorEnemyCharacter::StaticClass, TEXT("AWarriorEnemyCharacter"), &Z_Registration_Info_UClass_AWarriorEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorEnemyCharacter), 253522206U) },
+		{ Z_Construct_UClass_AWarriorEnemyCharacter, AWarriorEnemyCharacter::StaticClass, TEXT("AWarriorEnemyCharacter"), &Z_Registration_Info_UClass_AWarriorEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorEnemyCharacter), 3657705320U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h_2651780074(TEXT("/Script/Warrior"),
-	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h__Script_Warrior_2808916175(TEXT("/Script/Warrior"),
+	Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h__Script_Warrior_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEprojects_Warrior_Source_Warrior_Public_Characters_WarriorEnemyCharacter_h__Script_Warrior_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

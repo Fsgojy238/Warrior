@@ -69,32 +69,42 @@ void UPawnCombatComponent::ToggleWeaponCollision(bool bShouldEnable, EToogleDama
 
 void UPawnCombatComponent::OnHitTargetActor(AActor* HitActor)
 {
-
+    // 子类重写
 }
 
 void UPawnCombatComponent::OnWeaponPulledFromTargetActor(AActor* InteractedActor)
 {
-
+    // 子类重写
 }
 
+/**
+ * 切换当前装备武器的碰撞状态
+ * @param bShouldEnable 是否启用碰撞（true=启用，false=禁用）
+ */
 void UPawnCombatComponent::ToggleCurrentEquippedWeaponCollision(bool bShouldEnable)
 {
+    // 获取当前装备的武器对象
 	AWarriorWeaponBase* WeaponToToggle = GetCharacterCurrentEquippedWeapon();
 
+    // 确保武器对象有效（为空则触发断言错误）
 	check(WeaponToToggle);
 
 	if (bShouldEnable)
 	{
+        // 启用武器碰撞盒（仅用于查询检测，如命中判定）
 		WeaponToToggle->GetWeaponCollisonBox()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	}
 	else
 	{
+        // 禁用武器碰撞盒（关闭所有碰撞）
 		WeaponToToggle->GetWeaponCollisonBox()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
+        // 清空已记录的重叠Actor列表（碰撞禁用后无需保留）
 		OverlappedActors.Empty();
 	}
 }
 
 void UPawnCombatComponent::ToggleBodyCollsionBoxCollision(bool bShouldEnable, EToogleDamageType ToggleDamageType)
 {
+    // 子类重写
 }

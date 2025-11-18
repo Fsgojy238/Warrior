@@ -14,15 +14,8 @@ class WARRIOR_API UPawnExtensionComponentBase : public UActorComponent
 
 protected:
 
-	/**
+/**
  * 安全获取拥有此组件的 Pawn 对象（模板版本）
- *
- * @tparam T - 要返回的 Pawn 类型（必须继承自 APawn）
- * @return 拥有此组件的 Pawn 对象指针（类型为 T*）
- *
- * @备注：使用静态断言确保模板参数 T 是 APawn 的子类，
- *       并使用 CastChecked 进行强制类型转换，确保类型安全。
- * 
  */
 	template <class T>
 	T* GetOwningPawn() const
@@ -32,18 +25,17 @@ protected:
 		return CastChecked<T>(GetOwner());
 	}
 
-	/**
+/**
  * 获取拥有此组件的 Pawn 对象（非模板版本）
- *
- * @return 拥有此组件的 Pawn 对象指针，如果拥有者不是 Pawn 则返回 nullptr
- *
- * @备注：此方法调用了模板方法 GetOwningPawn<APawn>()，并返回其结果
  */
 	APawn* GetOwningPawn() const
 	{
 		return GetOwningPawn<APawn>();
 	}
 
+/**
+ * 获取拥有此组件的 Controller 
+ */
 	template <class T>
 	T* GetOwningController() const
 	{

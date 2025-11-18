@@ -133,53 +133,79 @@ UWarriorAbilitySystemComponent* UWarriorGameplayAbility::GetWarriorAbilitySystem
 	return Cast<UWarriorAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
 }
 
+/**
+ * 原生（C++）方法：将游戏效果规格应用到目标Actor
+ * 负责获取目标的能力系统组件并执行效果应用
+ * @return 活跃游戏效果的句柄（用于后续管理该效果，如移除、修改等）
+ */
 FActiveGameplayEffectHandle UWarriorGameplayAbility::NativeApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHandle)
 {
+	// 获取目标Actor的能力系统组件（ASC），用于处理游戏效果
 	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
 
+	// 确保目标ASC有效且效果规格合法，否则触发断言
 	check(TargetASC && InSpecHandle.IsValid());
 
+	// 通过当前能力所属的ASC，将效果规格应用到目标ASC
 	return GetWarriorAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectSpecToTarget(
-		*InSpecHandle.Data,
+		*InSpecHandle.Data,  // 解引用获取实际的效果规格数据
 		TargetASC
 	);
 }
 
+/**
+ * 蓝图可调用方法：将游戏效果规格应用到目标Actor（带执行结果反馈）
+ * 封装原生方法，为蓝图提供执行成功/失败的状态
+ * @return 活跃游戏效果的句柄
+ */
 FActiveGameplayEffectHandle UWarriorGameplayAbility::BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHanle, EWarriorSuccessType& OutSuccessType)
 {
+	// 调用原生方法执行效果应用
 	FActiveGameplayEffectHandle ActiveGameplayEffectHandle = NativeApplyEffectSpecHandleToTarget(TargetActor, InSpecHanle);
 
+	// 根据效果是否成功应用，设置输出的成功状态
 	OutSuccessType = ActiveGameplayEffectHandle.WasSuccessfullyApplied() ? EWarriorSuccessType::Successful : EWarriorSuccessType::Failed;
 
 	return ActiveGameplayEffectHandle;
 }
 
+/**
+ * 将游戏效果规格应用到多个命中结果中的目标
+ * 遍历命中列表，对每个敌对目标应用效果，并触发受击反应事件
+ */
 void UWarriorGameplayAbility::ApplyGameplayEffectSpecHandleToHitResults(const FGameplayEffectSpecHandle& InSpecHandle, const TArray<FHitResult>& InHitResults)
 {
+	// 如果没有命中结果，直接返回
 	if (InHitResults.IsEmpty())
 	{
 		return;
 	}
 
+	// 获取当前能力所属的角色（确保有效）
 	APawn* OwningPawn = CastChecked<APawn>(GetAvatarActorFromActorInfo());
 
+	// 遍历所有命中结果
 	for (const FHitResult& Hit : InHitResults)
 	{
+		// 判断命中的Actor是否为Pawn（可战斗角色）
 		if (APawn* HitPawn = Cast<APawn>(Hit.GetActor()))
 		{
+			// 检查该Pawn是否为当前角色的敌对目标
 			if (UWarriorFunctionLibrary::IsTargetPawnHostile(OwningPawn, HitPawn))
 			{
+				// 对敌对目标应用游戏效果
 				FActiveGameplayEffectHandle ActiveGameplayEffectHandle = NativeApplyEffectSpecHandleToTarget(HitPawn, InSpecHandle);
 
+				// 如果效果成功应用，向目标发送「受击反应」游戏事件（触发受击动画、硬直等）
 				if (ActiveGameplayEffectHandle.WasSuccessfullyApplied())
 				{
 					FGameplayEventData EventData;
-					EventData.Instigator = OwningPawn;
-					EventData.Target = HitPawn;
+					EventData.Instigator = OwningPawn;  // 事件发起者为当前角色
+					EventData.Target = HitPawn;         // 事件目标为被击中的敌对角色
 
 					UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
 						HitPawn,
-						WarriorGameplayTags::Shared_Event_HitReact,
+						WarriorGameplayTags::Shared_Event_HitReact,  // 受击反应标签
 						EventData
 					);
 				}
